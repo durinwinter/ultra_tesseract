@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V20" />
+  <SW.Types.PlcStruct ID="0">
+    <AttributeList>
+      <Interface><Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v5">
+  <Section Name="None">
+    <Member Name="Bit0" Datatype="Bool">
+      <Comment>
+        <MultiLanguageText Lang="en-US">0=Low Limit, 1=High Limit</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="Bit1" Datatype="Bool">
+      <Comment>
+        <MultiLanguageText Lang="en-US">1=Status Limit (purple)</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="Bit2" Datatype="Bool">
+      <Comment>
+        <MultiLanguageText Lang="en-US">1=Alarm Limit (red)</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="Bit3" Datatype="Bool">
+      <Comment>
+        <MultiLanguageText Lang="en-US">1=Warning Limit (yellow)</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="Bit4" Datatype="Bool">
+      <Comment>
+        <MultiLanguageText Lang="en-US">Reserved</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="Bit5" Datatype="Bool">
+      <Comment>
+        <MultiLanguageText Lang="en-US">Reserved</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="Bit6" Datatype="Bool">
+      <Comment>
+        <MultiLanguageText Lang="en-US">Reserved</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="Bit7" Datatype="Bool">
+      <Comment>
+        <MultiLanguageText Lang="en-US">Reserved</MultiLanguageText>
+      </Comment>
+    </Member>
+  </Section>
+</Sections></Interface>
+      <Name>UDT_ModeSt</Name>
+      <Namespace />
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <MultilingualText ID="3" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="4" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </SW.Types.PlcStruct>
+</Document>

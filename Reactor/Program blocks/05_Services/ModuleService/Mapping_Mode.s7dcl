@@ -1,0 +1,315 @@
+﻿{
+    S7_EditorMode := "SCL";
+    S7_Optimized := "TRUE";
+    S7_Version := "0.1"
+}
+FUNCTION_BLOCK "Mapping_Mode"
+    VAR_INPUT 
+        {
+            S7_Access := "ReadOnly := External";
+            S7_Visibility := "Hidden := External"
+        }
+        StateCmd : DWord;
+        ProcedureCur : DWord;
+    END_VAR
+    VAR_OUTPUT 
+        StateFbkIn : DWord;
+    END_VAR
+    VAR 
+        FillingProductionDone : Bool;
+        DosingProductionDone : Bool;
+        DosingCleaningDone : Bool;
+    END_VAR
+    VAR_TEMP 
+        State : _.Service_States;
+        Command : _.Service_Commands;
+        "i" : Int;
+    END_VAR
+
+    { S7_Language := "SCL" }
+    NETWORK
+        REGION Execute Commands
+            //send the services to the state, which has been selected via the command line
+            //Starting
+            IF #StateCmd = #Command.Start AND "ModuleService".Information.state = #State.Idle THEN
+                #StateFbkIn := #State.Starting;
+            //Stopping    
+            ELSIF #StateCmd = #Command.Stop THEN
+                #StateFbkIn := #State.Stopping;
+                "Filling".CommandForce.stop := true;
+                "Stirring".CommandForce.stop := true;
+                "Tempering".CommandForce.stop := true;
+                "Dosing".CommandForce.stop := true;
+            //Aborting
+            ELSIF #StateCmd = #Command.Abort THEN
+                #StateFbkIn := #State.Aborting;
+                "Filling".CommandForce.abort := true;
+                "Stirring".CommandForce.abort := true;
+                "Tempering".CommandForce.abort := true;
+                "Dosing".CommandForce.abort := true;
+            //Holding
+            ELSIF #StateCmd = #Command.Hold THEN
+                #StateFbkIn := #State.Holding;
+                "Filling".CommandForce.hold := true;
+                "Stirring".CommandForce.hold := true;
+                "Tempering".CommandForce.hold := true;
+                "Dosing".CommandForce.hold := true;
+            //Pausing    
+            ELSIF #StateCmd = #Command.Pause THEN
+                #StateFbkIn := #State.Pausing;
+                "Filling".CommandForce.pause := true;
+                "Stirring".CommandForce.pause := true;
+                "Tempering".CommandForce.pause := true;
+                "Dosing".CommandForce.pause := true;
+            //Completing    
+            ELSIF #StateCmd = #Command.Complete THEN
+                #StateFbkIn := #State.Completing;
+            //Resetting    
+            ELSIF #StateCmd = #Command.Reset THEN
+                #StateFbkIn := #State.Resetting;
+            END_IF;
+        END_REGION
+        REGION Reset CommandForce
+            //Reset the command force if stated change is done (Stopp, Abort, Pause, Hold)
+            //Stopping
+            IF "ModuleService".Information.state = #State.Stopped THEN
+                "Filling".CommandForce.stop := FALSE;
+                "Stirring".CommandForce.stop := FALSE;
+                "Tempering".CommandForce.stop := FALSE;
+                "Dosing".CommandForce.stop := FALSE;
+            //Aborting    
+            ELSIF "ModuleService".Information.state = #State.Aborted THEN
+                "Filling".CommandForce.abort := FALSE;
+                "Stirring".CommandForce.abort := FALSE;
+                "Tempering".CommandForce.abort := FALSE;
+                "Dosing".CommandForce.abort := FALSE;
+            //Pausing    
+            ELSIF "ModuleService".Information.state = #State.Paused THEN
+                "Filling".CommandForce.pause := FALSE;
+                "Stirring".CommandForce.pause := FALSE;
+                "Tempering".CommandForce.pause := FALSE;
+                "Dosing".CommandForce.pause := FALSE;
+            //Holding    
+            ELSIF "ModuleService".Information.state = #State.Held THEN
+                "Filling".CommandForce.hold := FALSE;
+                "Stirring".CommandForce.hold := FALSE;
+                "Tempering".CommandForce.hold := FALSE;
+                "Dosing".CommandForce.hold := FALSE;
+            END_IF;
+        END_REGION
+        REGION lock/unlock Starting 
+            //lock/unlock starting if Services are not in Auto mode
+            //lock
+            IF "Filling".AutAct = FALSE OR "Stirring".AutAct = FALSE OR "Tempering".AutAct = FALSE
+                OR "Dosing".AutAct = FALSE OR "Filling".Information.state <> #State.Idle AND "Stirring".Information.state <> #State.Idle
+                AND "Tempering".Information.state <> #State.Idle AND "Dosing".Information.state <> #State.Idle THEN
+                FOR #i:= 0 TO 2 BY 1 DO
+                    "ModuleService"."Procedure"[#i].ProcedureEnable.Start.ST := 16#80;
+                    "ModuleService"."Procedure"[#i].ProcedureEnable.Start.Value := FALSE;
+                END_FOR;
+            //unlock     
+            ELSIF "Filling".AutAct = TRUE AND "Stirring".AutAct = TRUE AND "Tempering".AutAct = TRUE AND
+                "Dosing".AutAct = TRUE AND "Filling".Information.state = #State.Idle AND "Stirring".Information.state = #State.Idle
+                AND "Tempering".Information.state = #State.Idle AND "Dosing".Information.state = #State.Idle THEN
+                FOR #i := 0 TO 2 BY 1 DO
+                    "ModuleService"."Procedure"[#i].ProcedureEnable.Start.ST := 16#80;
+                    "ModuleService"."Procedure"[#i].ProcedureEnable.Start.Value := TRUE;
+                END_FOR;
+            END_IF;
+        END_REGION 
+        REGION reset Command reset in Starting ServiceModule
+            IF "ModuleService".Information.state = #State.Starting THEN
+                "Filling".CommandInt.reset := FALSE;
+                "Stirring".CommandInt.reset := FALSE;
+                "Tempering".CommandInt.reset := FALSE;
+                "Dosing".CommandInt.reset := FALSE;
+            END_IF;
+        END_REGION
+        REGION Starting to Execute ServiceModule
+            //Change from strating to execute
+            IF "ModuleService".Information.state = #State.Starting THEN
+                IF "Filling".AutAct = TRUE AND "Stirring".AutAct = TRUE AND "Tempering".AutAct = TRUE AND
+                    "Dosing".AutAct = TRUE THEN
+                    #StateFbkIn := #State.Execute;
+                END_IF;
+            END_IF;
+        END_REGION
+        REGION Filling
+            //Select correct procedure of filling and start the process
+            IF ("Filling".Information.state <> #State.Completed OR #ProcedureCur = 3) AND "ModuleService".Information.state = #State.Execute
+                AND (*NOT "LIT100DB".PV_TH_Act.Value*) "LIT100DB".PV.Value < 2600.0 THEN
+                //select procedure for production
+                IF #ProcedureCur = 1 THEN
+                    "Filling".ProcedureInt := 16#0000_0002;
+                    "Filling".CommandInt.start := True;
+                //select procedure for production    
+                ELSIF #ProcedureCur = 2 THEN
+                    "Filling".ProcedureInt := 16#0000_0001;
+                    "Filling".CommandInt.start := True;
+                //manage workflow for production an cleaning    
+                ELSIF #ProcedureCur = 3 THEN
+                    IF "ModuleService".Information.state = #State.Execute AND "Dosing".Information.state = #State.Completed OR "Dosing".Information.state = #State.Idle THEN
+                        //Start production
+                        IF "Filling".Information.state = #State.Idle AND #FillingProductionDone = FALSE AND #DosingCleaningDone = FALSE AND #DosingProductionDone = FALSE THEN
+                            "Filling".ProcedureInt := 16#0000_0002;
+                            "Filling".CommandInt.start := True;
+                            "Dosing".CommandInt.start := FALSE;
+                            #FillingProductionDone := TRUE;
+                        //reset after production    
+                        ELSIF "Filling".Information.state = #State.Completed AND "Dosing".Information.state = #State.Completed AND #FillingProductionDone = TRUE AND #DosingProductionDone = TRUE AND #DosingCleaningDone = FALSE THEN
+                            "Filling".CommandInt.reset := TRUE;
+                            "Stirring".CommandInt.reset := TRUE;
+                            "Tempering".CommandInt.reset := TRUE;
+                            "Dosing".CommandInt.reset := TRUE;
+                        //start cleaning after production    
+                        ELSIF "Filling".Information.state = #State.Idle AND #FillingProductionDone = TRUE AND #DosingProductionDone = TRUE AND #DosingCleaningDone = FALSE THEN
+                            "Filling".ProcedureInt := 16#0000_0001;
+                            "Filling".CommandInt.start := True;
+                            "Dosing".CommandInt.start := FALSE;
+                        END_IF;
+                    END_IF;
+                END_IF;
+            END_IF;
+            //reset start command if filling is in execute
+            IF "Filling".Information.state = #State.Execute THEN
+                "Filling".CommandInt.start := FALSE;
+            END_IF;
+            //send filling to completed if level higher than 2650 liter
+            IF "LIT100DB".PV.Value > 2600.0 AND "Filling".Information.state = #State.Execute THEN
+                "Filling".CommandInt.start := FALSE;
+                "Filling".CommandInt.complete := true;
+            //Reset command complete if filling service is in completed   
+            ELSIF "Filling".Information.state = #State.Completed THEN
+                "Filling".CommandInt.complete := False;
+            END_IF;
+        END_REGION
+        REGION Tempering and Stirring
+            //Start Tempering and Stirring Service, if Filling is done. Use timed procedure for both
+            IF "Filling".Information.state = #State.Completed (*OR "LIT100DB".PV_Out.Value > 8.9)*) AND "Filling".Information.state <> #State.Idle
+                AND "Tempering".Information.state = #State.Idle AND "Stirring".Information.state = #State.Idle THEN
+                "Tempering".ProcedureInt := 16#0000_0002;
+                "Tempering".CommandInt.start := True;
+                "Stirring".ProcedureInt := 16#0000_0002;
+                "Stirring".CommandInt.start := True;
+            END_IF;
+        END_REGION
+        REGION Dosing
+            //Start dosing if Termpering and Stirring service are both completed
+             IF "Tempering".Information.state = #State.Completed AND "Stirring".Information.state = #State.Completed AND "Dosing".Information.state <> #State.Completed THEN
+                 //start production
+                 IF #ProcedureCur = 1 THEN
+                     "Dosing".ProcedureInt := 16#0000_0002;
+                     "Dosing".CommandInt.start := True;
+                 //Start cleaning    
+                 ELSIF #ProcedureCur = 2 THEN
+                     "Dosing".ProcedureInt := 16#0000_0001;
+                     "Dosing".CommandInt.start := True;
+                 //manage production and cleaning    
+                 ELSIF #ProcedureCur = 3 THEN
+                     //Start production
+                     IF "Dosing".Information.state = #State.Idle AND #FillingProductionDone = TRUE AND #DosingProductionDone = FALSE AND #DosingCleaningDone = FALSE THEN
+                         "Dosing".ProcedureInt := 16#0000_0002;
+                         "Dosing".CommandInt.start := True;
+                         "Filling".CommandInt.start := FALSE;
+                         "Stirring".CommandInt.start := FALSE;
+                         "Tempering".CommandInt.start := FALSE;
+                         #DosingProductionDone := TRUE;
+                    //Start cleaning if production is done     
+                     ELSIF ("Dosing".Information.state = #State.Idle OR "Dosing".Information.state = #State.Completed) AND #FillingProductionDone = TRUE AND
+                         #DosingProductionDone = TRUE AND #DosingCleaningDone = FALSE THEN
+                         "Filling".CommandInt.reset := FALSE;
+                         "Stirring".CommandInt.reset := FALSE;
+                         "Tempering".CommandInt.reset := FALSE;
+                         "Dosing".CommandInt.reset := FALSE;
+                         "Dosing".ProcedureInt := 16#0000_0001;
+                         "Dosing".CommandInt.start := True;
+                         "Filling".CommandInt.start := FALSE;
+                         #DosingCleaningDone := TRUE;
+                         #FillingProductionDone := FALSE;
+                         #DosingProductionDone := FALSE;
+                     END_IF;
+                 END_IF;
+             END_IF;
+        END_REGION
+        REGION Completing Service Module
+            //Set service ModuleService to completing
+            IF "Filling".Information.state = #State.Completed AND "Tempering".Information.state = #State.Completed AND
+                "Stirring".Information.state = #State.Completed AND "Dosing".Information.state = #State.Completed AND
+                "ModuleService".Information.state = #State.Execute AND #ProcedureCur <> 3 OR #DosingCleaningDone = TRUE AND "Dosing".Information.state = #State.Completed THEN
+                "Filling".CommandInt.start := FALSE;
+                "Filling".CommandInt.complete := FALSE;
+                "Tempering".CommandInt.start := FALSE;
+                "Stirring".CommandInt.start := FALSE;
+                "Dosing".CommandInt.start := FALSE;
+                #StateFbkIn := #State.Completing;
+            END_IF;
+            // set ModuleService to completed if all other services are in Idle (after production/cleaning done)
+            IF "Filling".Information.state = #State.Idle AND "Tempering".Information.state = #State.Idle AND
+                "Stirring".Information.state = #State.Idle AND "Dosing".Information.state = #State.Idle AND
+                "ModuleService".Information.state = #State.Completing THEN
+                #StateFbkIn := #State.Completed;
+                #DosingCleaningDone := FALSE;
+                #FillingProductionDone := FALSE;
+                "Filling".CommandInt.start := FALSE;
+            END_IF;
+            //Reset all services, if ModuleService is in Completing or in Resetting
+            IF "ModuleService".Information.state = #State.Completing OR "ModuleService".Information.state = #State.Resetting THEN
+                "Filling".CommandInt.reset := TRUE;
+                "Stirring".CommandInt.reset := TRUE;
+                "Tempering".CommandInt.reset := TRUE;
+                "Dosing".CommandInt.reset := TRUE;
+            END_IF;
+            //reset all reset commands for the other services and reset marker for ProduceAndClean service
+            IF "Filling".AutAct = TRUE AND "Tempering".AutAct = TRUE AND "Stirring".AutAct = TRUE AND "Dosing".AutAct = TRUE AND
+                ("ModuleService".Information.state = #State.Completed OR "ModuleService".Information.state = #State.Resetting) THEN
+                "Filling".CommandInt.reset := FALSE;
+                "Stirring".CommandInt.reset := FALSE;
+                "Tempering".CommandInt.reset := FALSE;
+                "Dosing".CommandInt.reset := FALSE;
+                "Filling".CommandInt.start := FALSE;
+                #FillingProductionDone := FALSE;
+                #DosingCleaningDone := FALSE;
+                #DosingCleaningDone := FALSE;
+            END_IF;
+        END_REGION
+        REGION Resetting Service Module
+            //set ServiceModule to Idle if resetting
+            IF "ModuleService".Information.state = #State.Resetting AND "Filling".Information.state = #State.Idle AND "Tempering".Information.state = #State.Idle AND
+                "Stirring".Information.state = #State.Idle AND "Dosing".Information.state = #State.Idle THEN
+                #StateFbkIn := #State.Idle;
+            END_IF;
+        END_REGION
+        REGION Aborting Service Module
+            //set Service Module to Aborting, if another service went to abort
+            IF "Filling".Information.state = #State.Aborting OR "Tempering".Information.state = #State.Aborting OR
+                "Stirring".Information.state = #State.Aborting OR "Dosing".Information.state = #State.Aborting THEN
+                #StateFbkIn := #State.Aborting;
+            END_IF;
+            //reset start command, if Module services is in aborting
+            IF "ModuleService".Information.state = #State.Aborting THEN
+                #StateFbkIn := #State.Aborted;
+                "Filling".CommandInt.start := FALSE;
+                "Filling".CommandInt.complete := FALSE;
+                "Tempering".CommandInt.start := FALSE;
+                "Stirring".CommandInt.start := FALSE;
+                "Dosing".CommandInt.start := FALSE;
+            END_IF;
+        END_REGION
+        REGION Stopping Service Module
+            //set Service Module to stopping, if another service went to stop
+            IF "Filling".Information.state = #State.Stopping OR "Tempering".Information.state = #State.Stopping OR
+                "Stirring".Information.state = #State.Stopping OR "Dosing".Information.state = #State.Stopping THEN
+                #StateFbkIn := #State.Stopping;
+            END_IF;
+            //reset start command, if Module services is in stopping
+            IF "ModuleService".Information.state = #State.Stopping THEN
+                #StateFbkIn := #State.Stopped;
+                "Filling".CommandInt.start := FALSE;
+                "Filling".CommandInt.complete := FALSE;
+                "Tempering".CommandInt.start := FALSE;
+                "Stirring".CommandInt.start := FALSE;
+                "Dosing".CommandInt.start := FALSE;
+            END_IF;
+        END_REGION
+    END_NETWORK
+END_FUNCTION_BLOCK

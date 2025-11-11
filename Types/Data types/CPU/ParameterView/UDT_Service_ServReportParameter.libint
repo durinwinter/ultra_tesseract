@@ -1,0 +1,15 @@
+﻿DocumentHash:
+  - FileName: UDT_Service_ServReportParameter.xml
+    Hash: mIqL47z+jK1E2v0WoIYIME7gREX3A9ADH0TyPHXwvIc=
+LibraryMetaFileHash: OZH/rbJ8kAPiQt7E3U74xHlURimL+QfLzIE/JrcBPwo=
+LibraryVersion:
+  Guid: d73630c0-375d-4bed-adaf-2442acd1aac5
+  DependsOn:
+    - TypeName: UDT_MTP_AnaReportValue
+      VersionNumber: 1.0.0
+    - TypeName: UDT_MTP_DIntReportValue
+      VersionNumber: 1.0.0
+    - TypeName: UDT_MTP_BinReportValue
+      VersionNumber: 1.0.0
+    - TypeName: UDT_MTP_StringReportValue
+      VersionNumber: 1.0.0

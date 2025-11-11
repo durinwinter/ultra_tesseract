@@ -1,0 +1,15 @@
+﻿DocumentHash:
+  - FileName: StruCm.xml
+    Hash: PrIlv66qMy5cconk+SzAd9l3heJO/0eBubTOjT+uHU0=
+LibraryMetaFileHash: 8nWgACF8NTHT1nRPqAGu4ov7v40o6EwH5x+MZJY3pm4=
+LibraryVersion:
+  Guid: 28c9fc03-38f1-42d6-a3a0-4e972e3de0c7
+  DependsOn:
+    - TypeName: AnaVal
+      VersionNumber: 1.0.1
+    - TypeName: DigVal
+      VersionNumber: 1.0.1
+    - TypeName: ScaVal
+      VersionNumber: 1.0.1
+    - TypeName: ScaVal_Raw
+      VersionNumber: 1.0.1

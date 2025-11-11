@@ -1,0 +1,9 @@
+﻿DocumentHash:
+  - FileName: UDT_Service_ProcedureRawDataMedium.xml
+    Hash: Mf1c/ZQXoBH5Y+TsALN7rIn4F8ofRVtxXrrv6KsF5JU=
+LibraryMetaFileHash: xD0gyJXh5uFEYkxaTpimL+YpklN3Fq3HttUiYsUsqxQ=
+LibraryVersion:
+  Guid: b8a5076b-e343-4d1b-9d20-f02054efda82
+  DependsOn:
+    - TypeName: UDT_MTP_ProcedureExtended
+      VersionNumber: 1.0.6

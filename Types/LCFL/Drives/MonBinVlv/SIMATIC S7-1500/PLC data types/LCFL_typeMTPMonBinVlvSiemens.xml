@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V20" />
+  <SW.Types.PlcStruct ID="0">
+    <AttributeList>
+      <Interface><Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v5">
+  <Section Name="None">
+    <Member Name="mtpData" Datatype="&quot;LCFL_typeMTPMonBinVlv&quot;" />
+    <Member Name="maintenance" Datatype="&quot;LCFL_typeMaintenance&quot;" />
+    <Member Name="tagName" Datatype="String[30]">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Instanznamen-Identifizierung</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Instance name identification</MultiLanguageText>
+      </Comment>
+      <StartValue>''</StartValue>
+    </Member>
+    <Member Name="enabled" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Funktionalität des Steuerelements ist aktiviert</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Functionality of control module is enabled</MultiLanguageText>
+      </Comment>
+      <StartValue>FALSE</StartValue>
+    </Member>
+    <Member Name="monitorStaticMessage" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Meldung für statischen Fehler (1: Meldung ist aktiviert; 0: Meldung ist deaktiviert)</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Message for static error (1: Message active; 0: Message inactive)</MultiLanguageText>
+      </Comment>
+      <StartValue>FALSE</StartValue>
+    </Member>
+    <Member Name="monitorDynamicMessage" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Meldung für dynamischen Fehler (1: Meldung ist aktiviert; 0: Meldung ist deaktiviert)</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Message for dynamic error (1: Message active; 0: Message inactive)</MultiLanguageText>
+      </Comment>
+      <StartValue>FALSE</StartValue>
+    </Member>
+    <Member Name="operatingTimeMessage" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Meldung für Betriebsstunden haben ihre Grenze erreicht (1: Meldung ist aktiviert; 0: Meldung ist deaktiviert)</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Message for operating time has reached (1: Message active; 0: Message inactive)</MultiLanguageText>
+      </Comment>
+      <StartValue>FALSE</StartValue>
+    </Member>
+    <Member Name="cycleTimeMessage" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Meldung für Zykluszeit ist erreicht (1: Meldung aktiv; 0: Meldung inaktiv)</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Message for cycle time has reached (1: Message active; 0: Message inactive)</MultiLanguageText>
+      </Comment>
+      <StartValue>FALSE</StartValue>
+    </Member>
+    <Member Name="switchCounterMessage" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Meldung für Anzahl der Zustandswechsel hat seine Grenze erreicht (1: Meldung ist aktiviert; 0: Meldung ist deaktiviert)</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Message for switch counter has reached (1: Message active; 0: Message inactive)</MultiLanguageText>
+      </Comment>
+      <StartValue>FALSE</StartValue>
+    </Member>
+    <Member Name="alarmCounterMessage" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Meldung für Alarmzähler ist erreicht (1: Meldung aktiv; 0: Meldung inaktiv)</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Message for alarm counter has reached (1: Message active; 0: Message inactive)</MultiLanguageText>
+      </Comment>
+      <StartValue>FALSE</StartValue>
+    </Member>
+    <Member Name="interconnectorActive" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="en-US">Interconnector active (1: Active; 0: Inactive)</MultiLanguageText>
+      </Comment>
+      <StartValue>FALSE</StartValue>
+    </Member>
+    <Member Name="interconnectedTagName" Datatype="String[30]">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Name der verbundenen Instanz</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Name of interconnected instance</MultiLanguageText>
+      </Comment>
+      <StartValue>''</StartValue>
+    </Member>
+  </Section>
+</Sections></Interface>
+      <Name>LCFL_typeMTPMonBinVlvSiemens</Name>
+      <Namespace />
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text>MTP data for bistable valve with the feedback monitoring (Siemens)</Text>
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="3" CompositionName="Items">
+            <AttributeList>
+              <Culture>de-DE</Culture>
+              <Text>MTP-Daten für bistabiles Ventil mit Rückmeldeüberwachung (Siemens)</Text>
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <MultilingualText ID="4" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="5" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text>MTP for monitoring binary valve (Siemens)</Text>
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="6" CompositionName="Items">
+            <AttributeList>
+              <Culture>de-DE</Culture>
+              <Text>MTP für binäre Ventilüberwachung (Siemens)</Text>
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </SW.Types.PlcStruct>
+</Document>

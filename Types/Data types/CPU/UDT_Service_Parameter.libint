@@ -1,0 +1,9 @@
+﻿DocumentHash:
+  - FileName: UDT_Service_Parameter.xml
+    Hash: iOY1U3cCdH9Sey9qcEVn6FLRnUs9psREGdke4tOIN98=
+LibraryMetaFileHash: b3eIByyAaICBqResq92Tehu8D+TX0YY2MJStxgh3Ux0=
+LibraryVersion:
+  Guid: b498d115-ad0d-48f5-a2f7-3d744aa6e890
+  DependsOn:
+    - TypeName: UDT_Service_Value
+      VersionNumber: 1.0.0

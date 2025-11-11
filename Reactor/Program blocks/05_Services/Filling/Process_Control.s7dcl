@@ -1,0 +1,25 @@
+﻿{
+    S7_EditorMode := "SCL";
+    S7_Optimized := "TRUE";
+    S7_Version := "0.1"
+}
+FUNCTION_BLOCK "Process_Control"
+    VAR_INPUT 
+        Level : Real;
+    END_VAR
+    VAR_TEMP 
+        States : _.Service_States;
+        "i" : Int;
+    END_VAR
+
+    { S7_Language := "SCL" }
+    NETWORK
+        //Set service to hold, if the level of the tank raises over 2750L
+        IF #Level >= 2700 AND "Filling".Information.state = #States.Execute THEN
+            "Filling".CommandForce.hold := TRUE;
+        END_IF;
+        IF "Filling".Information.state = #States.Held THEN
+            "Filling".CommandForce.hold := FALSE;
+        END_IF;
+    END_NETWORK
+END_FUNCTION_BLOCK

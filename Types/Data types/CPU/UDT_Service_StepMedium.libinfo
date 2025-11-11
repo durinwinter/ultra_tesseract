@@ -1,0 +1,8 @@
+﻿LibraryType:
+  Guid: cf7072b9-5d65-4860-884e-ae2c4c6d1d4b
+LibraryVersion:
+  VersionNumber: 1.0.1
+  Author: Siemens AG
+  IsDefault: true
+  Comment:
+    de-DE: 'Command, Force, Check and Or: now default value 16#FFFFFFFF'

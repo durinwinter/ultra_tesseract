@@ -1,0 +1,11 @@
+﻿DocumentHash:
+  - FileName: UDT_MTP_ProcedureExtended.xml
+    Hash: IRuS54QaRLIlJQbQPu6WE7/fv1QupKDjbh8O0jzEIMw=
+LibraryMetaFileHash: zTYsI5hCf6/XzmaV54OxQ2txCQYYGqhq+cPsZzz/MuE=
+LibraryVersion:
+  Guid: 677504b0-8f1e-466a-bad7-83a963320482
+  DependsOn:
+    - TypeName: UDT_Service_IndexElement
+      VersionNumber: 1.0.0
+    - TypeName: UDT_MTP_Procedure
+      VersionNumber: 1.0.1

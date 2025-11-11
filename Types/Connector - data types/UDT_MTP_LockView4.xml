@@ -1,0 +1,274 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V20" />
+  <SW.Types.PlcStruct ID="0">
+    <AttributeList>
+      <Interface><Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v5">
+  <Section Name="None">
+    <Member Name="WQC" Datatype="Byte">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Worst Quality Code variable</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Worst Quality Code variable</MultiLanguageText>
+      </Comment>
+      <StartValue>16#FF</StartValue>
+    </Member>
+    <Member Name="Logic" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Logical behaviour, false: OR, true: AND</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Logical behaviour, false: OR, true: AND</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="In1En" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Locking Input 1 - Enable, 0: Input not used, 1: Input is used</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Locking Input 1 - Enable, 0: Input not used, 1: Input is used</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="In1" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Locking Input 1 - Value</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Locking Input 1 - Value</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="In1QC" Datatype="Byte">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Locking Input 1 - Quality Code</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Locking Input 1 - Quality Code</MultiLanguageText>
+      </Comment>
+      <StartValue>16#FF</StartValue>
+    </Member>
+    <Member Name="In1Inv" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Locking Input 1 - Inversion Enable, 0: Input not inverted, 1: Input inverted</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Locking Input 1 - Inversion Enable, 0: Input not inverted, 1: Input inverted</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="In1Txt" Datatype="String[16]">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Locking Input 1 - Additional Text</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Locking Input 1 - Additional Text</MultiLanguageText>
+      </Comment>
+      <StartValue>''</StartValue>
+    </Member>
+    <Member Name="In2En" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Locking Input 2 - Enable, 0: Input not used, 1: Input is used</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Locking Input 2 - Enable, 0: Input not used, 1: Input is used</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="In2" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Locking Input 2 - Value</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Locking Input 2 - Value</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="In2QC" Datatype="Byte">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Locking Input 2 - Quality Code</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Locking Input 2 - Quality Code</MultiLanguageText>
+      </Comment>
+      <StartValue>16#FF</StartValue>
+    </Member>
+    <Member Name="In2Inv" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Locking Input 2 - Inversion Enable, 0: Input not inverted, 1: Input inverted</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Locking Input 2 - Inversion Enable, 0: Input not inverted, 1: Input inverted</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="In2Txt" Datatype="String[16]">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Locking Input 2 - Additional Text</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Locking Input 2 - Additional Text</MultiLanguageText>
+      </Comment>
+      <StartValue>''</StartValue>
+    </Member>
+    <Member Name="In3En" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Locking Input 3 - Enable, 0: Input not used, 1: Input is used</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Locking Input 3 - Enable, 0: Input not used, 1: Input is used</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="In3" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Locking Input 3 - Value</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Locking Input 3 - Value</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="In3QC" Datatype="Byte">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Locking Input 3 - Quality Code</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Locking Input 3 - Quality Code</MultiLanguageText>
+      </Comment>
+      <StartValue>16#FF</StartValue>
+    </Member>
+    <Member Name="In3Inv" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Locking Input 3 - Inversion Enable, 0: Input not inverted, 1: Input inverted</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Locking Input 3 - Inversion Enable, 0: Input not inverted, 1: Input inverted</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="In3Txt" Datatype="String[16]">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Locking Input 3 - Additional Text</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Locking Input 3 - Additional Text</MultiLanguageText>
+      </Comment>
+      <StartValue>''</StartValue>
+    </Member>
+    <Member Name="In4En" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Locking Input 4 - Enable, 0: Input not used, 1: Input is used</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Locking Input 4 - Enable, 0: Input not used, 1: Input is used</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="In4" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Locking Input 4 - Value</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Locking Input 4 - Value</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="In4QC" Datatype="Byte">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Locking Input 4 - Quality Code</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Locking Input 4 - Quality Code</MultiLanguageText>
+      </Comment>
+      <StartValue>16#FF</StartValue>
+    </Member>
+    <Member Name="In4Inv" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Locking Input 4 - Inversion Enable, 0: Input not inverted, 1: Input inverted</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Locking Input 4 - Inversion Enable, 0: Input not inverted, 1: Input inverted</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="In4Txt" Datatype="String[16]">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Locking Input 4 - Additional Text</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Locking Input 4 - Additional Text</MultiLanguageText>
+      </Comment>
+      <StartValue>''</StartValue>
+    </Member>
+    <Member Name="Out" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Locking Result Output</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Locking Result Output</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="OutQC" Datatype="Byte">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Locking Result Output - Quality Code</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Locking Result Output - Quality Code</MultiLanguageText>
+      </Comment>
+      <StartValue>16#FF</StartValue>
+    </Member>
+  </Section>
+</Sections></Interface>
+      <Name>UDT_MTP_LockView4</Name>
+      <Namespace />
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="3" CompositionName="Items">
+            <AttributeList>
+              <Culture>de-DE</Culture>
+              <Text>Interface Definition LockView4</Text>
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <MultilingualText ID="4" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="5" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="6" CompositionName="Items">
+            <AttributeList>
+              <Culture>de-DE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </SW.Types.PlcStruct>
+</Document>

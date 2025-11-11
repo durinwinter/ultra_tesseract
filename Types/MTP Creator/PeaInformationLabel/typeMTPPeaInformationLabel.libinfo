@@ -1,0 +1,10 @@
+﻿LibraryType:
+  Guid: afb5d52b-8891-4b55-9b0a-d3dca729c2f6
+  Comment:
+    en-US: List of product- and instance-specific information for the PEA handling within a modular plant environment.
+LibraryVersion:
+  VersionNumber: 1.0.5
+  Author: z004jv4e
+  IsDefault: true
+  Comment:
+    en-US: List of product- and instance-specific information for the PEA handling within a modular plant environment.

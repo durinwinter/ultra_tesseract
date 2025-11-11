@@ -1,0 +1,8 @@
+﻿LibraryType:
+  Guid: 566cc077-162c-4aaa-b6dc-309e39778460
+LibraryVersion:
+  VersionNumber: 1.0.4
+  Author: Siemens AG
+  IsDefault: true
+  Comment:
+    de-DE: parameterDefinition = Array[0..31]

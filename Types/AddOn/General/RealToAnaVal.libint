@@ -1,0 +1,9 @@
+﻿DocumentHash:
+  - FileName: RealToAnaVal.s7dcl
+    Hash: A1srHU8ILKuX1Rf+v2x9RAAd0Fzv3J0nE5345S5/QSo=
+LibraryMetaFileHash: lDCXbPtmuKRBBScBRf5awV5cywcgkgqEU4c2fagJMNg=
+LibraryVersion:
+  Guid: 83794eb6-ceb2-4a8c-9496-973a8c4610d3
+  DependsOn:
+    - TypeName: AnaVal
+      VersionNumber: 1.0.1

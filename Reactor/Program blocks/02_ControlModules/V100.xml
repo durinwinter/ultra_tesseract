@@ -1,0 +1,1701 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V20" />
+  <SW.Blocks.FC ID="0">
+    <AttributeList>
+      <Interface><Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v5">
+  <Section Name="Input" />
+  <Section Name="Output" />
+  <Section Name="InOut" />
+  <Section Name="Temp">
+    <Member Name="Temp" Datatype="&quot;DigVal&quot;" />
+    <Member Name="Temp_1" Datatype="&quot;DigVal&quot;" />
+    <Member Name="State" Datatype="&quot;Service_States&quot;" />
+  </Section>
+  <Section Name="Constant" />
+  <Section Name="Return">
+    <Member Name="Ret_Val" Datatype="Void" />
+  </Section>
+</Sections></Interface>
+      <MemoryLayout>Optimized</MemoryLayout>
+      <Name>V100</Name>
+      <Namespace />
+      <Number>3</Number>
+      <ProgrammingLanguage>FBD</ProgrammingLanguage>
+      <SetENOAutomatically>false</SetENOAutomatically>
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>de-DE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="3" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="4" CompositionName="Items">
+            <AttributeList>
+              <Culture>fr-FR</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <SW.Blocks.CompileUnit ID="5" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v5">
+  <Parts>
+    <Access Scope="GlobalVariable" UId="21">
+      <Symbol>
+        <Component Name="V100DB" />
+        <Component Name="FbkOpen" />
+      </Symbol>
+    </Access>
+    <Call UId="22">
+      <CallInfo Name="DiIn" BlockType="FB">
+        <Instance Scope="GlobalVariable" UId="23">
+          <Component Name="V100ChIn" />
+        </Instance>
+        <Parameter Name="PV_In" Section="Input" Type="Bool" />
+        <Parameter Name="InvPV_In" Section="Input" Type="Bool" />
+        <Parameter Name="ProImQB" Section="Input" Type="Bool" />
+        <Parameter Name="Feature" Section="Input" Type="Struct" />
+        <Parameter Name="SubsPV_In" Section="Input" Type="Bool" />
+        <Parameter Name="Bad" Section="Output" Type="&quot;DigVal&quot;" />
+        <Parameter Name="PV_Out" Section="Output" Type="&quot;DigVal&quot;" />
+      </CallInfo>
+    </Call>
+  </Parts>
+  <Wires>
+    <Wire UId="31">
+      <OpenCon UId="24" />
+      <NameCon UId="22" Name="en" />
+    </Wire>
+    <Wire UId="32">
+      <OpenCon UId="25" />
+      <NameCon UId="22" Name="PV_In" />
+    </Wire>
+    <Wire UId="33">
+      <OpenCon UId="26" />
+      <NameCon UId="22" Name="InvPV_In" />
+    </Wire>
+    <Wire UId="34">
+      <OpenCon UId="27" />
+      <NameCon UId="22" Name="ProImQB" />
+    </Wire>
+    <Wire UId="35">
+      <OpenCon UId="28" />
+      <NameCon UId="22" Name="Feature" />
+    </Wire>
+    <Wire UId="36">
+      <OpenCon UId="29" />
+      <NameCon UId="22" Name="SubsPV_In" />
+    </Wire>
+    <Wire UId="37">
+      <NameCon UId="22" Name="Bad" />
+      <OpenCon UId="30" />
+    </Wire>
+    <Wire UId="38">
+      <NameCon UId="22" Name="PV_Out" />
+      <IdentCon UId="21" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>FBD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="6" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="7" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="8" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="9" CompositionName="Items">
+                <AttributeList>
+                  <Culture>fr-FR</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="A" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="B" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="C" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>Channel input</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="D" CompositionName="Items">
+                <AttributeList>
+                  <Culture>fr-FR</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="E" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v5">
+  <Parts>
+    <Access Scope="LiteralConstant" UId="21">
+      <Constant>
+        <ConstantType>Bool</ConstantType>
+        <ConstantValue>0</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="LiteralConstant" UId="22">
+      <Constant>
+        <ConstantType>Byte</ConstantType>
+        <ConstantValue>16#80</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="LocalVariable" UId="23">
+      <Symbol>
+        <Component Name="Temp" />
+      </Symbol>
+    </Access>
+    <Access Scope="LiteralConstant" UId="24">
+      <Constant>
+        <ConstantType>Bool</ConstantType>
+        <ConstantValue>0</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="LiteralConstant" UId="25">
+      <Constant>
+        <ConstantType>Byte</ConstantType>
+        <ConstantValue>16#80</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="LocalVariable" UId="26">
+      <Symbol>
+        <Component Name="Temp_1" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="27">
+      <Symbol>
+        <Component Name="V100ChIn" />
+        <Component Name="Bad" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="28">
+      <Symbol>
+        <Component Name="V100ChOut" />
+        <Component Name="Bad" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="29">
+      <Symbol>
+        <Component Name="Temp" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="30">
+      <Symbol>
+        <Component Name="Temp_1" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="31">
+      <Symbol>
+        <Component Name="V100DB" />
+        <Component Name="CSF" />
+      </Symbol>
+    </Access>
+    <Call UId="32">
+      <CallInfo Name="BoolToDigVal" BlockType="FC">
+        <Parameter Name="In" Section="Input" Type="Bool" />
+        <Parameter Name="ST" Section="Input" Type="Byte" />
+        <Parameter Name="Out" Section="Output" Type="&quot;DigVal&quot;" />
+      </CallInfo>
+    </Call>
+    <Call UId="33">
+      <CallInfo Name="BoolToDigVal" BlockType="FC">
+        <Parameter Name="In" Section="Input" Type="Bool" />
+        <Parameter Name="ST" Section="Input" Type="Byte" />
+        <Parameter Name="Out" Section="Output" Type="&quot;DigVal&quot;" />
+      </CallInfo>
+    </Call>
+    <Call UId="34">
+      <CallInfo Name="Or04" BlockType="FC">
+        <Parameter Name="In1" Section="Input" Type="&quot;DigVal00&quot;" />
+        <Parameter Name="In2" Section="Input" Type="&quot;DigVal00&quot;" />
+        <Parameter Name="In3" Section="Input" Type="&quot;DigVal00&quot;" />
+        <Parameter Name="In4" Section="Input" Type="&quot;DigVal00&quot;" />
+        <Parameter Name="Out" Section="Output" Type="&quot;DigVal00&quot;" />
+      </CallInfo>
+    </Call>
+  </Parts>
+  <Wires>
+    <Wire UId="38">
+      <OpenCon UId="35" />
+      <NameCon UId="32" Name="en" />
+    </Wire>
+    <Wire UId="39">
+      <IdentCon UId="21" />
+      <NameCon UId="32" Name="In" />
+    </Wire>
+    <Wire UId="40">
+      <IdentCon UId="22" />
+      <NameCon UId="32" Name="ST" />
+    </Wire>
+    <Wire UId="41">
+      <NameCon UId="32" Name="Out" />
+      <IdentCon UId="23" />
+    </Wire>
+    <Wire UId="42">
+      <OpenCon UId="36" />
+      <NameCon UId="33" Name="en" />
+    </Wire>
+    <Wire UId="43">
+      <IdentCon UId="24" />
+      <NameCon UId="33" Name="In" />
+    </Wire>
+    <Wire UId="44">
+      <IdentCon UId="25" />
+      <NameCon UId="33" Name="ST" />
+    </Wire>
+    <Wire UId="45">
+      <NameCon UId="33" Name="Out" />
+      <IdentCon UId="26" />
+    </Wire>
+    <Wire UId="46">
+      <OpenCon UId="37" />
+      <NameCon UId="34" Name="en" />
+    </Wire>
+    <Wire UId="47">
+      <IdentCon UId="27" />
+      <NameCon UId="34" Name="In1" />
+    </Wire>
+    <Wire UId="48">
+      <IdentCon UId="28" />
+      <NameCon UId="34" Name="In2" />
+    </Wire>
+    <Wire UId="49">
+      <IdentCon UId="29" />
+      <NameCon UId="34" Name="In3" />
+    </Wire>
+    <Wire UId="50">
+      <IdentCon UId="30" />
+      <NameCon UId="34" Name="In4" />
+    </Wire>
+    <Wire UId="51">
+      <NameCon UId="34" Name="Out" />
+      <IdentCon UId="31" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>FBD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="F" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="10" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="11" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="12" CompositionName="Items">
+                <AttributeList>
+                  <Culture>fr-FR</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="13" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="14" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="15" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>CSF</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="16" CompositionName="Items">
+                <AttributeList>
+                  <Culture>fr-FR</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="17" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v5">
+  <Parts>
+    <Access Scope="GlobalVariable" UId="21">
+      <Symbol>
+        <Component Name="LIT100DB" />
+        <Component Name="PV_TH_Act" />
+      </Symbol>
+    </Access>
+    <Access Scope="LiteralConstant" UId="22">
+      <Constant>
+        <ConstantType>Bool</ConstantType>
+        <ConstantValue>true</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="LiteralConstant" UId="23">
+      <Constant>
+        <ConstantType>String</ConstantType>
+        <ConstantValue>'LIT100_PV_TL'</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="GlobalVariable" UId="24">
+      <Symbol>
+        <Component Name="V101DB" />
+        <Component Name="Closed" />
+      </Symbol>
+    </Access>
+    <Access Scope="LiteralConstant" UId="25">
+      <Constant>
+        <ConstantType>String</ConstantType>
+        <ConstantValue>'V101_Closed'</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="LiteralConstant" UId="26">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>1</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="GlobalVariable" UId="27">
+      <Symbol>
+        <Component Name="V100DB" />
+        <Component Name="Intlock" />
+      </Symbol>
+    </Access>
+    <Call UId="28">
+      <CallInfo Name="Intlk04" BlockType="FB">
+        <Instance Scope="GlobalVariable" UId="29">
+          <Component Name="V100Intlock" />
+        </Instance>
+        <Parameter Name="In01" Section="Input" Type="&quot;DigValFF&quot;" />
+        <Parameter Name="InvIn01" Section="Input" Type="Bool" />
+        <Parameter Name="In01_Text" Section="Input" Type="String[16]" />
+        <Parameter Name="BypLi01" Section="Input" Type="&quot;DigValFF&quot;" />
+        <Parameter Name="AV01" Section="Input" Type="&quot;AnaValFF&quot;" />
+        <Parameter Name="AV01_Unit" Section="Input" Type="Int" />
+        <Parameter Name="In02" Section="Input" Type="&quot;DigValFF&quot;" />
+        <Parameter Name="InvIn02" Section="Input" Type="Bool" />
+        <Parameter Name="In02_Text" Section="Input" Type="String[16]" />
+        <Parameter Name="BypLi02" Section="Input" Type="&quot;DigValFF&quot;" />
+        <Parameter Name="AV02" Section="Input" Type="&quot;AnaValFF&quot;" />
+        <Parameter Name="AV02_Unit" Section="Input" Type="Int" />
+        <Parameter Name="In03" Section="Input" Type="&quot;DigValFF&quot;" />
+        <Parameter Name="InvIn03" Section="Input" Type="Bool" />
+        <Parameter Name="In03_Text" Section="Input" Type="String[16]" />
+        <Parameter Name="BypLi03" Section="Input" Type="&quot;DigValFF&quot;" />
+        <Parameter Name="AV03" Section="Input" Type="&quot;AnaValFF&quot;" />
+        <Parameter Name="AV03_Unit" Section="Input" Type="Int" />
+        <Parameter Name="In04" Section="Input" Type="&quot;DigValFF&quot;" />
+        <Parameter Name="InvIn04" Section="Input" Type="Bool" />
+        <Parameter Name="In04_Text" Section="Input" Type="String[16]" />
+        <Parameter Name="BypLi04" Section="Input" Type="&quot;DigValFF&quot;" />
+        <Parameter Name="AV04" Section="Input" Type="&quot;AnaValFF&quot;" />
+        <Parameter Name="AV04_Unit" Section="Input" Type="Int" />
+        <Parameter Name="BypEn" Section="Input" Type="Struct" />
+        <Parameter Name="DefaultOut" Section="Input" Type="Bool" />
+        <Parameter Name="Logic" Section="Input" Type="Int" />
+        <Parameter Name="RstLi" Section="Input" Type="&quot;DigVal&quot;" />
+        <Parameter Name="RstBypLi" Section="Input" Type="&quot;DigVal&quot;" />
+        <Parameter Name="NotUsed" Section="Input" Type="&quot;DigVal&quot;" />
+        <Parameter Name="FirstInEn" Section="Input" Type="&quot;DigValT&quot;" />
+        <Parameter Name="BatchEn" Section="Input" Type="Bool" />
+        <Parameter Name="Occupied" Section="Input" Type="Bool" />
+        <Parameter Name="OS_Perm" Section="Input" Type="Struct" />
+        <Parameter Name="OpSt_In" Section="Input" Type="DWord" />
+        <Parameter Name="Feature" Section="Input" Type="Struct" />
+        <Parameter Name="DataHMI" Section="Input" Type="&quot;HMI_Intlk04&quot;" />
+        <Parameter Name="Out" Section="Output" Type="&quot;DigVal00&quot;" />
+        <Parameter Name="FirstIn" Section="Output" Type="DWord" />
+        <Parameter Name="BypAct" Section="Output" Type="&quot;DigVal&quot;" />
+        <Parameter Name="ErrorNum" Section="Output" Type="Int" />
+      </CallInfo>
+    </Call>
+  </Parts>
+  <Wires>
+    <Wire UId="65">
+      <OpenCon UId="30" />
+      <NameCon UId="28" Name="en" />
+    </Wire>
+    <Wire UId="66">
+      <IdentCon UId="21" />
+      <NameCon UId="28" Name="In01" />
+    </Wire>
+    <Wire UId="67">
+      <IdentCon UId="22" />
+      <NameCon UId="28" Name="InvIn01" />
+    </Wire>
+    <Wire UId="68">
+      <IdentCon UId="23" />
+      <NameCon UId="28" Name="In01_Text" />
+    </Wire>
+    <Wire UId="69">
+      <OpenCon UId="31" />
+      <NameCon UId="28" Name="BypLi01" />
+    </Wire>
+    <Wire UId="70">
+      <OpenCon UId="32" />
+      <NameCon UId="28" Name="AV01" />
+    </Wire>
+    <Wire UId="71">
+      <OpenCon UId="33" />
+      <NameCon UId="28" Name="AV01_Unit" />
+    </Wire>
+    <Wire UId="72">
+      <IdentCon UId="24" />
+      <NameCon UId="28" Name="In02" />
+    </Wire>
+    <Wire UId="73">
+      <OpenCon UId="34" />
+      <NameCon UId="28" Name="InvIn02" />
+    </Wire>
+    <Wire UId="74">
+      <IdentCon UId="25" />
+      <NameCon UId="28" Name="In02_Text" />
+    </Wire>
+    <Wire UId="75">
+      <OpenCon UId="35" />
+      <NameCon UId="28" Name="BypLi02" />
+    </Wire>
+    <Wire UId="76">
+      <OpenCon UId="36" />
+      <NameCon UId="28" Name="AV02" />
+    </Wire>
+    <Wire UId="77">
+      <OpenCon UId="37" />
+      <NameCon UId="28" Name="AV02_Unit" />
+    </Wire>
+    <Wire UId="78">
+      <OpenCon UId="38" />
+      <NameCon UId="28" Name="In03" />
+    </Wire>
+    <Wire UId="79">
+      <OpenCon UId="39" />
+      <NameCon UId="28" Name="InvIn03" />
+    </Wire>
+    <Wire UId="80">
+      <OpenCon UId="40" />
+      <NameCon UId="28" Name="In03_Text" />
+    </Wire>
+    <Wire UId="81">
+      <OpenCon UId="41" />
+      <NameCon UId="28" Name="BypLi03" />
+    </Wire>
+    <Wire UId="82">
+      <OpenCon UId="42" />
+      <NameCon UId="28" Name="AV03" />
+    </Wire>
+    <Wire UId="83">
+      <OpenCon UId="43" />
+      <NameCon UId="28" Name="AV03_Unit" />
+    </Wire>
+    <Wire UId="84">
+      <OpenCon UId="44" />
+      <NameCon UId="28" Name="In04" />
+    </Wire>
+    <Wire UId="85">
+      <OpenCon UId="45" />
+      <NameCon UId="28" Name="InvIn04" />
+    </Wire>
+    <Wire UId="86">
+      <OpenCon UId="46" />
+      <NameCon UId="28" Name="In04_Text" />
+    </Wire>
+    <Wire UId="87">
+      <OpenCon UId="47" />
+      <NameCon UId="28" Name="BypLi04" />
+    </Wire>
+    <Wire UId="88">
+      <OpenCon UId="48" />
+      <NameCon UId="28" Name="AV04" />
+    </Wire>
+    <Wire UId="89">
+      <OpenCon UId="49" />
+      <NameCon UId="28" Name="AV04_Unit" />
+    </Wire>
+    <Wire UId="90">
+      <OpenCon UId="50" />
+      <NameCon UId="28" Name="BypEn" />
+    </Wire>
+    <Wire UId="91">
+      <OpenCon UId="51" />
+      <NameCon UId="28" Name="DefaultOut" />
+    </Wire>
+    <Wire UId="92">
+      <IdentCon UId="26" />
+      <NameCon UId="28" Name="Logic" />
+    </Wire>
+    <Wire UId="93">
+      <OpenCon UId="52" />
+      <NameCon UId="28" Name="RstLi" />
+    </Wire>
+    <Wire UId="94">
+      <OpenCon UId="53" />
+      <NameCon UId="28" Name="RstBypLi" />
+    </Wire>
+    <Wire UId="95">
+      <OpenCon UId="54" />
+      <NameCon UId="28" Name="NotUsed" />
+    </Wire>
+    <Wire UId="96">
+      <OpenCon UId="55" />
+      <NameCon UId="28" Name="FirstInEn" />
+    </Wire>
+    <Wire UId="97">
+      <OpenCon UId="56" />
+      <NameCon UId="28" Name="BatchEn" />
+    </Wire>
+    <Wire UId="98">
+      <OpenCon UId="57" />
+      <NameCon UId="28" Name="Occupied" />
+    </Wire>
+    <Wire UId="99">
+      <OpenCon UId="58" />
+      <NameCon UId="28" Name="OS_Perm" />
+    </Wire>
+    <Wire UId="100">
+      <OpenCon UId="59" />
+      <NameCon UId="28" Name="OpSt_In" />
+    </Wire>
+    <Wire UId="101">
+      <OpenCon UId="60" />
+      <NameCon UId="28" Name="Feature" />
+    </Wire>
+    <Wire UId="102">
+      <OpenCon UId="61" />
+      <NameCon UId="28" Name="DataHMI" />
+    </Wire>
+    <Wire UId="103">
+      <NameCon UId="28" Name="Out" />
+      <IdentCon UId="27" />
+    </Wire>
+    <Wire UId="104">
+      <NameCon UId="28" Name="FirstIn" />
+      <OpenCon UId="62" />
+    </Wire>
+    <Wire UId="105">
+      <NameCon UId="28" Name="BypAct" />
+      <OpenCon UId="63" />
+    </Wire>
+    <Wire UId="106">
+      <NameCon UId="28" Name="ErrorNum" />
+      <OpenCon UId="64" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>FBD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="18" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="19" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="1A" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="1B" CompositionName="Items">
+                <AttributeList>
+                  <Culture>fr-FR</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="1C" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="1D" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="1E" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>VlvAn Intlock</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="1F" CompositionName="Items">
+                <AttributeList>
+                  <Culture>fr-FR</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="20" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v5">
+  <Parts>
+    <Access Scope="GlobalVariable" UId="21">
+      <Symbol>
+        <Component Name="Filling" />
+        <Component Name="MTP" />
+        <Component Name="ServiceControl" />
+        <Component Name="StateCur" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="22">
+      <Symbol>
+        <Component Name="State" />
+        <Component Name="Execute" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="23">
+      <Symbol>
+        <Component Name="Filling" />
+        <Component Name="MTP" />
+        <Component Name="ServiceControl" />
+        <Component Name="ProcedureCur" />
+      </Symbol>
+    </Access>
+    <Access Scope="LiteralConstant" UId="24">
+      <Constant>
+        <ConstantType>DWord</ConstantType>
+        <ConstantValue>2</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="GlobalVariable" UId="25">
+      <Symbol>
+        <Component Name="LIT100DB" />
+        <Component Name="PV_WH_Act" />
+        <Component Name="Value" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="26">
+      <Symbol>
+        <Component Name="V100DB" />
+        <Component Name="OpenAut" />
+        <Component Name="Value" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="27">
+      <Symbol>
+        <Component Name="Filling" />
+        <Component Name="MTP" />
+        <Component Name="ServiceControl" />
+        <Component Name="StateCur" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="28">
+      <Symbol>
+        <Component Name="State" />
+        <Component Name="Completing" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="29">
+      <Symbol>
+        <Component Name="Filling" />
+        <Component Name="MTP" />
+        <Component Name="ServiceControl" />
+        <Component Name="StateCur" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="30">
+      <Symbol>
+        <Component Name="State" />
+        <Component Name="Stopping" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="31">
+      <Symbol>
+        <Component Name="Filling" />
+        <Component Name="MTP" />
+        <Component Name="ServiceControl" />
+        <Component Name="StateCur" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="32">
+      <Symbol>
+        <Component Name="State" />
+        <Component Name="Aborting" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="33">
+      <Symbol>
+        <Component Name="Filling" />
+        <Component Name="MTP" />
+        <Component Name="ServiceControl" />
+        <Component Name="StateCur" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="34">
+      <Symbol>
+        <Component Name="State" />
+        <Component Name="Holding" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="35">
+      <Symbol>
+        <Component Name="Filling" />
+        <Component Name="MTP" />
+        <Component Name="ServiceControl" />
+        <Component Name="StateCur" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="36">
+      <Symbol>
+        <Component Name="State" />
+        <Component Name="Pausing" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="37">
+      <Symbol>
+        <Component Name="LIT100DB" />
+        <Component Name="PV_WH_Act" />
+        <Component Name="Value" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="38">
+      <Symbol>
+        <Component Name="V100DB" />
+        <Component Name="CloseAut" />
+        <Component Name="Value" />
+      </Symbol>
+    </Access>
+    <Access Scope="LiteralConstant" UId="39">
+      <Constant>
+        <ConstantType>Bool</ConstantType>
+        <ConstantValue>true</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="LiteralConstant" UId="40">
+      <Constant>
+        <ConstantType>Bool</ConstantType>
+        <ConstantValue>true</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="LiteralConstant" UId="41">
+      <Constant>
+        <ConstantType>Real</ConstantType>
+        <ConstantValue>10.0</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="LiteralConstant" UId="42">
+      <Constant>
+        <ConstantType>Real</ConstantType>
+        <ConstantValue>10.0</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="LiteralConstant" UId="43">
+      <Constant>
+        <ConstantType>Bool</ConstantType>
+        <ConstantValue>false</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="LiteralConstant" UId="44">
+      <Constant>
+        <ConstantType>Void</ConstantType>
+        <ConstantValue>NULL</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="LiteralConstant" UId="45">
+      <Constant>
+        <ConstantType>Void</ConstantType>
+        <ConstantValue>NULL</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="LiteralConstant" UId="46">
+      <Constant>
+        <ConstantType>Void</ConstantType>
+        <ConstantValue>NULL</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="LiteralConstant" UId="47">
+      <Constant>
+        <ConstantType>Void</ConstantType>
+        <ConstantValue>NULL</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="LiteralConstant" UId="48">
+      <Constant>
+        <ConstantType>Void</ConstantType>
+        <ConstantValue>NULL</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="GlobalVariable" UId="49">
+      <Symbol>
+        <Component Name="V100ChOut" />
+        <Component Name="PV_In" />
+      </Symbol>
+    </Access>
+    <Part Name="Eq" UId="50">
+      <TemplateValue Name="SrcType" Type="Type">DWord</TemplateValue>
+    </Part>
+    <Part Name="Eq" UId="51">
+      <TemplateValue Name="SrcType" Type="Type">DWord</TemplateValue>
+    </Part>
+    <Part Name="A" UId="52">
+      <TemplateValue Name="Card" Type="Cardinality">3</TemplateValue>
+      <Negated Name="in3" />
+    </Part>
+    <Part Name="Coil" UId="53" />
+    <Part Name="Eq" UId="54">
+      <TemplateValue Name="SrcType" Type="Type">DWord</TemplateValue>
+    </Part>
+    <Part Name="Eq" UId="55">
+      <TemplateValue Name="SrcType" Type="Type">DWord</TemplateValue>
+    </Part>
+    <Part Name="Eq" UId="56">
+      <TemplateValue Name="SrcType" Type="Type">DWord</TemplateValue>
+    </Part>
+    <Part Name="Eq" UId="57">
+      <TemplateValue Name="SrcType" Type="Type">DWord</TemplateValue>
+    </Part>
+    <Part Name="Eq" UId="58">
+      <TemplateValue Name="SrcType" Type="Type">DWord</TemplateValue>
+    </Part>
+    <Part Name="O" UId="59">
+      <TemplateValue Name="Card" Type="Cardinality">6</TemplateValue>
+    </Part>
+    <Part Name="Coil" UId="60" />
+    <Call UId="61">
+      <CallInfo Name="VlvL" BlockType="FB">
+        <Instance Scope="GlobalVariable" UId="62">
+          <Component Name="V100DB" />
+        </Instance>
+        <Parameter Name="OpenAut" Section="Input" Type="&quot;DigVal&quot;" />
+        <Parameter Name="CloseAut" Section="Input" Type="&quot;DigVal&quot;" />
+        <Parameter Name="ModLiOp" Section="Input" Type="&quot;DigVal&quot;" />
+        <Parameter Name="AutModLi" Section="Input" Type="&quot;DigVal&quot;" />
+        <Parameter Name="ManModLi" Section="Input" Type="&quot;DigVal&quot;" />
+        <Parameter Name="LocalLi" Section="Input" Type="&quot;DigVal&quot;" />
+        <Parameter Name="OosLi" Section="Input" Type="&quot;DigVal&quot;" />
+        <Parameter Name="OpenLocal" Section="Input" Type="&quot;DigVal&quot;" />
+        <Parameter Name="CloseLocal" Section="Input" Type="&quot;DigVal&quot;" />
+        <Parameter Name="LocalSetting" Section="Input" Type="Int" />
+        <Parameter Name="FbkOpen" Section="Input" Type="&quot;DigValFF&quot;" />
+        <Parameter Name="FbkClose" Section="Input" Type="&quot;DigValFF&quot;" />
+        <Parameter Name="NoFbkOpen" Section="Input" Type="Bool" />
+        <Parameter Name="NoFbkClose" Section="Input" Type="Bool" />
+        <Parameter Name="Monitor" Section="Input" Type="Bool" />
+        <Parameter Name="MonTiStatic" Section="Input" Type="Real" />
+        <Parameter Name="MonTiDynamic" Section="Input" Type="Real" />
+        <Parameter Name="PulseWidth" Section="Input" Type="Real" />
+        <Parameter Name="MonSafePos" Section="Input" Type="Bool" />
+        <Parameter Name="SafePos" Section="Input" Type="Bool" />
+        <Parameter Name="WarnTiMan" Section="Input" Type="Real" />
+        <Parameter Name="WarnTiAut" Section="Input" Type="Real" />
+        <Parameter Name="RstLi" Section="Input" Type="&quot;DigVal&quot;" />
+        <Parameter Name="BypProt" Section="Input" Type="Bool" />
+        <Parameter Name="Permit" Section="Input" Type="&quot;DigValTFF&quot;" />
+        <Parameter Name="Perm_En" Section="Input" Type="Bool" />
+        <Parameter Name="Intlock" Section="Input" Type="&quot;DigValTFF&quot;" />
+        <Parameter Name="Intl_En" Section="Input" Type="Bool" />
+        <Parameter Name="Protect" Section="Input" Type="&quot;DigValTFF&quot;" />
+        <Parameter Name="Prot_En" Section="Input" Type="Bool" />
+        <Parameter Name="OpenForce" Section="Input" Type="&quot;DigVal&quot;" />
+        <Parameter Name="CloseForce" Section="Input" Type="&quot;DigVal&quot;" />
+        <Parameter Name="UserAna1" Section="Input" Type="&quot;AnaValFF&quot;" />
+        <Parameter Name="UA1unit" Section="Input" Type="Int" />
+        <Parameter Name="UserAna2" Section="Input" Type="&quot;AnaValFF&quot;" />
+        <Parameter Name="UA2unit" Section="Input" Type="Int" />
+        <Parameter Name="MsgLock" Section="Input" Type="&quot;DigVal&quot;" />
+        <Parameter Name="SimLiOp" Section="Input" Type="&quot;DigVal&quot;" />
+        <Parameter Name="SimOnLi" Section="Input" Type="&quot;DigVal&quot;" />
+        <Parameter Name="SimOn" Section="Input" Type="Bool" />
+        <Parameter Name="RunUpCyc" Section="Input" Type="Int" />
+        <Parameter Name="BatchEn" Section="Input" Type="Bool" />
+        <Parameter Name="BatchID" Section="Input" Type="DWord" />
+        <Parameter Name="BatchName" Section="Input" Type="String[16]" />
+        <Parameter Name="StepNo" Section="Input" Type="DWord" />
+        <Parameter Name="Occupied" Section="Input" Type="Bool" />
+        <Parameter Name="FaultExt" Section="Input" Type="&quot;DigVal&quot;" />
+        <Parameter Name="CSF" Section="Input" Type="&quot;DigVal&quot;" />
+        <Parameter Name="ExtMsg1" Section="Input" Type="&quot;DigVal&quot;" />
+        <Parameter Name="ExtMsg2" Section="Input" Type="&quot;DigVal&quot;" />
+        <Parameter Name="ExtMsg3" Section="Input" Type="&quot;DigVal&quot;" />
+        <Parameter Name="ExtVal04" Section="Input" Type="Variant" />
+        <Parameter Name="ExtVal05" Section="Input" Type="Variant" />
+        <Parameter Name="ExtVal06" Section="Input" Type="Variant" />
+        <Parameter Name="ExtVal07" Section="Input" Type="Variant" />
+        <Parameter Name="ExtVal08" Section="Input" Type="Variant" />
+        <Parameter Name="OS_Perm" Section="Input" Type="Struct" />
+        <Parameter Name="OpSt_In" Section="Input" Type="DWord" />
+        <Parameter Name="Feature" Section="Input" Type="Struct" />
+        <Parameter Name="Feature2" Section="Input" Type="Struct" />
+        <Parameter Name="DataHMI" Section="Input" Type="&quot;HMI_VlvL&quot;" />
+        <Parameter Name="MonDynErr" Section="Output" Type="&quot;DigVal&quot;" />
+        <Parameter Name="MonStaErr" Section="Output" Type="&quot;DigVal&quot;" />
+        <Parameter Name="CurrMon" Section="Output" Type="DInt" />
+        <Parameter Name="LockAct" Section="Output" Type="&quot;DigVal&quot;" />
+        <Parameter Name="GrpErr" Section="Output" Type="&quot;DigVal&quot;" />
+        <Parameter Name="RdyToStart" Section="Output" Type="&quot;DigVal&quot;" />
+        <Parameter Name="RdyToReset" Section="Output" Type="&quot;DigVal&quot;" />
+        <Parameter Name="WarnAct" Section="Output" Type="&quot;DigVal&quot;" />
+        <Parameter Name="Ctrl" Section="Output" Type="&quot;DigVal&quot;" />
+        <Parameter Name="P_Open" Section="Output" Type="&quot;DigVal&quot;" />
+        <Parameter Name="P_Close" Section="Output" Type="&quot;DigVal&quot;" />
+        <Parameter Name="P_Rst" Section="Output" Type="&quot;DigVal&quot;" />
+        <Parameter Name="LocalAct" Section="Output" Type="&quot;DigVal&quot;" />
+        <Parameter Name="AutAct" Section="Output" Type="&quot;DigVal&quot;" />
+        <Parameter Name="ManAct" Section="Output" Type="&quot;DigValT&quot;" />
+        <Parameter Name="OosAct" Section="Output" Type="&quot;DigVal&quot;" />
+        <Parameter Name="FbkOpenOut" Section="Output" Type="&quot;DigVal&quot;" />
+        <Parameter Name="FbkCloseOut" Section="Output" Type="&quot;DigVal&quot;" />
+        <Parameter Name="Opened" Section="Output" Type="&quot;DigVal&quot;" />
+        <Parameter Name="Closed" Section="Output" Type="&quot;DigVal&quot;" />
+        <Parameter Name="Opening" Section="Output" Type="&quot;DigVal&quot;" />
+        <Parameter Name="Closing" Section="Output" Type="&quot;DigVal&quot;" />
+        <Parameter Name="ErrorNum" Section="Output" Type="Int" />
+        <Parameter Name="MsgStat" Section="Output" Type="Array[0..#C_ALARM_MAX] of Byte" />
+      </CallInfo>
+    </Call>
+  </Parts>
+  <Wires>
+    <Wire UId="138">
+      <IdentCon UId="21" />
+      <NameCon UId="50" Name="in1" />
+    </Wire>
+    <Wire UId="139">
+      <IdentCon UId="22" />
+      <NameCon UId="50" Name="in2" />
+    </Wire>
+    <Wire UId="140">
+      <NameCon UId="50" Name="out" />
+      <NameCon UId="52" Name="in1" />
+    </Wire>
+    <Wire UId="141">
+      <IdentCon UId="23" />
+      <NameCon UId="51" Name="in1" />
+    </Wire>
+    <Wire UId="142">
+      <IdentCon UId="24" />
+      <NameCon UId="51" Name="in2" />
+    </Wire>
+    <Wire UId="143">
+      <NameCon UId="51" Name="out" />
+      <NameCon UId="52" Name="in2" />
+    </Wire>
+    <Wire UId="144">
+      <IdentCon UId="25" />
+      <NameCon UId="52" Name="in3" />
+    </Wire>
+    <Wire UId="145">
+      <NameCon UId="52" Name="out" />
+      <NameCon UId="53" Name="in" />
+    </Wire>
+    <Wire UId="146">
+      <IdentCon UId="26" />
+      <NameCon UId="53" Name="operand" />
+    </Wire>
+    <Wire UId="147">
+      <IdentCon UId="27" />
+      <NameCon UId="54" Name="in1" />
+    </Wire>
+    <Wire UId="148">
+      <IdentCon UId="28" />
+      <NameCon UId="54" Name="in2" />
+    </Wire>
+    <Wire UId="149">
+      <NameCon UId="54" Name="out" />
+      <NameCon UId="59" Name="in1" />
+    </Wire>
+    <Wire UId="150">
+      <IdentCon UId="29" />
+      <NameCon UId="55" Name="in1" />
+    </Wire>
+    <Wire UId="151">
+      <IdentCon UId="30" />
+      <NameCon UId="55" Name="in2" />
+    </Wire>
+    <Wire UId="152">
+      <NameCon UId="55" Name="out" />
+      <NameCon UId="59" Name="in2" />
+    </Wire>
+    <Wire UId="153">
+      <IdentCon UId="31" />
+      <NameCon UId="56" Name="in1" />
+    </Wire>
+    <Wire UId="154">
+      <IdentCon UId="32" />
+      <NameCon UId="56" Name="in2" />
+    </Wire>
+    <Wire UId="155">
+      <NameCon UId="56" Name="out" />
+      <NameCon UId="59" Name="in3" />
+    </Wire>
+    <Wire UId="156">
+      <IdentCon UId="33" />
+      <NameCon UId="57" Name="in1" />
+    </Wire>
+    <Wire UId="157">
+      <IdentCon UId="34" />
+      <NameCon UId="57" Name="in2" />
+    </Wire>
+    <Wire UId="158">
+      <NameCon UId="57" Name="out" />
+      <NameCon UId="59" Name="in4" />
+    </Wire>
+    <Wire UId="159">
+      <IdentCon UId="35" />
+      <NameCon UId="58" Name="in1" />
+    </Wire>
+    <Wire UId="160">
+      <IdentCon UId="36" />
+      <NameCon UId="58" Name="in2" />
+    </Wire>
+    <Wire UId="161">
+      <NameCon UId="58" Name="out" />
+      <NameCon UId="59" Name="in5" />
+    </Wire>
+    <Wire UId="162">
+      <IdentCon UId="37" />
+      <NameCon UId="59" Name="in6" />
+    </Wire>
+    <Wire UId="163">
+      <NameCon UId="59" Name="out" />
+      <NameCon UId="60" Name="in" />
+    </Wire>
+    <Wire UId="164">
+      <IdentCon UId="38" />
+      <NameCon UId="60" Name="operand" />
+    </Wire>
+    <Wire UId="165">
+      <OpenCon UId="63" />
+      <NameCon UId="61" Name="en" />
+    </Wire>
+    <Wire UId="166">
+      <OpenCon UId="64" />
+      <NameCon UId="61" Name="OpenAut" />
+    </Wire>
+    <Wire UId="167">
+      <OpenCon UId="65" />
+      <NameCon UId="61" Name="CloseAut" />
+    </Wire>
+    <Wire UId="168">
+      <OpenCon UId="66" />
+      <NameCon UId="61" Name="ModLiOp" />
+    </Wire>
+    <Wire UId="169">
+      <OpenCon UId="67" />
+      <NameCon UId="61" Name="AutModLi" />
+    </Wire>
+    <Wire UId="170">
+      <OpenCon UId="68" />
+      <NameCon UId="61" Name="ManModLi" />
+    </Wire>
+    <Wire UId="171">
+      <OpenCon UId="69" />
+      <NameCon UId="61" Name="LocalLi" />
+    </Wire>
+    <Wire UId="172">
+      <OpenCon UId="70" />
+      <NameCon UId="61" Name="OosLi" />
+    </Wire>
+    <Wire UId="173">
+      <OpenCon UId="71" />
+      <NameCon UId="61" Name="OpenLocal" />
+    </Wire>
+    <Wire UId="174">
+      <OpenCon UId="72" />
+      <NameCon UId="61" Name="CloseLocal" />
+    </Wire>
+    <Wire UId="175">
+      <OpenCon UId="73" />
+      <NameCon UId="61" Name="LocalSetting" />
+    </Wire>
+    <Wire UId="176">
+      <OpenCon UId="74" />
+      <NameCon UId="61" Name="FbkOpen" />
+    </Wire>
+    <Wire UId="177">
+      <OpenCon UId="75" />
+      <NameCon UId="61" Name="FbkClose" />
+    </Wire>
+    <Wire UId="178">
+      <IdentCon UId="39" />
+      <NameCon UId="61" Name="NoFbkOpen" />
+    </Wire>
+    <Wire UId="179">
+      <IdentCon UId="40" />
+      <NameCon UId="61" Name="NoFbkClose" />
+    </Wire>
+    <Wire UId="180">
+      <OpenCon UId="76" />
+      <NameCon UId="61" Name="Monitor" />
+    </Wire>
+    <Wire UId="181">
+      <IdentCon UId="41" />
+      <NameCon UId="61" Name="MonTiStatic" />
+    </Wire>
+    <Wire UId="182">
+      <IdentCon UId="42" />
+      <NameCon UId="61" Name="MonTiDynamic" />
+    </Wire>
+    <Wire UId="183">
+      <OpenCon UId="77" />
+      <NameCon UId="61" Name="PulseWidth" />
+    </Wire>
+    <Wire UId="184">
+      <OpenCon UId="78" />
+      <NameCon UId="61" Name="MonSafePos" />
+    </Wire>
+    <Wire UId="185">
+      <IdentCon UId="43" />
+      <NameCon UId="61" Name="SafePos" />
+    </Wire>
+    <Wire UId="186">
+      <OpenCon UId="79" />
+      <NameCon UId="61" Name="WarnTiMan" />
+    </Wire>
+    <Wire UId="187">
+      <OpenCon UId="80" />
+      <NameCon UId="61" Name="WarnTiAut" />
+    </Wire>
+    <Wire UId="188">
+      <OpenCon UId="81" />
+      <NameCon UId="61" Name="RstLi" />
+    </Wire>
+    <Wire UId="189">
+      <OpenCon UId="82" />
+      <NameCon UId="61" Name="BypProt" />
+    </Wire>
+    <Wire UId="190">
+      <OpenCon UId="83" />
+      <NameCon UId="61" Name="Permit" />
+    </Wire>
+    <Wire UId="191">
+      <OpenCon UId="84" />
+      <NameCon UId="61" Name="Perm_En" />
+    </Wire>
+    <Wire UId="192">
+      <OpenCon UId="85" />
+      <NameCon UId="61" Name="Intlock" />
+    </Wire>
+    <Wire UId="193">
+      <OpenCon UId="86" />
+      <NameCon UId="61" Name="Intl_En" />
+    </Wire>
+    <Wire UId="194">
+      <OpenCon UId="87" />
+      <NameCon UId="61" Name="Protect" />
+    </Wire>
+    <Wire UId="195">
+      <OpenCon UId="88" />
+      <NameCon UId="61" Name="Prot_En" />
+    </Wire>
+    <Wire UId="196">
+      <OpenCon UId="89" />
+      <NameCon UId="61" Name="OpenForce" />
+    </Wire>
+    <Wire UId="197">
+      <OpenCon UId="90" />
+      <NameCon UId="61" Name="CloseForce" />
+    </Wire>
+    <Wire UId="198">
+      <OpenCon UId="91" />
+      <NameCon UId="61" Name="UserAna1" />
+    </Wire>
+    <Wire UId="199">
+      <OpenCon UId="92" />
+      <NameCon UId="61" Name="UA1unit" />
+    </Wire>
+    <Wire UId="200">
+      <OpenCon UId="93" />
+      <NameCon UId="61" Name="UserAna2" />
+    </Wire>
+    <Wire UId="201">
+      <OpenCon UId="94" />
+      <NameCon UId="61" Name="UA2unit" />
+    </Wire>
+    <Wire UId="202">
+      <OpenCon UId="95" />
+      <NameCon UId="61" Name="MsgLock" />
+    </Wire>
+    <Wire UId="203">
+      <OpenCon UId="96" />
+      <NameCon UId="61" Name="SimLiOp" />
+    </Wire>
+    <Wire UId="204">
+      <OpenCon UId="97" />
+      <NameCon UId="61" Name="SimOnLi" />
+    </Wire>
+    <Wire UId="205">
+      <OpenCon UId="98" />
+      <NameCon UId="61" Name="SimOn" />
+    </Wire>
+    <Wire UId="206">
+      <OpenCon UId="99" />
+      <NameCon UId="61" Name="RunUpCyc" />
+    </Wire>
+    <Wire UId="207">
+      <OpenCon UId="100" />
+      <NameCon UId="61" Name="BatchEn" />
+    </Wire>
+    <Wire UId="208">
+      <OpenCon UId="101" />
+      <NameCon UId="61" Name="BatchID" />
+    </Wire>
+    <Wire UId="209">
+      <OpenCon UId="102" />
+      <NameCon UId="61" Name="BatchName" />
+    </Wire>
+    <Wire UId="210">
+      <OpenCon UId="103" />
+      <NameCon UId="61" Name="StepNo" />
+    </Wire>
+    <Wire UId="211">
+      <OpenCon UId="104" />
+      <NameCon UId="61" Name="Occupied" />
+    </Wire>
+    <Wire UId="212">
+      <OpenCon UId="105" />
+      <NameCon UId="61" Name="FaultExt" />
+    </Wire>
+    <Wire UId="213">
+      <OpenCon UId="106" />
+      <NameCon UId="61" Name="CSF" />
+    </Wire>
+    <Wire UId="214">
+      <OpenCon UId="107" />
+      <NameCon UId="61" Name="ExtMsg1" />
+    </Wire>
+    <Wire UId="215">
+      <OpenCon UId="108" />
+      <NameCon UId="61" Name="ExtMsg2" />
+    </Wire>
+    <Wire UId="216">
+      <OpenCon UId="109" />
+      <NameCon UId="61" Name="ExtMsg3" />
+    </Wire>
+    <Wire UId="217">
+      <IdentCon UId="44" />
+      <NameCon UId="61" Name="ExtVal04" />
+    </Wire>
+    <Wire UId="218">
+      <IdentCon UId="45" />
+      <NameCon UId="61" Name="ExtVal05" />
+    </Wire>
+    <Wire UId="219">
+      <IdentCon UId="46" />
+      <NameCon UId="61" Name="ExtVal06" />
+    </Wire>
+    <Wire UId="220">
+      <IdentCon UId="47" />
+      <NameCon UId="61" Name="ExtVal07" />
+    </Wire>
+    <Wire UId="221">
+      <IdentCon UId="48" />
+      <NameCon UId="61" Name="ExtVal08" />
+    </Wire>
+    <Wire UId="222">
+      <OpenCon UId="110" />
+      <NameCon UId="61" Name="OS_Perm" />
+    </Wire>
+    <Wire UId="223">
+      <OpenCon UId="111" />
+      <NameCon UId="61" Name="OpSt_In" />
+    </Wire>
+    <Wire UId="224">
+      <OpenCon UId="112" />
+      <NameCon UId="61" Name="Feature" />
+    </Wire>
+    <Wire UId="225">
+      <OpenCon UId="113" />
+      <NameCon UId="61" Name="Feature2" />
+    </Wire>
+    <Wire UId="226">
+      <OpenCon UId="114" />
+      <NameCon UId="61" Name="DataHMI" />
+    </Wire>
+    <Wire UId="227">
+      <NameCon UId="61" Name="MonDynErr" />
+      <OpenCon UId="115" />
+    </Wire>
+    <Wire UId="228">
+      <NameCon UId="61" Name="MonStaErr" />
+      <OpenCon UId="116" />
+    </Wire>
+    <Wire UId="229">
+      <NameCon UId="61" Name="CurrMon" />
+      <OpenCon UId="117" />
+    </Wire>
+    <Wire UId="230">
+      <NameCon UId="61" Name="LockAct" />
+      <OpenCon UId="118" />
+    </Wire>
+    <Wire UId="231">
+      <NameCon UId="61" Name="GrpErr" />
+      <OpenCon UId="119" />
+    </Wire>
+    <Wire UId="232">
+      <NameCon UId="61" Name="RdyToStart" />
+      <OpenCon UId="120" />
+    </Wire>
+    <Wire UId="233">
+      <NameCon UId="61" Name="RdyToReset" />
+      <OpenCon UId="121" />
+    </Wire>
+    <Wire UId="234">
+      <NameCon UId="61" Name="WarnAct" />
+      <OpenCon UId="122" />
+    </Wire>
+    <Wire UId="235">
+      <NameCon UId="61" Name="Ctrl" />
+      <IdentCon UId="49" />
+    </Wire>
+    <Wire UId="236">
+      <NameCon UId="61" Name="P_Open" />
+      <OpenCon UId="123" />
+    </Wire>
+    <Wire UId="237">
+      <NameCon UId="61" Name="P_Close" />
+      <OpenCon UId="124" />
+    </Wire>
+    <Wire UId="238">
+      <NameCon UId="61" Name="P_Rst" />
+      <OpenCon UId="125" />
+    </Wire>
+    <Wire UId="239">
+      <NameCon UId="61" Name="LocalAct" />
+      <OpenCon UId="126" />
+    </Wire>
+    <Wire UId="240">
+      <NameCon UId="61" Name="AutAct" />
+      <OpenCon UId="127" />
+    </Wire>
+    <Wire UId="241">
+      <NameCon UId="61" Name="ManAct" />
+      <OpenCon UId="128" />
+    </Wire>
+    <Wire UId="242">
+      <NameCon UId="61" Name="OosAct" />
+      <OpenCon UId="129" />
+    </Wire>
+    <Wire UId="243">
+      <NameCon UId="61" Name="FbkOpenOut" />
+      <OpenCon UId="130" />
+    </Wire>
+    <Wire UId="244">
+      <NameCon UId="61" Name="FbkCloseOut" />
+      <OpenCon UId="131" />
+    </Wire>
+    <Wire UId="245">
+      <NameCon UId="61" Name="Opened" />
+      <OpenCon UId="132" />
+    </Wire>
+    <Wire UId="246">
+      <NameCon UId="61" Name="Closed" />
+      <OpenCon UId="133" />
+    </Wire>
+    <Wire UId="247">
+      <NameCon UId="61" Name="Opening" />
+      <OpenCon UId="134" />
+    </Wire>
+    <Wire UId="248">
+      <NameCon UId="61" Name="Closing" />
+      <OpenCon UId="135" />
+    </Wire>
+    <Wire UId="249">
+      <NameCon UId="61" Name="ErrorNum" />
+      <OpenCon UId="136" />
+    </Wire>
+    <Wire UId="250">
+      <NameCon UId="61" Name="MsgStat" />
+      <OpenCon UId="137" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>FBD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="21" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="22" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="23" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="24" CompositionName="Items">
+                <AttributeList>
+                  <Culture>fr-FR</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="25" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="26" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="27" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>VlvAnL</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="28" CompositionName="Items">
+                <AttributeList>
+                  <Culture>fr-FR</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="29" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v5">
+  <Parts>
+    <Access Scope="GlobalVariable" UId="21">
+      <Symbol>
+        <Component Name="V100DB" />
+      </Symbol>
+    </Access>
+    <Call UId="22">
+      <CallInfo Name="MTPBinVlv" BlockType="FB">
+        <Instance Scope="GlobalVariable" UId="23">
+          <Component Name="V-100" />
+        </Instance>
+        <Parameter Name="VlvL" Section="InOut" Type="&quot;VlvL&quot;" />
+      </CallInfo>
+    </Call>
+  </Parts>
+  <Wires>
+    <Wire UId="25">
+      <OpenCon UId="24" />
+      <NameCon UId="22" Name="en" />
+    </Wire>
+    <Wire UId="26">
+      <IdentCon UId="21" />
+      <NameCon UId="22" Name="VlvL" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>FBD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="2A" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="2B" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="2C" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="2D" CompositionName="Items">
+                <AttributeList>
+                  <Culture>fr-FR</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="2E" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="2F" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="30" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>MTP</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="31" CompositionName="Items">
+                <AttributeList>
+                  <Culture>fr-FR</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="32" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v5">
+  <Parts>
+    <Access Scope="GlobalVariable" UId="21">
+      <Symbol>
+        <Component Name="V100DB" />
+        <Component Name="Ctrl" />
+      </Symbol>
+    </Access>
+    <Call UId="22">
+      <CallInfo Name="DiOu" BlockType="FB">
+        <Instance Scope="GlobalVariable" UId="23">
+          <Component Name="V100ChOut" />
+        </Instance>
+        <Parameter Name="PV_In" Section="Input" Type="&quot;DigVal&quot;" />
+        <Parameter Name="InvPV_Out" Section="Input" Type="Bool" />
+        <Parameter Name="ProImQB" Section="Input" Type="Bool" />
+        <Parameter Name="Feature" Section="Input" Type="Struct" />
+        <Parameter Name="Bad" Section="Output" Type="&quot;DigVal&quot;" />
+        <Parameter Name="PV_Out" Section="Output" Type="Bool" />
+      </CallInfo>
+    </Call>
+  </Parts>
+  <Wires>
+    <Wire UId="30">
+      <OpenCon UId="24" />
+      <NameCon UId="22" Name="en" />
+    </Wire>
+    <Wire UId="31">
+      <IdentCon UId="21" />
+      <NameCon UId="22" Name="PV_In" />
+    </Wire>
+    <Wire UId="32">
+      <OpenCon UId="25" />
+      <NameCon UId="22" Name="InvPV_Out" />
+    </Wire>
+    <Wire UId="33">
+      <OpenCon UId="26" />
+      <NameCon UId="22" Name="ProImQB" />
+    </Wire>
+    <Wire UId="34">
+      <OpenCon UId="27" />
+      <NameCon UId="22" Name="Feature" />
+    </Wire>
+    <Wire UId="35">
+      <NameCon UId="22" Name="Bad" />
+      <OpenCon UId="28" />
+    </Wire>
+    <Wire UId="36">
+      <NameCon UId="22" Name="PV_Out" />
+      <OpenCon UId="29" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>FBD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="33" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="34" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="35" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="36" CompositionName="Items">
+                <AttributeList>
+                  <Culture>fr-FR</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="37" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="38" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="39" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>Channel output</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="3A" CompositionName="Items">
+                <AttributeList>
+                  <Culture>fr-FR</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <MultilingualText ID="3B" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="3C" CompositionName="Items">
+            <AttributeList>
+              <Culture>de-DE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="3D" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="3E" CompositionName="Items">
+            <AttributeList>
+              <Culture>fr-FR</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </SW.Blocks.FC>
+</Document>

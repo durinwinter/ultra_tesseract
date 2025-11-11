@@ -1,0 +1,9 @@
+﻿DocumentHash:
+  - FileName: LCFL_typeOSLevelSiemens.xml
+    Hash: /r1GcT0jMlxfOfxOkLOx9tsYGliXy2RRQtVLKiZdg5o=
+LibraryMetaFileHash: Cv5TAiHLYSs7gTbX0JsCrw0ErcX2BamtI1WPTHe2ON0=
+LibraryVersion:
+  Guid: 36e200d3-7566-46e5-b571-7d3e08b7133b
+  DependsOn:
+    - TypeName: LCFL_typeMTPOSLevel
+      VersionNumber: 1.0.0

@@ -1,0 +1,10 @@
+﻿LibraryType:
+  Guid: 50ad628c-ff89-4dd8-bb43-865fbad4d426
+  Comment:
+    en-US: PLC data type for ModuleTypePackageRevision
+LibraryVersion:
+  VersionNumber: 1.0.0
+  Author: Siemens AG
+  IsDefault: true
+  Comment:
+    en-US: First official version

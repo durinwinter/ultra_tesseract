@@ -1,0 +1,8 @@
+﻿LibraryType:
+  Guid: 9524a775-d39e-4cc6-83a2-8433511c8828
+LibraryVersion:
+  VersionNumber: 1.0.2
+  Author: Siemens AG
+  IsDefault: true
+  Comment:
+    de-DE: parameterIndex Array[0..511] of Byte

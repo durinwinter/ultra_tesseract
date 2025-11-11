@@ -1,0 +1,8 @@
+﻿LibraryType:
+  Guid: 2238f21c-dbe7-4800-a8b7-daec4d94ccf6
+  Comment:
+    de-DE: Can be simulated with Simatic S7-PLCSIM activated
+LibraryVersion:
+  VersionNumber: 1.0.4
+  Author: z004bv0s
+  IsDefault: true

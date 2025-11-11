@@ -1,0 +1,11 @@
+﻿DocumentHash:
+  - FileName: UDT_Service_StepRawDataMedium.xml
+    Hash: zc1tlrKGI8C1viBA2skmOxnGsvJQ9057nSA2D/AnqEQ=
+LibraryMetaFileHash: Simel3QOD0lc92yowNJiwB9PT+Uyoef8vz9/lr37Y8U=
+LibraryVersion:
+  Guid: 4d9131d3-2e6e-453f-98ab-9924b177170e
+  DependsOn:
+    - TypeName: UDT_Service_ParameterDefinition
+      VersionNumber: 1.0.1
+    - TypeName: UDT_Service_StepMedium
+      VersionNumber: 1.0.1

@@ -1,0 +1,8 @@
+﻿LibraryType:
+  Guid: 8d825bd3-c011-4240-a321-35286cca177d
+LibraryVersion:
+  VersionNumber: 1.0.0
+  Author: Siemens AG
+  IsDefault: true
+  Comment:
+    de-DE: First release

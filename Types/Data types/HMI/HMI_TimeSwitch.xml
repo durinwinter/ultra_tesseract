@@ -1,0 +1,1014 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V20" />
+  <SW.Types.PlcStruct ID="0">
+    <AttributeList>
+      <Interface><Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v5">
+  <Section Name="None">
+    <Member Name="DwCurr" Datatype="Int">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="CFC_Visible" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Currently used day of the week</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Currently used day of the week</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">Currently used day of the week</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="TdCurr" Datatype="DInt">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="CFC_Visible" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Currently used time of the day</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Currently used time of the day</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">Currently used time of the day</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="StCurr" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Current daylight saving time</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Current daylight saving time</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">Current daylight saving time</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="DwAs" Datatype="Int">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="CFC_Visible" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">AS day of the week</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">AS day of the week</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">AS day of the week</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="TdAs" Datatype="DInt">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="CFC_Visible" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">AS time of the day</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">AS time of the day</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">AS time of the day</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="DwLoc" Datatype="Int">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="CFC_Visible" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Local day of the week</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Local day of the week</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">Local day of the week</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="TdLoc" Datatype="DInt">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="CFC_Visible" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Local time of the day</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Local time of the day</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">Local time of the day</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="StLoc" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="CFC_Visible" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Local daylight saving time active</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Local daylight saving time active</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">Local daylight saving time active</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="DwExt" Datatype="Int">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="CFC_Visible" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">External day of the week</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">External day of the week</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">External day of the week</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="TdExt" Datatype="DInt">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="CFC_Visible" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">External time of the day</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">External time of the day</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">External time of the day</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="StExt" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="CFC_Visible" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">External daylight saving time active</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Local daylight saving time active</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">Local daylight saving time active</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="TiExtQc" Datatype="Byte">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="CFC_Visible" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Quality of external time signal</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Quality of external time signal</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">Quality of external time signal</MultiLanguageText>
+      </Comment>
+      <StartValue>BYTE#16#80</StartValue>
+    </Member>
+    <Member Name="P_Time" Datatype="Real">
+      <AttributeList>
+        <BooleanAttribute Name="CFC_Visible" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Time for on/off pulse</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Time for on/off pulse</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">Time for on/off pulse</MultiLanguageText>
+      </Comment>
+      <StartValue>2.0</StartValue>
+    </Member>
+    <Member Name="OnOp" Datatype="Bool">
+      <Comment>
+        <MultiLanguageText Lang="de-DE">1=On Mode: On Mode by Operator</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">1=On Mode: On Mode by Operator</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">1=On Mode: On Mode by Operator</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="OosOP" Datatype="Bool">
+      <Comment>
+        <MultiLanguageText Lang="de-DE">1=Oos Mode: Oos Mode by Operator</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">1=Oos Mode: Oos Mode by Operator</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">1=Oos Mode: Oos Mode by Operator</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="On" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Output switch point general</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Output switch point general</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">Output switch point general</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="P_On" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">On pulse output switch point general</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">On pulse output switch point general</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">On pulse output switch point general</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="P_Off" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Off pulse output sitch point general</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Off pulse output sitch point general</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">Off pulse output sitch point general</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="NxTiOn" Datatype="Real">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Next on switch point</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Next on switch point</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">Next on switch point</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="NxTiOff" Datatype="Real">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Next off switch point</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Next off switch point</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">Next off switch point</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="On1" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="CFC_Visible" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="CFC_ForTest" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Output switch point 1</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Output switch point 1</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">Output switch point 1</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="P_On1" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">On pulse output switch point 1</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">On pulse output switch point 1</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">On pulse output switch point 1</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="P_Off1" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Off pulse output sitch point 1</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Off pulse output sitch point 1</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">Off pulse output sitch point 1</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="NxTiOn1" Datatype="Real">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Next on switch point</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Next on switch point</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">Next on switch point</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="NxTiOff1" Datatype="Real">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Next off switch point</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Next off switch point</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">Next off switch point</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="SwTiOn1" Datatype="DInt">
+      <AttributeList>
+        <BooleanAttribute Name="CFC_Visible" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">time switching point 1 on</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">time switching point 1 on</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">time switching point 1 on</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="SwTiOff1" Datatype="DInt">
+      <AttributeList>
+        <BooleanAttribute Name="CFC_Visible" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">time switching point 1 off</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">time switching point 1 off</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">time switching point 1 off</MultiLanguageText>
+      </Comment>
+      <StartValue>DINT#86399</StartValue>
+    </Member>
+    <Member Name="SwAct1" Datatype="Byte">
+      <AttributeList>
+        <BooleanAttribute Name="CFC_Visible" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">active days switching point 1</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">active days switching point 1</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">active days switching point 1</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="On2" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="CFC_Visible" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="CFC_ForTest" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Output switch point 2</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Output switch point 2</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">Output switch point 2</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="P_On2" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">On pulse output switch point 2</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">On pulse output switch point 2</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">On pulse output switch point 2</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="P_Off2" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Off pulse output sitch point 2</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Off pulse output sitch point 2</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">Off pulse output sitch point 2</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="NxTiOn2" Datatype="Real">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Next on switch point</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Next on switch point</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">Next on switch point</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="NxTiOff2" Datatype="Real">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Next off switch point</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Next off switch point</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">Next off switch point</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="SwTiOn2" Datatype="DInt">
+      <AttributeList>
+        <BooleanAttribute Name="CFC_Visible" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">time switching point 2 on</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">time switching point 2 on</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">time switching point 2 on</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="SwTiOff2" Datatype="DInt">
+      <AttributeList>
+        <BooleanAttribute Name="CFC_Visible" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">time switching point 2 off</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">time switching point 2 off</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">time switching point 2 off</MultiLanguageText>
+      </Comment>
+      <StartValue>DINT#86399</StartValue>
+    </Member>
+    <Member Name="SwAct2" Datatype="Byte">
+      <AttributeList>
+        <BooleanAttribute Name="CFC_Visible" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">active days switching point 2</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">active days switching point 2</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">active days switching point 2</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="On3" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="CFC_Visible" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="CFC_ForTest" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Output switch point 3</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Output switch point 3</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">Output switch point 3</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="P_On3" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">On pulse output switch point 3</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">On pulse output switch point 3</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">On pulse output switch point 3</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="P_Off3" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Off pulse output sitch point 3</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Off pulse output sitch point 3</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">Off pulse output sitch point 3</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="NxTiOn3" Datatype="Real">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Next on switch point</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Next on switch point</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">Next on switch point</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="NxTiOff3" Datatype="Real">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Next off switch point</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Next off switch point</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">Next off switch point</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="SwTiOn3" Datatype="DInt">
+      <AttributeList>
+        <BooleanAttribute Name="CFC_Visible" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">time switching point 3 on</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">time switching point 3 on</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">time switching point 3 on</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="SwTiOff3" Datatype="DInt">
+      <AttributeList>
+        <BooleanAttribute Name="CFC_Visible" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">time switching point 3 off</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">time switching point 3 off</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">time switching point 3 off</MultiLanguageText>
+      </Comment>
+      <StartValue>DINT#86399</StartValue>
+    </Member>
+    <Member Name="SwAct3" Datatype="Byte">
+      <AttributeList>
+        <BooleanAttribute Name="CFC_Visible" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">active days switching point 3</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">active days switching point 3</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">active days switching point 3</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="On4" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="CFC_Visible" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="CFC_ForTest" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Output switch point 4</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Output switch point 4</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">Output switch point 4</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="P_On4" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">On pulse output switch point 4</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">On pulse output switch point 4</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">On pulse output switch point 4</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="P_Off4" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Off pulse output sitch point 4</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Off pulse output sitch point 4</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">Off pulse output sitch point 4</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="NxTiOn4" Datatype="Real">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Next on switch point</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Next on switch point</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">Next on switch point</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="NxTiOff4" Datatype="Real">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Next off switch point</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Next off switch point</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">Next off switch point</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="SwTiOn4" Datatype="DInt">
+      <AttributeList>
+        <BooleanAttribute Name="CFC_Visible" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">time switching point 4 on</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">time switching point 4 on</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">time switching point 4 on</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="SwTiOff4" Datatype="DInt">
+      <AttributeList>
+        <BooleanAttribute Name="CFC_Visible" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">time switching point 4 off</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">time switching point 4 off</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">time switching point 4 off</MultiLanguageText>
+      </Comment>
+      <StartValue>DINT#86399</StartValue>
+    </Member>
+    <Member Name="SwAct4" Datatype="Byte">
+      <AttributeList>
+        <BooleanAttribute Name="CFC_Visible" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">active days switching point 4</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">active days switching point 4</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">active days switching point 4</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="On5" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="CFC_Visible" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="CFC_ForTest" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Output switch point 5</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Output switch point 5</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">Output switch point 5</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="P_On5" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">On pulse output switch point 5</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">On pulse output switch point 5</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">On pulse output switch point 5</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="P_Off5" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Off pulse output sitch point 5</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Off pulse output sitch point 5</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">Off pulse output sitch point 5</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="NxTiOn5" Datatype="Real">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Next on switch point</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Next on switch point</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">Next on switch point</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="NxTiOff5" Datatype="Real">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Next off switch point</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Next off switch point</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">Next off switch point</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="SwTiOn5" Datatype="DInt">
+      <AttributeList>
+        <BooleanAttribute Name="CFC_Visible" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">time switching point 5 on</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">time switching point 5 on</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">time switching point 5 on</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="SwTiOff5" Datatype="DInt">
+      <AttributeList>
+        <BooleanAttribute Name="CFC_Visible" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">time switching point 5 off</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">time switching point 5 off</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">time switching point 5 off</MultiLanguageText>
+      </Comment>
+      <StartValue>DINT#86399</StartValue>
+    </Member>
+    <Member Name="SwAct5" Datatype="Byte">
+      <AttributeList>
+        <BooleanAttribute Name="CFC_Visible" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">active days switching point 5</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">active days switching point 5</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">active days switching point 5</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="On6" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="CFC_Visible" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="CFC_ForTest" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Output switch point 6</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Output switch point 6</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">Output switch point 6</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="P_On6" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">On pulse output switch point 6</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">On pulse output switch point 6</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">On pulse output switch point 6</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="P_Off6" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Off pulse output sitch point 6</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Off pulse output sitch point 6</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">Off pulse output sitch point 6</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="NxTiOn6" Datatype="Real">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Next on switch point</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Next on switch point</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">Next on switch point</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="NxTiOff6" Datatype="Real">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Next off switch point</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Next off switch point</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">Next off switch point</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="SwTiOn6" Datatype="DInt">
+      <AttributeList>
+        <BooleanAttribute Name="CFC_Visible" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">time switching point 6 on</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">time switching point 6 on</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">time switching point 6 on</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="SwTiOff6" Datatype="DInt">
+      <AttributeList>
+        <BooleanAttribute Name="CFC_Visible" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">time switching point 6 off</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">time switching point 6 off</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">time switching point 6 off</MultiLanguageText>
+      </Comment>
+      <StartValue>DINT#86399</StartValue>
+    </Member>
+    <Member Name="SwAct6" Datatype="Byte">
+      <AttributeList>
+        <BooleanAttribute Name="CFC_Visible" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">active days switching point 6</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">active days switching point 6</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">active days switching point 6</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="On7" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="CFC_Visible" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="CFC_ForTest" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Output switch point 7</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Output switch point 7</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">Output switch point 7</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="P_On7" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">On pulse output switch point 7</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">On pulse output switch point 7</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">On pulse output switch point 7</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="P_Off7" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Off pulse output sitch point 7</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Off pulse output sitch point 7</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">Off pulse output sitch point 7</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="NxTiOn7" Datatype="Real">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Next on switch point</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Next on switch point</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">Next on switch point</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="NxTiOff7" Datatype="Real">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Next off switch point</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Next off switch point</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">Next off switch point</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="SwTiOn7" Datatype="DInt">
+      <AttributeList>
+        <BooleanAttribute Name="CFC_Visible" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">time switching point 7 on</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">time switching point 7 on</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">time switching point 7 on</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="SwTiOff7" Datatype="DInt">
+      <AttributeList>
+        <BooleanAttribute Name="CFC_Visible" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">time switching point 7 off</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">time switching point 7 off</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">time switching point 7 off</MultiLanguageText>
+      </Comment>
+      <StartValue>DINT#86399</StartValue>
+    </Member>
+    <Member Name="SwAct7" Datatype="Byte">
+      <AttributeList>
+        <BooleanAttribute Name="CFC_Visible" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">active days switching point 7</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">active days switching point 7</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">active days switching point 7</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="On8" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="CFC_Visible" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="CFC_ForTest" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Output switch point 8</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Output switch point 8</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">Output switch point 8</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="P_On8" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">On pulse output switch point 8</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">On pulse output switch point 8</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">On pulse output switch point 8</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="P_Off8" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Off pulse output sitch point 8</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Off pulse output sitch point 8</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">Off pulse output sitch point 8</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="NxTiOn8" Datatype="Real">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Next on switch point</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Next on switch point</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">Next on switch point</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="NxTiOff8" Datatype="Real">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Next off switch point</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Next off switch point</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">Next off switch point</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="SwTiOn8" Datatype="DInt">
+      <AttributeList>
+        <BooleanAttribute Name="CFC_Visible" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">time switching point 8 on</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">time switching point 8 on</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">time switching point 8 on</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="SwTiOff8" Datatype="DInt">
+      <AttributeList>
+        <BooleanAttribute Name="CFC_Visible" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">time switching point 8 off</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">time switching point 8 off</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">time switching point 8 off</MultiLanguageText>
+      </Comment>
+      <StartValue>DINT#86399</StartValue>
+    </Member>
+    <Member Name="SwAct8" Datatype="Byte">
+      <AttributeList>
+        <BooleanAttribute Name="CFC_Visible" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">active days switching point 8</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">active days switching point 8</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">active days switching point 8</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="Status1" Datatype="DWord">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Status word 1, defined in the online help</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Status word 1, defined in the online help</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">Status word 1, defined in the online help</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="Status2" Datatype="DWord">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Status word 2, defined in the online help</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Status word 2, defined in the online help</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">Status word 2, defined in the online help</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="Status3" Datatype="DWord">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Status word 3, defined in the online help</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Status word 3, defined in the online help</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">Status word 3, defined in the online help</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="Status4" Datatype="DWord">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Status word 4, defined in the online help</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Status word 4, defined in the online help</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">Status word 4, defined in the online help</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="OS_PermOut" Datatype="DWord">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Display of operator permissions OS_Perm</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Display of operator permissions OS_Perm</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">Display of operator permissions OS_Perm</MultiLanguageText>
+      </Comment>
+      <StartValue>DWORD#16#FFFF_FFFF</StartValue>
+    </Member>
+    <Member Name="OS_PermLog" Datatype="DWord">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Operator permissions with settings changed by the block algorithm</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Operator permissions with settings changed by the block algorithm</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">Operator permissions with settings changed by the block algorithm</MultiLanguageText>
+      </Comment>
+      <StartValue>DWORD#16#FFFF_FFFF</StartValue>
+    </Member>
+    <Member Name="ST_Worst" Datatype="Byte">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Worst signal status</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Worst signal status</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">Worst signal status</MultiLanguageText>
+      </Comment>
+      <StartValue>BYTE#16#80</StartValue>
+    </Member>
+    <Member Name="AlarmState" Datatype="Word">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Alarm Status for group display</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Alarm Status for group display</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">Alarm Status for group display</MultiLanguageText>
+      </Comment>
+    </Member>
+  </Section>
+</Sections></Interface>
+      <Name>HMI_TimeSwitch</Name>
+      <Namespace />
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="3" CompositionName="Items">
+            <AttributeList>
+              <Culture>de-DE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="4" CompositionName="Items">
+            <AttributeList>
+              <Culture>fr-FR</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <MultilingualText ID="5" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="6" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="7" CompositionName="Items">
+            <AttributeList>
+              <Culture>de-DE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="8" CompositionName="Items">
+            <AttributeList>
+              <Culture>fr-FR</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </SW.Types.PlcStruct>
+</Document>

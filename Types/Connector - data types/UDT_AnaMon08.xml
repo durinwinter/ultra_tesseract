@@ -1,0 +1,335 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V20" />
+  <SW.Types.PlcStruct ID="0">
+    <AttributeList>
+      <Interface><Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v5">
+  <Section Name="None">
+    <Member Name="VSclMin" Datatype="Real">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="en-US">Value Scale Low Limit</MultiLanguageText>
+      </Comment>
+      <StartValue>0.0</StartValue>
+    </Member>
+    <Member Name="VSclMax" Datatype="Real">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="en-US">Value Scale High Limit</MultiLanguageText>
+      </Comment>
+      <StartValue>100.0</StartValue>
+    </Member>
+    <Member Name="VUnit" Datatype="Int">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="en-US">Value Unit</MultiLanguageText>
+      </Comment>
+      <StartValue>1001</StartValue>
+    </Member>
+    <Member Name="OSLevel" Datatype="Byte">
+      <Comment>
+        <MultiLanguageText Lang="en-US">OSLevel variable</MultiLanguageText>
+      </Comment>
+      <StartValue>16#00</StartValue>
+    </Member>
+    <Member Name="WQC" Datatype="Byte">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="en-US">Worst Quality Code variable</MultiLanguageText>
+      </Comment>
+      <StartValue>16#FF</StartValue>
+    </Member>
+    <Member Name="V" Datatype="Real">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="en-US">Value</MultiLanguageText>
+      </Comment>
+      <StartValue>0.0</StartValue>
+    </Member>
+    <Member Name="VLim1En" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="en-US">Enables Limit 11: enabled0: disabled</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="VLim1" Datatype="Real">
+      <Comment>
+        <MultiLanguageText Lang="en-US">Limit 1 Value</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="VLim1Act" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="en-US">Limit 1 active1: active0: inactive</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="VMode1" Datatype="Byte">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="en-US">Mode Limit 1</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="VLim2En" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="en-US">Enables Limit 21: enabled0: disabled</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="VLim2" Datatype="Real">
+      <Comment>
+        <MultiLanguageText Lang="en-US">Limit 2 Value</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="VLim2Act" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="en-US">Limit 2 active1: active0: inactive</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="VMode2" Datatype="Byte">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="en-US">Mode Limit 2</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="VLim3En" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="en-US">Enables Limit 31: enabled0: disabled</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="VLim3" Datatype="Real">
+      <Comment>
+        <MultiLanguageText Lang="en-US">Limit 3 Value</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="VLim3Act" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="en-US">Limit 3 active1: active0: inactive</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="VMode3" Datatype="Byte">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="en-US">Mode Limit 3</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="VLim4En" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="en-US">Enables Limit 41: enabled0: disabled</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="VLim4" Datatype="Real">
+      <Comment>
+        <MultiLanguageText Lang="en-US">Limit 4 Value</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="VLim4Act" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="en-US">Limit 4 active1: active0: inactive</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="VMode4" Datatype="Byte">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="en-US">Mode Limit 4</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="VLim5En" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="en-US">Enables Limit 51: enabled0: disabled</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="VLim5" Datatype="Real">
+      <Comment>
+        <MultiLanguageText Lang="en-US">Limit 5 Value</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="VLim5Act" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="en-US">Limit 5 active1: active0: inactive</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="VMode5" Datatype="Byte">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="en-US">Mode Limit 5</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="VLim6En" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="en-US">Enables Limit 61: enabled0: disabled</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="VLim6" Datatype="Real">
+      <Comment>
+        <MultiLanguageText Lang="en-US">Limit 6 Value</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="VLim6Act" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="en-US">Limit 6 active1: active0: inactive</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="VMode6" Datatype="Byte">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="en-US">Mode Limit 6</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="VLim7En" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="en-US">Enables Limit 71: enabled0: disabled</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="VLim7" Datatype="Real">
+      <Comment>
+        <MultiLanguageText Lang="en-US">Limit 7 Value</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="VLim7Act" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="en-US">Limit 7 active1: active0: inactive</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="VMode7" Datatype="Byte">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="en-US">Mode Limit 7</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="VLim8En" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="en-US">Enables Limit 81: enabled0: disabled</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="VLim8" Datatype="Real">
+      <Comment>
+        <MultiLanguageText Lang="en-US">Limit 8 Value</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="VLim8Act" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="en-US">Limit 8 active1: active0: inactive</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="VMode8" Datatype="Byte">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="en-US">Mode Limit 8</MultiLanguageText>
+      </Comment>
+    </Member>
+  </Section>
+</Sections></Interface>
+      <Name>UDT_AnaMon08</Name>
+      <Namespace />
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <MultilingualText ID="3" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="4" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text>MTPDataObjectSUCLibrary/DataAssembly/FlexAnaMon08</Text>
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </SW.Types.PlcStruct>
+</Document>

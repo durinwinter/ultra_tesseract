@@ -1,0 +1,17 @@
+﻿DocumentHash:
+  - FileName: UDT_Service_ControlBlockMedium.xml
+    Hash: 7fjvJSDGtoauBS3ZxuCVLzXuy+Msb2zfIm6RHfmOp6Q=
+LibraryMetaFileHash: jb1Y/LZ0t3ibWP1T1r79haIFwzMNRfpJus84fgvMiOs=
+LibraryVersion:
+  Guid: 182b8d76-ab3c-44f9-ba2d-43f71ca64e60
+  DependsOn:
+    - TypeName: UDT_Service_StepOrderRawDataMedium
+      VersionNumber: 1.0.2
+    - TypeName: UDT_Service_StepRawDataMedium
+      VersionNumber: 1.0.4
+    - TypeName: UDT_Service_ProcedureRawDataMedium
+      VersionNumber: 1.0.8
+    - TypeName: UDT_Service_ParameterDataMedium
+      VersionNumber: 1.0.3
+    - TypeName: UDT_Service_ValueDataMedium
+      VersionNumber: 1.0.4

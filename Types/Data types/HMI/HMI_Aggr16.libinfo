@@ -1,0 +1,8 @@
+﻿LibraryType:
+  Guid: d230ccda-67d7-4a5d-a599-bb9b7a5ca2b1
+  Comment:
+    de-DE: Changeover for max. 16 units
+LibraryVersion:
+  VersionNumber: 1.0.3
+  Author: z004bv0s
+  IsDefault: true

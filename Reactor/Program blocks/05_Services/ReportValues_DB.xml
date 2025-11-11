@@ -1,0 +1,250 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V20" />
+  <SW.Blocks.InstanceDB ID="0">
+    <AttributeList>
+      <HeaderAuthor>Siemens AG</HeaderAuthor>
+      <HeaderFamily>ServiceControl</HeaderFamily>
+      <HeaderVersion>1.0</HeaderVersion>
+      <InstanceOfName>ReportValues</InstanceOfName>
+      <InstanceOfType>FB</InstanceOfType>
+      <Interface><Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v5">
+  <Section Name="Input" />
+  <Section Name="Output" />
+  <Section Name="InOut" />
+  <Section Name="Static">
+    <Member Name="MTPAnalog" Datatype="Array[0..10] of &quot;UDT_MTP_AnaReportValue&quot;">
+      <AttributeList>
+        <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+      <Sections>
+        <Section Name="None">
+          <Member Name="V" Datatype="Real">
+            <Subelement Path="0">
+              <StartValue>0.0</StartValue>
+            </Subelement>
+            <Subelement Path="1">
+              <StartValue>0.0</StartValue>
+            </Subelement>
+            <Subelement Path="2">
+              <StartValue>0.0</StartValue>
+            </Subelement>
+            <Subelement Path="3">
+              <StartValue>0.0</StartValue>
+            </Subelement>
+            <Subelement Path="4">
+              <StartValue>0.0</StartValue>
+            </Subelement>
+            <Subelement Path="5">
+              <StartValue>0.0</StartValue>
+            </Subelement>
+            <Subelement Path="6">
+              <StartValue>0.0</StartValue>
+            </Subelement>
+            <Subelement Path="7">
+              <StartValue>0.0</StartValue>
+            </Subelement>
+            <Subelement Path="8">
+              <StartValue>0.0</StartValue>
+            </Subelement>
+            <Subelement Path="9">
+              <StartValue>0.0</StartValue>
+            </Subelement>
+          </Member>
+          <Member Name="VSclMin" Datatype="Real">
+            <Subelement Path="0">
+              <StartValue>0.0</StartValue>
+            </Subelement>
+            <Subelement Path="1">
+              <StartValue>0.0</StartValue>
+            </Subelement>
+            <Subelement Path="2">
+              <StartValue>0.0</StartValue>
+            </Subelement>
+            <Subelement Path="3">
+              <StartValue>0.0</StartValue>
+            </Subelement>
+            <Subelement Path="4">
+              <StartValue>0.0</StartValue>
+            </Subelement>
+            <Subelement Path="5">
+              <StartValue>0.0</StartValue>
+            </Subelement>
+            <Subelement Path="6">
+              <StartValue>0.0</StartValue>
+            </Subelement>
+            <Subelement Path="7">
+              <StartValue>0.0</StartValue>
+            </Subelement>
+            <Subelement Path="8">
+              <StartValue>0.0</StartValue>
+            </Subelement>
+            <Subelement Path="9">
+              <StartValue>0.0</StartValue>
+            </Subelement>
+          </Member>
+          <Member Name="VSclMax" Datatype="Real">
+            <Subelement Path="0">
+              <StartValue>3000.0</StartValue>
+            </Subelement>
+            <Subelement Path="1">
+              <StartValue>3000.0</StartValue>
+            </Subelement>
+            <Subelement Path="2">
+              <StartValue>100.0</StartValue>
+            </Subelement>
+            <Subelement Path="3">
+              <StartValue>100.0</StartValue>
+            </Subelement>
+            <Subelement Path="4">
+              <StartValue>3000.0</StartValue>
+            </Subelement>
+            <Subelement Path="5">
+              <StartValue>3000.0</StartValue>
+            </Subelement>
+            <Subelement Path="6">
+              <StartValue>100.0</StartValue>
+            </Subelement>
+            <Subelement Path="7">
+              <StartValue>100.0</StartValue>
+            </Subelement>
+            <Subelement Path="8">
+              <StartValue>3000.0</StartValue>
+            </Subelement>
+            <Subelement Path="9">
+              <StartValue>1.0</StartValue>
+            </Subelement>
+          </Member>
+          <Member Name="VUnit" Datatype="Int">
+            <Subelement Path="0">
+              <StartValue>1038</StartValue>
+            </Subelement>
+            <Subelement Path="1">
+              <StartValue>1038</StartValue>
+            </Subelement>
+            <Subelement Path="2">
+              <StartValue>1001</StartValue>
+            </Subelement>
+            <Subelement Path="3">
+              <StartValue>1001</StartValue>
+            </Subelement>
+            <Subelement Path="4">
+              <StartValue>1038</StartValue>
+            </Subelement>
+            <Subelement Path="5">
+              <StartValue>1038</StartValue>
+            </Subelement>
+            <Subelement Path="6">
+              <StartValue>1001</StartValue>
+            </Subelement>
+            <Subelement Path="7">
+              <StartValue>1001</StartValue>
+            </Subelement>
+            <Subelement Path="8">
+              <StartValue>1038</StartValue>
+            </Subelement>
+            <Subelement Path="9">
+              <StartValue>1000</StartValue>
+            </Subelement>
+          </Member>
+        </Section>
+      </Sections>
+    </Member>
+    <Member Name="MTPDigital" Datatype="Array[0..0] of &quot;UDT_MTP_DIntReportValue&quot;">
+      <AttributeList>
+        <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+    </Member>
+    <Member Name="MTPBinary" Datatype="Array[0..2] of &quot;UDT_MTP_BinReportValue&quot;">
+      <AttributeList>
+        <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+      <Sections>
+        <Section Name="None">
+          <Member Name="V" Datatype="Bool">
+            <Subelement Path="0">
+              <StartValue>False</StartValue>
+            </Subelement>
+            <Subelement Path="1">
+              <StartValue>False</StartValue>
+            </Subelement>
+          </Member>
+          <Member Name="VState0" Datatype="String[16]">
+            <Subelement Path="0">
+              <StartValue>''</StartValue>
+            </Subelement>
+            <Subelement Path="1">
+              <StartValue>''</StartValue>
+            </Subelement>
+          </Member>
+          <Member Name="VState1" Datatype="String[16]">
+            <Subelement Path="0">
+              <StartValue>''</StartValue>
+            </Subelement>
+            <Subelement Path="1">
+              <StartValue>''</StartValue>
+            </Subelement>
+          </Member>
+        </Section>
+      </Sections>
+    </Member>
+    <Member Name="MTPString" Datatype="Array[0..0] of &quot;UDT_MTP_StringReportValue&quot;">
+      <AttributeList>
+        <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+    </Member>
+  </Section>
+</Sections></Interface>
+      <Name>ReportValues_DB</Name>
+      <Namespace />
+      <Number>35</Number>
+      <ProgrammingLanguage>DB</ProgrammingLanguage>
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>de-DE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="3" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="4" CompositionName="Items">
+            <AttributeList>
+              <Culture>fr-FR</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <MultilingualText ID="5" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="6" CompositionName="Items">
+            <AttributeList>
+              <Culture>de-DE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="7" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="8" CompositionName="Items">
+            <AttributeList>
+              <Culture>fr-FR</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </SW.Blocks.InstanceDB>
+</Document>

@@ -1,0 +1,256 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V20" />
+  <SW.Types.PlcStruct ID="0">
+    <AttributeList>
+      <Interface><Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v5">
+  <Section Name="None">
+    <Member Name="V" Datatype="Real">
+      <Comment>
+        <MultiLanguageText Lang="en-US">External parameter value variable; relevant, if StateAutAct is true and SrcExtAct is true</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="VFbk" Datatype="Real">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="en-US">Feedback value variable</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="VSclMin" Datatype="Real">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="en-US">value scale low limit</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="VSclMax" Datatype="Real">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="en-US">value scale high limit</MultiLanguageText>
+      </Comment>
+      <StartValue>100.0</StartValue>
+    </Member>
+    <Member Name="VUnit" Datatype="Int">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="en-US">value unit</MultiLanguageText>
+      </Comment>
+      <StartValue>1998</StartValue>
+    </Member>
+    <Member Name="VMin" Datatype="Real">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="en-US">value low limit</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="VMax" Datatype="Real">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="en-US">value high limit</MultiLanguageText>
+      </Comment>
+      <StartValue>100.0</StartValue>
+    </Member>
+    <Member Name="V_1" Datatype="Real" />
+    <Member Name="VFbk_1" Datatype="Real" />
+    <Member Name="VSclMin_1" Datatype="Real" />
+    <Member Name="VSclMax_1" Datatype="Real" />
+    <Member Name="VUnit_1" Datatype="Real" />
+    <Member Name="VMin_1" Datatype="Real" />
+    <Member Name="VMax_1" Datatype="Real" />
+    <Member Name="V_2" Datatype="Real" />
+    <Member Name="VFbk_2" Datatype="Real" />
+    <Member Name="VSclMin_2" Datatype="Real" />
+    <Member Name="VSclMax_2" Datatype="Real" />
+    <Member Name="VUnit_2" Datatype="Real" />
+    <Member Name="VMin_2" Datatype="Real" />
+    <Member Name="VMax_2" Datatype="Real" />
+    <Member Name="V_3" Datatype="Real" />
+    <Member Name="VFbk_3" Datatype="Real" />
+    <Member Name="VSclMin_3" Datatype="Real" />
+    <Member Name="VSclMax_3" Datatype="Real" />
+    <Member Name="VUnit_3" Datatype="Real" />
+    <Member Name="VMin_3" Datatype="Real" />
+    <Member Name="VMax_3" Datatype="Real" />
+    <Member Name="V_4" Datatype="Real" />
+    <Member Name="VFbk_4" Datatype="Real" />
+    <Member Name="VSclMin_4" Datatype="Real" />
+    <Member Name="VSclMax_4" Datatype="Real" />
+    <Member Name="VUnit_4" Datatype="Real" />
+    <Member Name="VMin_4" Datatype="Real" />
+    <Member Name="VMax_4" Datatype="Real" />
+    <Member Name="V_5" Datatype="Real" />
+    <Member Name="VFbk_5" Datatype="Real" />
+    <Member Name="VSclMin_5" Datatype="Real" />
+    <Member Name="VSclMax_5" Datatype="Real" />
+    <Member Name="VUnit_5" Datatype="Real" />
+    <Member Name="VMin_5" Datatype="Real" />
+    <Member Name="VMax_5" Datatype="Real" />
+    <Member Name="V_6" Datatype="Real" />
+    <Member Name="VFbk_6" Datatype="Real" />
+    <Member Name="VSclMin_6" Datatype="Real" />
+    <Member Name="VSclMax_6" Datatype="Real" />
+    <Member Name="VUnit_6" Datatype="Real" />
+    <Member Name="VMin_6" Datatype="Real" />
+    <Member Name="VMax_6" Datatype="Real" />
+    <Member Name="V_7" Datatype="Real" />
+    <Member Name="VFbk_7" Datatype="Real" />
+    <Member Name="VSclMin_7" Datatype="Real" />
+    <Member Name="VSclMax_7" Datatype="Real" />
+    <Member Name="VUnit_7" Datatype="Real" />
+    <Member Name="VMin_7" Datatype="Real" />
+    <Member Name="VMax_7" Datatype="Real" />
+    <Member Name="V_8" Datatype="Real" />
+    <Member Name="VFbk_8" Datatype="Real" />
+    <Member Name="VSclMin_8" Datatype="Real" />
+    <Member Name="VSclMax_8" Datatype="Real" />
+    <Member Name="VUnit_8" Datatype="Real" />
+    <Member Name="VMin_8" Datatype="Real" />
+    <Member Name="VMax_8" Datatype="Real" />
+    <Member Name="V_9" Datatype="Real" />
+    <Member Name="VFbk_9" Datatype="Real" />
+    <Member Name="VSclMin_9" Datatype="Real" />
+    <Member Name="VSclMax_9" Datatype="Real" />
+    <Member Name="VUnit_9" Datatype="Real" />
+    <Member Name="VMin_9" Datatype="Real" />
+    <Member Name="VMax_9" Datatype="Real" />
+    <Member Name="V_10" Datatype="Real" />
+    <Member Name="VFbk_10" Datatype="Real" />
+    <Member Name="VSclMin_10" Datatype="Real" />
+    <Member Name="VSclMax_10" Datatype="Real" />
+    <Member Name="VUnit_10" Datatype="Real" />
+    <Member Name="VMin_10" Datatype="Real" />
+    <Member Name="VMax_10" Datatype="Real" />
+    <Member Name="V_11" Datatype="Real" />
+    <Member Name="VFbk_11" Datatype="Real" />
+    <Member Name="VSclMin_11" Datatype="Real" />
+    <Member Name="VSclMax_11" Datatype="Real" />
+    <Member Name="VUnit_11" Datatype="Real" />
+    <Member Name="VMin_11" Datatype="Real" />
+    <Member Name="VMax_11" Datatype="Real" />
+    <Member Name="V_12" Datatype="Real" />
+    <Member Name="VFbk_12" Datatype="Real" />
+    <Member Name="VSclMin_12" Datatype="Real" />
+    <Member Name="VSclMax_12" Datatype="Real" />
+    <Member Name="VUnit_12" Datatype="Real" />
+    <Member Name="VMin_12" Datatype="Real" />
+    <Member Name="VMax_12" Datatype="Real" />
+    <Member Name="V_13" Datatype="Real" />
+    <Member Name="VFbk_13" Datatype="Real" />
+    <Member Name="VSclMin_13" Datatype="Real" />
+    <Member Name="VSclMax_13" Datatype="Real" />
+    <Member Name="VUnit_13" Datatype="Real" />
+    <Member Name="VMin_13" Datatype="Real" />
+    <Member Name="VMax_13" Datatype="Real" />
+    <Member Name="V_14" Datatype="Real" />
+    <Member Name="VFbk_14" Datatype="Real" />
+    <Member Name="VSclMin_14" Datatype="Real" />
+    <Member Name="VSclMax_14" Datatype="Real" />
+    <Member Name="VUnit_14" Datatype="Real" />
+    <Member Name="VMin_14" Datatype="Real" />
+    <Member Name="VMax_14" Datatype="Real" />
+    <Member Name="V_15" Datatype="Real" />
+    <Member Name="VFbk_15" Datatype="Real" />
+    <Member Name="VSclMin_15" Datatype="Real" />
+    <Member Name="VSclMax_15" Datatype="Real" />
+    <Member Name="VUnit_15" Datatype="Real" />
+    <Member Name="VMin_15" Datatype="Real" />
+    <Member Name="VMax_15" Datatype="Real" />
+    <Member Name="V_16" Datatype="Real" />
+    <Member Name="VFbk_16" Datatype="Real" />
+    <Member Name="VSclMin_16" Datatype="Real" />
+    <Member Name="VSclMax_16" Datatype="Real" />
+    <Member Name="VUnit_16" Datatype="Real" />
+    <Member Name="VMin_16" Datatype="Real" />
+    <Member Name="VMax_16" Datatype="Real" />
+    <Member Name="V_17" Datatype="Real" />
+    <Member Name="VFbk_17" Datatype="Real" />
+    <Member Name="VSclMin_17" Datatype="Real" />
+    <Member Name="VSclMax_17" Datatype="Real" />
+    <Member Name="VUnit_17" Datatype="Real" />
+    <Member Name="VMin_17" Datatype="Real" />
+    <Member Name="VMax_17" Datatype="Real" />
+    <Member Name="V_18" Datatype="Real" />
+    <Member Name="VFbk_18" Datatype="Real" />
+    <Member Name="VSclMin_18" Datatype="Real" />
+    <Member Name="VSclMax_18" Datatype="Real" />
+    <Member Name="VUnit_18" Datatype="Real" />
+    <Member Name="VMin_18" Datatype="Real" />
+    <Member Name="VMax_18" Datatype="Real" />
+    <Member Name="V_19" Datatype="Real" />
+    <Member Name="VFbk_19" Datatype="Real" />
+    <Member Name="VSclMin_19" Datatype="Real" />
+    <Member Name="VSclMax_19" Datatype="Real" />
+    <Member Name="VUnit_19" Datatype="Real" />
+    <Member Name="VMin_19" Datatype="Real" />
+    <Member Name="VMax_19" Datatype="Real" />
+    <Member Name="V_20" Datatype="Real" />
+    <Member Name="VFbk_20" Datatype="Real" />
+    <Member Name="VSclMin_20" Datatype="Real" />
+    <Member Name="VSclMax_20" Datatype="Real" />
+    <Member Name="VUnit_20" Datatype="Real" />
+    <Member Name="VMin_20" Datatype="Real" />
+    <Member Name="VMax_20" Datatype="Real" />
+  </Section>
+</Sections></Interface>
+      <Name>UDT_MTP_AnaServParam_Recipe</Name>
+      <Namespace />
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="3" CompositionName="Items">
+            <AttributeList>
+              <Culture>de-DE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="4" CompositionName="Items">
+            <AttributeList>
+              <Culture>fr-FR</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <MultilingualText ID="5" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="6" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="7" CompositionName="Items">
+            <AttributeList>
+              <Culture>de-DE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="8" CompositionName="Items">
+            <AttributeList>
+              <Culture>fr-FR</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </SW.Types.PlcStruct>
+</Document>

@@ -1,0 +1,58 @@
+﻿{
+    S7_EditorMode := "SCL";
+    S7_Optimized := "TRUE";
+    S7_Version := "0.1"
+}
+FUNCTION_BLOCK "CalcDose"
+    VAR_INPUT 
+        Enable : Bool;
+        Dose_Liters : Real;
+        VolumeFlow : Real;
+        Scale_Raw : _.ScaVal_Raw := (
+            High := 27648,
+            Low := 0
+        );
+    END_VAR
+    VAR_OUTPUT 
+        Service_Done : Bool;
+        { S7_Access := "ReadOnly := External" }
+        Liters : Real;
+        Liters_Raw : Real;
+    END_VAR
+    VAR_IN_OUT 
+        AccuSDB : _.AccuS;
+    END_VAR
+    VAR_TEMP 
+        State : _.Service_States;
+    END_VAR
+
+    { S7_Language := "SCL" }
+    NETWORK
+        IF "Dosing".MTP.ServiceControl.StateCur = #State.Starting THEN
+            #Liters := 0;
+            #AccuSDB.RstCnt1Li.ST := 16#80;
+            #AccuSDB.RstCnt1Li.Value := TRUE;
+            #Service_Done := FALSE;
+        ELSE
+            #AccuSDB.RstCnt1Li.ST := 16#80;
+            #AccuSDB.RstCnt1Li.Value := FALSE;
+        END_IF;
+        IF #Enable = FALSE THEN
+            RETURN;
+        END_IF;
+        
+        //calc already pumped liters and set valve MV
+        IF #Liters <= #Dose_Liters THEN
+            #Liters := #AccuSDB.AcCnt1Out.Value;
+        ELSIF #Dose_Liters = 0 THEN
+            #Liters := #AccuSDB.AcCnt1Out.Value;
+        ELSIF #Liters > #Dose_Liters THEN
+            #Service_Done := TRUE;
+        END_IF;
+        IF #Liters > 3600 THEN
+            #Liters := #Liters - 3600;
+        END_IF;
+        #Liters_Raw := (#Liters/3600) * #Scale_Raw.High;
+        
+    END_NETWORK
+END_FUNCTION_BLOCK

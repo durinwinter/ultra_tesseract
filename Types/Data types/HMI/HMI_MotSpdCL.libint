@@ -1,0 +1,9 @@
+﻿DocumentHash:
+  - FileName: HMI_MotSpdCL.xml
+    Hash: 9BKe+vb0FxfwnD9fk6FE+ObiT3QOrfZ7mqJ96cUU6LQ=
+LibraryMetaFileHash: fciW1tLu6ap9f/d9RPearVsITgSbrMswhKlXKzuZkMo=
+LibraryVersion:
+  Guid: 460a6657-7586-4187-ac5e-752c59c96d93
+  DependsOn:
+    - TypeName: ScaVal
+      VersionNumber: 1.0.1

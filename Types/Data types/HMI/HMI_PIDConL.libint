@@ -1,0 +1,9 @@
+﻿DocumentHash:
+  - FileName: HMI_PIDConL.xml
+    Hash: 1BRonNqNL2VoJir90UBJ0/o/gs+LegnGGa+1jVm3mAo=
+LibraryMetaFileHash: x11rwQcsTQXwFWMmfa496RVuptZlc7d5hWr7eiKZrEg=
+LibraryVersion:
+  Guid: 5e0f84c3-bd20-473e-aa7e-043953920dc3
+  DependsOn:
+    - TypeName: ScaVal
+      VersionNumber: 1.0.1

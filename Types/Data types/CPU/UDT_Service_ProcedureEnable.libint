@@ -1,0 +1,9 @@
+﻿DocumentHash:
+  - FileName: UDT_Service_ProcedureEnable.xml
+    Hash: b1XZdrLkW0gUF0k6iWAVhQuod/fXlPebjq1b5qMyJ0g=
+LibraryMetaFileHash: ohPW0RS+/jSdTH4KEREWLGIgCNhuxY+ajoZWdgjHV7k=
+LibraryVersion:
+  Guid: aa07cbd9-b1e5-4a0b-ba38-8dc9b90d273a
+  DependsOn:
+    - TypeName: DigValTFF
+      VersionNumber: 1.0.1

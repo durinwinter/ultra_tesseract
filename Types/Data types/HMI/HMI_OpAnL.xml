@@ -1,0 +1,354 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V20" />
+  <SW.Types.PlcStruct ID="0">
+    <AttributeList>
+      <Interface><Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v5">
+  <Section Name="None">
+    <Member Name="SP_ExtOp" Datatype="Bool">
+      <Comment>
+        <MultiLanguageText Lang="de-DE"> Operator input to select external setpoint</MultiLanguageText>
+        <MultiLanguageText Lang="en-US"> Operator input to select external setpoint</MultiLanguageText>
+      </Comment>
+      <StartValue>FALSE</StartValue>
+    </Member>
+    <Member Name="SP_IntOp" Datatype="Bool">
+      <Comment>
+        <MultiLanguageText Lang="de-DE"> Operator input to select internal setpoint</MultiLanguageText>
+        <MultiLanguageText Lang="en-US"> Operator input to select internal setpoint</MultiLanguageText>
+      </Comment>
+      <StartValue>TRUE</StartValue>
+    </Member>
+    <Member Name="SP_Int" Datatype="Real">
+      <Comment>
+        <MultiLanguageText Lang="de-DE"> Internal Analog setpoint</MultiLanguageText>
+        <MultiLanguageText Lang="en-US"> Internal Analog setpoint</MultiLanguageText>
+      </Comment>
+      <StartValue>0.0</StartValue>
+    </Member>
+    <Member Name="SP_Ext" Datatype="Real">
+      <Comment>
+        <MultiLanguageText Lang="de-DE"> External Analog setpoint</MultiLanguageText>
+        <MultiLanguageText Lang="en-US"> External Analog setpoint</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="SP_HiLim" Datatype="Real">
+      <Comment>
+        <MultiLanguageText Lang="de-DE"> Input High Limit</MultiLanguageText>
+        <MultiLanguageText Lang="en-US"> Input High Limit</MultiLanguageText>
+      </Comment>
+      <StartValue>100.0</StartValue>
+    </Member>
+    <Member Name="SP_LoLim" Datatype="Real">
+      <Comment>
+        <MultiLanguageText Lang="de-DE"> Input Low Limit</MultiLanguageText>
+        <MultiLanguageText Lang="en-US"> Input Low Limit</MultiLanguageText>
+      </Comment>
+      <StartValue>0.0</StartValue>
+    </Member>
+    <Member Name="SP_OpScale" Datatype="&quot;ScaVal&quot;">
+      <Comment>
+        <MultiLanguageText Lang="de-DE"> SP- Bar Display Limits for OS</MultiLanguageText>
+        <MultiLanguageText Lang="en-US"> SP- Bar Display Limits for OS</MultiLanguageText>
+      </Comment>
+      <Sections>
+        <Section Name="None">
+          <Member Name="High" Datatype="Real">
+            <Comment>
+              <MultiLanguageText Lang="en-US">High Value</MultiLanguageText>
+            </Comment>
+          </Member>
+          <Member Name="Low" Datatype="Real">
+            <Comment>
+              <MultiLanguageText Lang="en-US">Low Value</MultiLanguageText>
+            </Comment>
+          </Member>
+        </Section>
+      </Sections>
+    </Member>
+    <Member Name="SP_Unit" Datatype="Int">
+      <Comment>
+        <MultiLanguageText Lang="de-DE"> Engineering units of Input</MultiLanguageText>
+        <MultiLanguageText Lang="en-US"> Engineering units of Input</MultiLanguageText>
+      </Comment>
+      <StartValue>1001</StartValue>
+    </Member>
+    <Member Name="PV_In" Datatype="Real">
+      <Comment>
+        <MultiLanguageText Lang="de-DE"> Feedback Analog Input</MultiLanguageText>
+        <MultiLanguageText Lang="en-US"> Feedback Analog Input</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="PV_In_ST" Datatype="Byte">
+      <Comment>
+        <MultiLanguageText Lang="de-DE"> PV_In Signal Status</MultiLanguageText>
+        <MultiLanguageText Lang="en-US"> PV_In Signal Status</MultiLanguageText>
+      </Comment>
+      <StartValue>BYTE#16#80</StartValue>
+    </Member>
+    <Member Name="PV_OpScale" Datatype="&quot;ScaVal&quot;">
+      <Comment>
+        <MultiLanguageText Lang="de-DE"> PV- Bar Display Limits for OS</MultiLanguageText>
+        <MultiLanguageText Lang="en-US"> PV- Bar Display Limits for OS</MultiLanguageText>
+      </Comment>
+      <Sections>
+        <Section Name="None">
+          <Member Name="High" Datatype="Real">
+            <Comment>
+              <MultiLanguageText Lang="en-US">High Value</MultiLanguageText>
+            </Comment>
+          </Member>
+          <Member Name="Low" Datatype="Real">
+            <Comment>
+              <MultiLanguageText Lang="en-US">Low Value</MultiLanguageText>
+            </Comment>
+          </Member>
+        </Section>
+      </Sections>
+    </Member>
+    <Member Name="PV_Unit" Datatype="Int">
+      <Comment>
+        <MultiLanguageText Lang="de-DE"> Engineering units of Feedback Input</MultiLanguageText>
+        <MultiLanguageText Lang="en-US"> Engineering units of Feedback Input</MultiLanguageText>
+      </Comment>
+      <StartValue>1001</StartValue>
+    </Member>
+    <Member Name="SP_TrkExt" Datatype="Bool">
+      <Comment>
+        <MultiLanguageText Lang="de-DE"> 1: SP_Int tracks SP_Ext in External</MultiLanguageText>
+        <MultiLanguageText Lang="en-US"> 1: SP_Int tracks SP_Ext in External</MultiLanguageText>
+      </Comment>
+      <StartValue>FALSE</StartValue>
+    </Member>
+    <Member Name="SP_UpRaLim" Datatype="Real">
+      <Comment>
+        <MultiLanguageText Lang="de-DE"> Upward rate limit for setpoint</MultiLanguageText>
+        <MultiLanguageText Lang="en-US"> Upward rate limit for setpoint</MultiLanguageText>
+      </Comment>
+      <StartValue>100.0</StartValue>
+    </Member>
+    <Member Name="SP_DnRaLim" Datatype="Real">
+      <Comment>
+        <MultiLanguageText Lang="de-DE"> Downward rate limit for setpoint</MultiLanguageText>
+        <MultiLanguageText Lang="en-US"> Downward rate limit for setpoint</MultiLanguageText>
+      </Comment>
+      <StartValue>100.0</StartValue>
+    </Member>
+    <Member Name="SP_RateOn" Datatype="Bool">
+      <Comment>
+        <MultiLanguageText Lang="de-DE"> 1= Activate limitation of setpoint gradients</MultiLanguageText>
+        <MultiLanguageText Lang="en-US"> 1= Activate limitation of setpoint gradients</MultiLanguageText>
+      </Comment>
+      <StartValue>FALSE</StartValue>
+    </Member>
+    <Member Name="SP_RmpOn" Datatype="Bool">
+      <Comment>
+        <MultiLanguageText Lang="de-DE"> 1= Activate setpoint ramp to target SP_RmpTarget</MultiLanguageText>
+        <MultiLanguageText Lang="en-US"> 1= Activate setpoint ramp to target SP_RmpTarget</MultiLanguageText>
+      </Comment>
+      <StartValue>FALSE</StartValue>
+    </Member>
+    <Member Name="SP_RmpModTime" Datatype="Bool">
+      <Comment>
+        <MultiLanguageText Lang="de-DE"> 1= Use time SP_RmpTime for ramp, 0= Use rates SP_UpRaLim, SP_DnRaLim</MultiLanguageText>
+        <MultiLanguageText Lang="en-US"> 1= Use time SP_RmpTime for ramp, 0= Use rates SP_UpRaLim, SP_DnRaLim</MultiLanguageText>
+      </Comment>
+      <StartValue>FALSE</StartValue>
+    </Member>
+    <Member Name="SP_RmpTime" Datatype="Real">
+      <Comment>
+        <MultiLanguageText Lang="de-DE"> Setpoint ramp time [s,min,h]</MultiLanguageText>
+        <MultiLanguageText Lang="en-US"> Setpoint ramp time [s,min,h]</MultiLanguageText>
+      </Comment>
+      <StartValue>0.0</StartValue>
+    </Member>
+    <Member Name="SP_RmpTarget" Datatype="Real">
+      <Comment>
+        <MultiLanguageText Lang="de-DE"> Setpoint ramp target</MultiLanguageText>
+        <MultiLanguageText Lang="en-US"> Setpoint ramp target</MultiLanguageText>
+      </Comment>
+      <StartValue>0.0</StartValue>
+    </Member>
+    <Member Name="OnOp" Datatype="Bool">
+      <Comment>
+        <MultiLanguageText Lang="de-DE"> 1=On Mode: On Mode by Operator</MultiLanguageText>
+        <MultiLanguageText Lang="en-US"> 1=On Mode: On Mode by Operator</MultiLanguageText>
+      </Comment>
+      <StartValue>FALSE</StartValue>
+    </Member>
+    <Member Name="OosOp" Datatype="Bool">
+      <Comment>
+        <MultiLanguageText Lang="de-DE"> 1=Oos Mode: Oos Mode by Operator</MultiLanguageText>
+        <MultiLanguageText Lang="en-US"> 1=Oos Mode: Oos Mode by Operator</MultiLanguageText>
+      </Comment>
+      <StartValue>FALSE</StartValue>
+    </Member>
+    <Member Name="TimeFactor" Datatype="Int">
+      <Comment>
+        <MultiLanguageText Lang="de-DE"> Time Conversion Factor (0- Sec, 1- Min, 2- Hour)</MultiLanguageText>
+        <MultiLanguageText Lang="en-US"> Time Conversion Factor (0- Sec, 1- Min, 2- Hour)</MultiLanguageText>
+      </Comment>
+      <StartValue>0</StartValue>
+    </Member>
+    <Member Name="BatchID" Datatype="DWord">
+      <Comment>
+        <MultiLanguageText Lang="de-DE"> Current Batch ID (number)</MultiLanguageText>
+        <MultiLanguageText Lang="en-US"> Current Batch ID (number)</MultiLanguageText>
+      </Comment>
+      <StartValue>16#0</StartValue>
+    </Member>
+    <Member Name="BatchName" Datatype="String[32]">
+      <Comment>
+        <MultiLanguageText Lang="de-DE"> Current Batch Name</MultiLanguageText>
+        <MultiLanguageText Lang="en-US"> Current Batch Name</MultiLanguageText>
+      </Comment>
+      <StartValue>''</StartValue>
+    </Member>
+    <Member Name="StepNo" Datatype="DWord">
+      <Comment>
+        <MultiLanguageText Lang="de-DE"> Batch Step Number</MultiLanguageText>
+        <MultiLanguageText Lang="en-US"> Batch Step Number</MultiLanguageText>
+      </Comment>
+      <StartValue>16#0</StartValue>
+    </Member>
+    <Member Name="SP_Out" Datatype="Real">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE"> Analog Output Value</MultiLanguageText>
+        <MultiLanguageText Lang="en-US"> Analog Output Value</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="SP_RateTarget" Datatype="Real">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE"> Target  for limitation of setpoint gradients</MultiLanguageText>
+        <MultiLanguageText Lang="en-US"> Target  for limitation of setpoint gradients</MultiLanguageText>
+      </Comment>
+      <StartValue>0.0</StartValue>
+    </Member>
+    <Member Name="SP_RemRT" Datatype="Real">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE"> Remaining ramp time of setpoint</MultiLanguageText>
+        <MultiLanguageText Lang="en-US"> Remaining ramp time of setpoint</MultiLanguageText>
+      </Comment>
+      <StartValue>0.0</StartValue>
+    </Member>
+    <Member Name="OS_PermOut" Datatype="DWord">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE"> Operator Permission: Output for OS</MultiLanguageText>
+        <MultiLanguageText Lang="en-US"> Operator Permission: Output for OS</MultiLanguageText>
+      </Comment>
+      <StartValue>DWORD#16#FFFF_FFFF</StartValue>
+    </Member>
+    <Member Name="OS_PermLog" Datatype="DWord">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE"> Operator Permission: Output for OS</MultiLanguageText>
+        <MultiLanguageText Lang="en-US"> Operator Permission: Output for OS</MultiLanguageText>
+      </Comment>
+      <StartValue>DWORD#16#FFFF_FFFF</StartValue>
+    </Member>
+    <Member Name="OpSt_Out" Datatype="DWord">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE"> Enabled operator stations</MultiLanguageText>
+        <MultiLanguageText Lang="en-US"> Enabled operator stations</MultiLanguageText>
+      </Comment>
+      <StartValue>16#0</StartValue>
+    </Member>
+    <Member Name="ST_Worst" Datatype="Byte">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE"> Worst Signal Status</MultiLanguageText>
+        <MultiLanguageText Lang="en-US"> Worst Signal Status</MultiLanguageText>
+      </Comment>
+      <StartValue>16#80</StartValue>
+    </Member>
+    <Member Name="Status1" Datatype="DWord">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE"> Status Word1</MultiLanguageText>
+        <MultiLanguageText Lang="en-US"> Status Word1</MultiLanguageText>
+      </Comment>
+      <StartValue>16#0</StartValue>
+    </Member>
+    <Member Name="AlarmState" Datatype="Word">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Alarm State for group display</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Alarm Status for group display</MultiLanguageText>
+      </Comment>
+    </Member>
+  </Section>
+</Sections></Interface>
+      <Name>HMI_OpAnL</Name>
+      <Namespace />
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="3" CompositionName="Items">
+            <AttributeList>
+              <Culture>de-DE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="4" CompositionName="Items">
+            <AttributeList>
+              <Culture>fr-FR</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <MultilingualText ID="5" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="6" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="7" CompositionName="Items">
+            <AttributeList>
+              <Culture>de-DE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="8" CompositionName="Items">
+            <AttributeList>
+              <Culture>fr-FR</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </SW.Types.PlcStruct>
+</Document>

@@ -1,0 +1,11 @@
+﻿DocumentHash:
+  - FileName: LCFL_typeMaintenanceSiemens.xml
+    Hash: hB9LoTGdrOsod1PoYH+mlXTyfAHz75hCeHN1ncsm9HY=
+LibraryMetaFileHash: vNZ1mQ1q761FDZ1c8JJSMCLw1gwUjVAy9kvhAQgAfJU=
+LibraryVersion:
+  Guid: 25029418-e5d5-43b3-9d8c-13956f655964
+  DependsOn:
+    - TypeName: LCFL_typeMaintenance
+      VersionNumber: 1.0.0
+    - TypeName: LCFL_typeMTPOSLevel
+      VersionNumber: 1.0.0

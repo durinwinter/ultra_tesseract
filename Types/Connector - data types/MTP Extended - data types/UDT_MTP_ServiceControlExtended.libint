@@ -1,0 +1,11 @@
+﻿DocumentHash:
+  - FileName: UDT_MTP_ServiceControlExtended.xml
+    Hash: DG+L6/Ni4l7o0r2RKlO/kv58an9e0/BwhST+s842k2k=
+LibraryMetaFileHash: QNd+JR551FbfakNMXH6UKPdUs7XcRO5ugkjbIE3YGKE=
+LibraryVersion:
+  Guid: f131665f-2c8f-47b6-a665-699744ba8915
+  DependsOn:
+    - TypeName: UDT_MTP_ServiceControl
+      VersionNumber: 1.0.3
+    - TypeName: UDT_Service_Setup
+      VersionNumber: 1.0.0

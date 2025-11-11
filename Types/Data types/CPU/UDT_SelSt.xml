@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V20" />
+  <SW.Types.PlcStruct ID="0">
+    <AttributeList>
+      <Interface><Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v5">
+  <Section Name="None">
+    <Member Name="b0" Datatype="Byte">
+      <Comment>
+        <MultiLanguageText Lang="en-US">Byte 0</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="b1" Datatype="Byte">
+      <Comment>
+        <MultiLanguageText Lang="en-US">Byte 1</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="b2" Datatype="Byte">
+      <Comment>
+        <MultiLanguageText Lang="en-US">Byte 2</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="b3" Datatype="Byte">
+      <Comment>
+        <MultiLanguageText Lang="en-US">Byte 3</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="b4" Datatype="Byte">
+      <Comment>
+        <MultiLanguageText Lang="en-US">Byte 4</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="b5" Datatype="Byte">
+      <Comment>
+        <MultiLanguageText Lang="en-US">Byte 5</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="b6" Datatype="Byte">
+      <Comment>
+        <MultiLanguageText Lang="en-US">Byte 6</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="b7" Datatype="Byte">
+      <Comment>
+        <MultiLanguageText Lang="en-US">Byte 7</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="b8" Datatype="Byte">
+      <Comment>
+        <MultiLanguageText Lang="en-US">Byte 8</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="b9" Datatype="Byte">
+      <Comment>
+        <MultiLanguageText Lang="en-US">Byte 9</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="b10" Datatype="Byte">
+      <Comment>
+        <MultiLanguageText Lang="en-US">Byte 10</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="b11" Datatype="Byte">
+      <Comment>
+        <MultiLanguageText Lang="en-US">Byte 11</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="b12" Datatype="Byte">
+      <Comment>
+        <MultiLanguageText Lang="en-US">Byte 12</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="b13" Datatype="Byte">
+      <Comment>
+        <MultiLanguageText Lang="en-US">Byte 13</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="b14" Datatype="Byte">
+      <Comment>
+        <MultiLanguageText Lang="en-US">Byte 14</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="b15" Datatype="Byte">
+      <Comment>
+        <MultiLanguageText Lang="en-US">Byte 15</MultiLanguageText>
+      </Comment>
+    </Member>
+  </Section>
+</Sections></Interface>
+      <Name>UDT_SelSt</Name>
+      <Namespace />
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <MultilingualText ID="3" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="4" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </SW.Types.PlcStruct>
+</Document>

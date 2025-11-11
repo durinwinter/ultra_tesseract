@@ -1,0 +1,9 @@
+﻿DocumentHash:
+  - FileName: BoolToDigVal.s7dcl
+    Hash: E7asimDJRQZr3gPvfHaCQrXC+Aya2Kfa8Fni5nR8Lw4=
+LibraryMetaFileHash: UqiCtV/8/yoH1BtXSafYBSGTbEaJPFGetEjoruZIMbI=
+LibraryVersion:
+  Guid: 55b9fa37-6386-42ac-ab11-af9c8705ed4d
+  DependsOn:
+    - TypeName: DigVal
+      VersionNumber: 1.0.1

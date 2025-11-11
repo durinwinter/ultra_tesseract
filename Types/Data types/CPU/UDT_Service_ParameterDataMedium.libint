@@ -1,0 +1,9 @@
+﻿DocumentHash:
+  - FileName: UDT_Service_ParameterDataMedium.xml
+    Hash: rCcXh9cRrIRQX0Xtcy6HV/4VZ4PoCXFZzGDK9lkaEQs=
+LibraryMetaFileHash: frxV4jiD4EqDBhdIQm1/LImrZ6uSYClwkUB2vxX2AHE=
+LibraryVersion:
+  Guid: e614db22-ed83-451b-952c-622c8d469092
+  DependsOn:
+    - TypeName: UDT_Service_ParameterDefinition
+      VersionNumber: 1.0.1

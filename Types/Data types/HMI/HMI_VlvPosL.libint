@@ -1,0 +1,9 @@
+﻿DocumentHash:
+  - FileName: HMI_VlvPosL.xml
+    Hash: xomWamOSLA9j5aSc+QuX8STpfYaLhcGFuB6QoW6yO6w=
+LibraryMetaFileHash: N0o6w6FKyxhKnitMu4wqU6IEofw2mDKoT5Cv4QB7cx8=
+LibraryVersion:
+  Guid: bbd31111-39a7-4154-ac86-fd41a00fd827
+  DependsOn:
+    - TypeName: ScaVal
+      VersionNumber: 1.0.1

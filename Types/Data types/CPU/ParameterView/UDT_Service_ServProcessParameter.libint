@@ -1,0 +1,15 @@
+﻿DocumentHash:
+  - FileName: UDT_Service_ServProcessParameter.xml
+    Hash: HpQBqiYzsNRP4PRJrIIAaHH6dwSloFFEhktVAZV6aCw=
+LibraryMetaFileHash: 5NIa1KCrjcPTZQP5g82K0U8dupgHGWG8oroeq/Bo0OE=
+LibraryVersion:
+  Guid: 6fe33881-4426-4a91-8312-cc544352e9bd
+  DependsOn:
+    - TypeName: UDT_MTP_DIntProcessValueIn
+      VersionNumber: 1.0.1
+    - TypeName: UDT_MTP_StringProcessValueIn
+      VersionNumber: 1.0.1
+    - TypeName: UDT_MTP_BinProcessValueIn
+      VersionNumber: 1.0.3
+    - TypeName: UDT_MTP_AnaProcessValueIn
+      VersionNumber: 1.0.1

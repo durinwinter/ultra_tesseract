@@ -1,0 +1,8 @@
+﻿LibraryType:
+  Guid: 0d183ddf-6c42-4439-8d2d-5c509f71b8f5
+LibraryVersion:
+  VersionNumber: 1.0.2
+  Author: Siemens AG
+  IsDefault: true
+  Comment:
+    de-DE: default value sync = true

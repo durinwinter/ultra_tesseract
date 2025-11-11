@@ -1,0 +1,8 @@
+﻿LibraryType:
+  Guid: 3b581e68-eccc-4260-92ec-456b10c11dd7
+LibraryVersion:
+  VersionNumber: 1.0.4
+  Author: Siemens AG
+  IsDefault: true
+  Comment:
+    de-DE: definition = Array[0..31]

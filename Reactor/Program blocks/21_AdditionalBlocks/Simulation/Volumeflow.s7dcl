@@ -1,0 +1,47 @@
+﻿{
+    S7_EditorMode := "SCL";
+    S7_Optimized := "TRUE";
+    S7_Version := "0.1"
+}
+FUNCTION_BLOCK "Volumeflow"
+    VAR_INPUT 
+        Enable : Bool;
+        Release_Spd : Int;
+        T_Release : Real;
+        {
+            S7_Access := "ReadOnly := External";
+            S7_Visibility := "Hidden := External"
+        }
+        Raw_Scale : _.ScaVal_Raw := (
+            High := 27648,
+            Low := 0
+        );
+    END_VAR
+    VAR_OUTPUT 
+        Liter : Real;
+        Liters_Raw : Int;
+    END_VAR
+    VAR 
+        "pi" : Real := 3.1415;
+        r : Real := 0.5;
+    END_VAR
+    VAR_TEMP 
+        Release_Spd_Raw : Real;
+        Release_Spd_Real : Real;
+    END_VAR
+
+    { S7_Language := "SCL" }
+    NETWORK
+        IF #Enable = FALSE THEN
+            #Liter := 0;
+            #Liters_Raw := 0;
+            RETURN;
+        END_IF;
+        #Release_Spd_Real := INT_TO_REAL(#Release_Spd);
+        #Release_Spd_Raw := (#Release_Spd_Real / 27648) * 100;
+        //Volume flow in liter (dm^2 == l)
+        #Liter := #T_Release * #Release_Spd_Raw * #pi * #r * #r * 4;
+        #Liters_Raw := (#Liter/32) * #Raw_Scale.High;
+        
+    END_NETWORK
+END_FUNCTION_BLOCK

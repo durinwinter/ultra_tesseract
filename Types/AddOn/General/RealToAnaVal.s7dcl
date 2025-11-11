@@ -1,0 +1,20 @@
+﻿{
+    S7_EditorMode := "SCL";
+    S7_Optimized := "TRUE";
+    S7_Version := "0.1"
+}
+FUNCTION "RealToAnaVal" : Void
+    VAR_INPUT 
+        In : Real;
+        ST : Byte;
+    END_VAR
+    VAR_OUTPUT 
+        Out : _.AnaVal;
+    END_VAR
+
+    { S7_Language := "SCL" }
+    NETWORK
+        #Out.ST := #ST;
+        #Out.Value := #In;
+    END_NETWORK
+END_FUNCTION

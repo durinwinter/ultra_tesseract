@@ -1,0 +1,614 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V20" />
+  <SW.Types.PlcStruct ID="0">
+    <AttributeList>
+      <Interface><Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v5">
+  <Section Name="None">
+    <Member Name="FwdMan" Datatype="Bool">
+      <Comment>
+        <MultiLanguageText Lang="de-DE"> 1=Start: Forward Start Command in Manual Mode</MultiLanguageText>
+        <MultiLanguageText Lang="en-US"> 1=Start: Forward Start Command in Manual Mode</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="StopMan" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="CFC_ForTest" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE"> 1=Stop: Stop Command in Manual Mode</MultiLanguageText>
+        <MultiLanguageText Lang="en-US"> 1=Stop: Stop Command in Manual Mode</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="RevMan" Datatype="Bool">
+      <Comment>
+        <MultiLanguageText Lang="de-DE"> 1=Start: Reverse Start Command in Manual Mode</MultiLanguageText>
+        <MultiLanguageText Lang="en-US"> 1=Start: Reverse Start Command in Manual Mode</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="DvFdOnMan" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="CFC_ForTest" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE"> 1=On: Device feed-in On Command in Manual Mode</MultiLanguageText>
+        <MultiLanguageText Lang="en-US"> 1=On: Device feed-in On Command in Manual Mode</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="DvFdOffMan" Datatype="Bool">
+      <Comment>
+        <MultiLanguageText Lang="de-DE"> 1=Off: Device feed-in Off Command in Manual Mode</MultiLanguageText>
+        <MultiLanguageText Lang="en-US"> 1=Off: Device feed-in Off Command in Manual Mode</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="AutModOp" Datatype="Bool">
+      <Comment>
+        <MultiLanguageText Lang="de-DE"> 1=Auto Mode: Auto Mode by Operator</MultiLanguageText>
+        <MultiLanguageText Lang="en-US"> 1=Auto Mode: Auto Mode by Operator</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="ManModOp" Datatype="Bool">
+      <Comment>
+        <MultiLanguageText Lang="de-DE"> 1=Manual Mode: Manual Mode by Operator</MultiLanguageText>
+        <MultiLanguageText Lang="en-US"> 1=Manual Mode: Manual Mode by Operator</MultiLanguageText>
+      </Comment>
+      <StartValue>TRUE</StartValue>
+    </Member>
+    <Member Name="LocalLi" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="CFC_ForTest" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE"> 1=Local Mode: Local Operation by Field Signal</MultiLanguageText>
+        <MultiLanguageText Lang="en-US"> 1=Local Mode: Local Operation by Field Signal</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="LocalOp" Datatype="Bool">
+      <Comment>
+        <MultiLanguageText Lang="de-DE"> 1=Local Mode: Local Operation by Operator</MultiLanguageText>
+        <MultiLanguageText Lang="en-US"> 1=Local Mode: Local Operation by Operator</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="OosOp" Datatype="Bool">
+      <Comment>
+        <MultiLanguageText Lang="de-DE"> 1=Oos Mode: Oos Mode by Operator</MultiLanguageText>
+        <MultiLanguageText Lang="en-US"> 1=Oos Mode: Oos Mode by Operator</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="FwdLocal" Datatype="Bool">
+      <Comment>
+        <MultiLanguageText Lang="de-DE"> 1=Start Local: Field Forward Start Signal</MultiLanguageText>
+        <MultiLanguageText Lang="en-US"> 1=Start Local: Field Forward Start Signal</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="StopLocal" Datatype="Bool">
+      <Comment>
+        <MultiLanguageText Lang="de-DE"> 1=Stop Local: Field Stop Signal</MultiLanguageText>
+        <MultiLanguageText Lang="en-US"> 1=Stop Local: Field Stop Signal</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="RevLocal" Datatype="Bool">
+      <Comment>
+        <MultiLanguageText Lang="de-DE"> 1=Start Local: Field Reverse Start Signal</MultiLanguageText>
+        <MultiLanguageText Lang="en-US"> 1=Start Local: Field Reverse Start Signal</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="SP_Int" Datatype="Real">
+      <Comment>
+        <MultiLanguageText Lang="de-DE"> Setpoint (Internal)</MultiLanguageText>
+        <MultiLanguageText Lang="en-US"> Setpoint (Internal)</MultiLanguageText>
+      </Comment>
+      <StartValue>1.0</StartValue>
+    </Member>
+    <Member Name="SP_Ext" Datatype="Real">
+      <Comment>
+        <MultiLanguageText Lang="de-DE"> Setpoint (External)</MultiLanguageText>
+        <MultiLanguageText Lang="en-US"> Setpoint (External)</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="SP_HiLim" Datatype="Real">
+      <Comment>
+        <MultiLanguageText Lang="de-DE"> Setpoint High Limit</MultiLanguageText>
+        <MultiLanguageText Lang="en-US"> Setpoint High Limit</MultiLanguageText>
+      </Comment>
+      <StartValue>100.0</StartValue>
+    </Member>
+    <Member Name="SP_LoLim" Datatype="Real">
+      <Comment>
+        <MultiLanguageText Lang="de-DE"> Setpoint Low Limit</MultiLanguageText>
+        <MultiLanguageText Lang="en-US"> Setpoint Low Limit</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="SP_ExtOp" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="CFC_ForTest" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE"> Operator Input to Select External Setpoint</MultiLanguageText>
+        <MultiLanguageText Lang="en-US"> Operator Input to Select External Setpoint</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="SP_IntOp" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="CFC_ForTest" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE"> Operator Input to Select Internal Setpoint</MultiLanguageText>
+        <MultiLanguageText Lang="en-US"> Operator Input to Select Internal Setpoint</MultiLanguageText>
+      </Comment>
+      <StartValue>TRUE</StartValue>
+    </Member>
+    <Member Name="SP_TrkExt" Datatype="Bool">
+      <Comment>
+        <MultiLanguageText Lang="de-DE"> Bumpless Transfer from External to Internal</MultiLanguageText>
+        <MultiLanguageText Lang="en-US"> Bumpless Transfer from External to Internal</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="SP_RateOn" Datatype="Bool">
+      <Comment>
+        <MultiLanguageText Lang="de-DE"> 1= Activate limitation of setpoint gradients</MultiLanguageText>
+        <MultiLanguageText Lang="en-US"> 1= Activate limitation of setpoint gradients</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="SP_RmpOn" Datatype="Bool">
+      <Comment>
+        <MultiLanguageText Lang="de-DE"> 1= Activate setpoint ramp to target SP_RmpTarget</MultiLanguageText>
+        <MultiLanguageText Lang="en-US"> 1= Activate setpoint ramp to target SP_RmpTarget</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="SP_RmpModTime" Datatype="Bool">
+      <Comment>
+        <MultiLanguageText Lang="de-DE"> 1= Use time SP_RmpTime for ramp, 0= Use rates SP_UpRaLim, SP_DnRaLim</MultiLanguageText>
+        <MultiLanguageText Lang="en-US"> 1= Use time SP_RmpTime for ramp, 0= Use rates SP_UpRaLim, SP_DnRaLim</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="SP_UpRaLim" Datatype="Real">
+      <Comment>
+        <MultiLanguageText Lang="de-DE"> Upward rate limit for setpoint</MultiLanguageText>
+        <MultiLanguageText Lang="en-US"> Upward rate limit for setpoint</MultiLanguageText>
+      </Comment>
+      <StartValue>100.0</StartValue>
+    </Member>
+    <Member Name="SP_DnRaLim" Datatype="Real">
+      <AttributeList>
+        <BooleanAttribute Name="CFC_ForTest" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE"> Downward rate limit for setpoint</MultiLanguageText>
+        <MultiLanguageText Lang="en-US"> Downward rate limit for setpoint</MultiLanguageText>
+      </Comment>
+      <StartValue>100.0</StartValue>
+    </Member>
+    <Member Name="SP_RmpTime" Datatype="Real">
+      <Comment>
+        <MultiLanguageText Lang="de-DE"> Setpoint ramp time [s,min,h]</MultiLanguageText>
+        <MultiLanguageText Lang="en-US"> Setpoint ramp time [s,min,h]</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="SP_RmpTarget" Datatype="Real">
+      <Comment>
+        <MultiLanguageText Lang="de-DE"> Setpoint ramp target</MultiLanguageText>
+        <MultiLanguageText Lang="en-US"> Setpoint ramp target</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="SP_OpScale" Datatype="&quot;ScaVal&quot;">
+      <Comment>
+        <MultiLanguageText Lang="de-DE"> SP - Bar Display Limits for OS</MultiLanguageText>
+        <MultiLanguageText Lang="en-US"> SP - Bar Display Limits for OS</MultiLanguageText>
+      </Comment>
+      <Sections>
+        <Section Name="None">
+          <Member Name="High" Datatype="Real">
+            <Comment>
+              <MultiLanguageText Lang="en-US">High Value</MultiLanguageText>
+            </Comment>
+          </Member>
+          <Member Name="Low" Datatype="Real">
+            <Comment>
+              <MultiLanguageText Lang="en-US">Low Value</MultiLanguageText>
+            </Comment>
+          </Member>
+        </Section>
+      </Sections>
+    </Member>
+    <Member Name="SP_Unit" Datatype="Int">
+      <Comment>
+        <MultiLanguageText Lang="de-DE"> Engineering units of SP</MultiLanguageText>
+        <MultiLanguageText Lang="en-US"> Engineering units of SP</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="RbkUnit" Datatype="Int">
+      <Comment>
+        <MultiLanguageText Lang="de-DE"> Engineering units of Rbk</MultiLanguageText>
+        <MultiLanguageText Lang="en-US"> Engineering units of Rbk</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="RbkWH_Lim" Datatype="Real">
+      <Comment>
+        <MultiLanguageText Lang="de-DE"> Rbk - High Warning Limit</MultiLanguageText>
+        <MultiLanguageText Lang="en-US"> Rbk - High Warning Limit</MultiLanguageText>
+      </Comment>
+      <StartValue>90.0</StartValue>
+    </Member>
+    <Member Name="RbkWL_Lim" Datatype="Real">
+      <Comment>
+        <MultiLanguageText Lang="de-DE"> Rbk - Low Warning Limit</MultiLanguageText>
+        <MultiLanguageText Lang="en-US"> Rbk - Low Warning Limit</MultiLanguageText>
+      </Comment>
+      <StartValue>10.0</StartValue>
+    </Member>
+    <Member Name="RbkHyst" Datatype="Real">
+      <Comment>
+        <MultiLanguageText Lang="de-DE"> Rbk - Hysteresis</MultiLanguageText>
+        <MultiLanguageText Lang="en-US"> Rbk - Hysteresis</MultiLanguageText>
+      </Comment>
+      <StartValue>1.0</StartValue>
+    </Member>
+    <Member Name="RbkOpScale" Datatype="&quot;ScaVal&quot;">
+      <Comment>
+        <MultiLanguageText Lang="de-DE"> Rbk - Bar Display Limits for OS</MultiLanguageText>
+        <MultiLanguageText Lang="en-US"> Rbk - Bar Display Limits for OS</MultiLanguageText>
+      </Comment>
+      <Sections>
+        <Section Name="None">
+          <Member Name="High" Datatype="Real">
+            <Comment>
+              <MultiLanguageText Lang="en-US">High Value</MultiLanguageText>
+            </Comment>
+          </Member>
+          <Member Name="Low" Datatype="Real">
+            <Comment>
+              <MultiLanguageText Lang="en-US">Low Value</MultiLanguageText>
+            </Comment>
+          </Member>
+        </Section>
+      </Sections>
+    </Member>
+    <Member Name="ER_AH_Lim" Datatype="Real">
+      <AttributeList>
+        <BooleanAttribute Name="CFC_ForTest" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE"> ER alarm high limit</MultiLanguageText>
+        <MultiLanguageText Lang="en-US"> ER alarm high limit</MultiLanguageText>
+      </Comment>
+      <StartValue>100.0</StartValue>
+    </Member>
+    <Member Name="ER_AL_Lim" Datatype="Real">
+      <Comment>
+        <MultiLanguageText Lang="de-DE"> ER alarm low limit</MultiLanguageText>
+        <MultiLanguageText Lang="en-US"> ER alarm low limit</MultiLanguageText>
+      </Comment>
+      <StartValue>-100.0</StartValue>
+    </Member>
+    <Member Name="ER_Hyst" Datatype="Real">
+      <Comment>
+        <MultiLanguageText Lang="de-DE"> Hysteresis for ER alarms</MultiLanguageText>
+        <MultiLanguageText Lang="en-US"> Hysteresis for ER alarms</MultiLanguageText>
+      </Comment>
+      <StartValue>1.0</StartValue>
+    </Member>
+    <Member Name="ER_AH_DFac" Datatype="Real">
+      <AttributeList>
+        <BooleanAttribute Name="CFC_ForTest" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE"> ER alarm coming delay factor for positive SP jump [s/PV_Unit]</MultiLanguageText>
+        <MultiLanguageText Lang="en-US"> ER alarm coming delay factor for positive SP jump [s/PV_Unit]</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="ER_AL_DFac" Datatype="Real">
+      <Comment>
+        <MultiLanguageText Lang="de-DE"> ER alarm coming delay factor for negative SP jump [s/PV_Unit]</MultiLanguageText>
+        <MultiLanguageText Lang="en-US"> ER alarm coming delay factor for negative SP jump [s/PV_Unit]</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="Monitor" Datatype="Bool">
+      <Comment>
+        <MultiLanguageText Lang="de-DE"> 1=Monitor ON, 0=Monitor OFF: Feedback Monitor</MultiLanguageText>
+        <MultiLanguageText Lang="en-US"> 1=Monitor ON, 0=Monitor OFF: Feedback Monitor</MultiLanguageText>
+      </Comment>
+      <StartValue>TRUE</StartValue>
+    </Member>
+    <Member Name="MonTiStatic" Datatype="Real">
+      <Comment>
+        <MultiLanguageText Lang="de-DE"> Monitoring Time of Feedback [s]</MultiLanguageText>
+        <MultiLanguageText Lang="en-US"> Monitoring Time of Feedback [s]</MultiLanguageText>
+      </Comment>
+      <StartValue>3.0</StartValue>
+    </Member>
+    <Member Name="MonTiDynamic" Datatype="Real">
+      <Comment>
+        <MultiLanguageText Lang="de-DE"> Monitoring Time of Feedback on starting or on change in control output [s]</MultiLanguageText>
+        <MultiLanguageText Lang="en-US"> Monitoring Time of Feedback on starting or on change in control output [s]</MultiLanguageText>
+      </Comment>
+      <StartValue>3.0</StartValue>
+    </Member>
+    <Member Name="MonTiDyStop" Datatype="Real">
+      <AttributeList>
+        <BooleanAttribute Name="CFC_ForTest" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE"> Monitoring Time of Feedback on stopping in control output [s]</MultiLanguageText>
+        <MultiLanguageText Lang="en-US"> Monitoring Time of Feedback on stopping in control output [s]</MultiLanguageText>
+      </Comment>
+      <StartValue>3.0</StartValue>
+    </Member>
+    <Member Name="RapidStp" Datatype="Bool">
+      <Comment>
+        <MultiLanguageText Lang="de-DE"> 1 = Motor Rapid Stop command</MultiLanguageText>
+        <MultiLanguageText Lang="en-US"> 1 = Motor Rapid Stop command</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="RstOp" Datatype="Bool">
+      <Comment>
+        <MultiLanguageText Lang="de-DE"> Operator Reset Signal</MultiLanguageText>
+        <MultiLanguageText Lang="en-US"> Operator Reset Signal</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="Permit_ST" Datatype="Byte">
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Permit Signal Status</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Permit Signal Status</MultiLanguageText>
+      </Comment>
+      <StartValue>BYTE#16#FF</StartValue>
+    </Member>
+    <Member Name="Intlock_ST" Datatype="Byte">
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Intlock Signal Status</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Intlock Signal Status</MultiLanguageText>
+      </Comment>
+      <StartValue>BYTE#16#FF</StartValue>
+    </Member>
+    <Member Name="Protect_ST" Datatype="Byte">
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Protect Signal Status</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Protect Signal Status</MultiLanguageText>
+      </Comment>
+      <StartValue>BYTE#16#FF</StartValue>
+    </Member>
+    <Member Name="TimeFactor" Datatype="Int">
+      <Comment>
+        <MultiLanguageText Lang="de-DE"> Time Conversion Factor (0- Sec, 1- Min, 2- Hour)</MultiLanguageText>
+        <MultiLanguageText Lang="en-US"> Time Conversion Factor (0- Sec, 1- Min, 2- Hour)</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="CurrMon" Datatype="DInt">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE"> Remaining monitoring time [s]</MultiLanguageText>
+        <MultiLanguageText Lang="en-US"> Remaining monitoring time [s]</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="FbkFwdOut" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE"> 1=Run, 0=Stop: Feedback of Control Forward</MultiLanguageText>
+        <MultiLanguageText Lang="en-US"> 1=Run, 0=Stop: Feedback of Control Forward</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="FbkRevOut" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE"> 1=Run, 0=Stop: Feedback of Control Reverse</MultiLanguageText>
+        <MultiLanguageText Lang="en-US"> 1=Run, 0=Stop: Feedback of Control Reverse</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="SP_Out" Datatype="Real">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE"> Analog Output Value</MultiLanguageText>
+        <MultiLanguageText Lang="en-US"> Analog Output Value</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="SP_RateTarget" Datatype="Real">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE"> Target  for limitation of setpoint gradients</MultiLanguageText>
+        <MultiLanguageText Lang="en-US"> Target  for limitation of setpoint gradients</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="SP_RemRT" Datatype="Real">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE"> Remaining ramp time of setpoint</MultiLanguageText>
+        <MultiLanguageText Lang="en-US"> Remaining ramp time of setpoint</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="RbkOut" Datatype="Real">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE"> Readback value output</MultiLanguageText>
+        <MultiLanguageText Lang="en-US"> Readback value output</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="OS_PermOut" Datatype="DWord">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE"> Operator Permission: Output for OS</MultiLanguageText>
+        <MultiLanguageText Lang="en-US"> Operator Permission: Output for OS</MultiLanguageText>
+      </Comment>
+      <StartValue>DWORD#16#FFFF_FFFF</StartValue>
+    </Member>
+    <Member Name="OS_PermLog" Datatype="DWord">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE"> Operator Permission: Output for OS</MultiLanguageText>
+        <MultiLanguageText Lang="en-US"> Operator Permission: Output for OS</MultiLanguageText>
+      </Comment>
+      <StartValue>DWORD#16#FFFF_FFFF</StartValue>
+    </Member>
+    <Member Name="OS1PermOut" Datatype="DWord">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE"> Operator Permission: Output for OS</MultiLanguageText>
+        <MultiLanguageText Lang="en-US"> Operator Permission: Output for OS</MultiLanguageText>
+      </Comment>
+      <StartValue>DWORD#16#FFFF_FFFF</StartValue>
+    </Member>
+    <Member Name="OS1PermLog" Datatype="DWord">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE"> Operator Permission: Output for OS</MultiLanguageText>
+        <MultiLanguageText Lang="en-US"> Operator Permission: Output for OS</MultiLanguageText>
+      </Comment>
+      <StartValue>DWORD#16#FFFF_FFFF</StartValue>
+    </Member>
+    <Member Name="OpSt_Out" Datatype="DWord">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE"> Enabled operator stations</MultiLanguageText>
+        <MultiLanguageText Lang="en-US"> Enabled operator stations</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="ST_Worst" Datatype="Byte">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE"> Worst Signal Status</MultiLanguageText>
+        <MultiLanguageText Lang="en-US"> Worst Signal Status</MultiLanguageText>
+      </Comment>
+      <StartValue>16#80</StartValue>
+    </Member>
+    <Member Name="AutoST" Datatype="Byte">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE"> Worst Signal Status of the automatic commands</MultiLanguageText>
+        <MultiLanguageText Lang="en-US"> Worst Signal Status of the automatic commands</MultiLanguageText>
+      </Comment>
+      <StartValue>16#80</StartValue>
+    </Member>
+    <Member Name="Status1" Datatype="DWord">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE"> Status1 Word</MultiLanguageText>
+        <MultiLanguageText Lang="en-US"> Status1 Word</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="Status2" Datatype="DWord">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE"> Status2 Word</MultiLanguageText>
+        <MultiLanguageText Lang="en-US"> Status2 Word</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="Status3" Datatype="DWord">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE"> Status3 Word</MultiLanguageText>
+        <MultiLanguageText Lang="en-US"> Status3 Word</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="Status4" Datatype="DWord">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE"> Status4 Word</MultiLanguageText>
+        <MultiLanguageText Lang="en-US"> Status4 Word</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="Status5" Datatype="DWord">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE"> Status5 Word</MultiLanguageText>
+        <MultiLanguageText Lang="en-US"> Status5 Word</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="AlarmState" Datatype="Word">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Alarm State for group display</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Alarm Status for group display</MultiLanguageText>
+      </Comment>
+    </Member>
+  </Section>
+</Sections></Interface>
+      <Name>HMI_MotSpdCL</Name>
+      <Namespace />
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="3" CompositionName="Items">
+            <AttributeList>
+              <Culture>de-DE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="4" CompositionName="Items">
+            <AttributeList>
+              <Culture>fr-FR</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <MultilingualText ID="5" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="6" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="7" CompositionName="Items">
+            <AttributeList>
+              <Culture>de-DE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="8" CompositionName="Items">
+            <AttributeList>
+              <Culture>fr-FR</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </SW.Types.PlcStruct>
+</Document>

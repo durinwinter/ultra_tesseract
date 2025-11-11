@@ -1,0 +1,704 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V20" />
+  <SW.Types.PlcStruct ID="0">
+    <AttributeList>
+      <Interface><Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v5">
+  <Section Name="None">
+    <Member Name="FwdEn" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Forward movement enable1: enabled0: disabled</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Forward movement enable1: enabled0: disabled</MultiLanguageText>
+      </Comment>
+      <StartValue>FALSE</StartValue>
+    </Member>
+    <Member Name="RevEn" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Reverse movement enable1: enabled0: disabled</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Reverse movement enable1: enabled0: disabled</MultiLanguageText>
+      </Comment>
+      <StartValue>FALSE</StartValue>
+    </Member>
+    <Member Name="StopOp" Datatype="Bool">
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Stop Command from Operator (relevant, if StateOpAct) 0--&gt;1:request from POL 1--&gt;0:acknowledge from PEA (Handshake)</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Stop Command from Operator (relevant, if StateOpAct) 0--&gt;1:request from POL 1--&gt;0:acknowledge from PEA (Handshake)</MultiLanguageText>
+      </Comment>
+      <StartValue>FALSE</StartValue>
+    </Member>
+    <Member Name="FwdOp" Datatype="Bool">
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Forward Command from Operator (relevant, if StateOpAct &amp; FwdEn) 0--&gt;1: request from POL 1--&gt;0: acknowledge from PEA (Handshake)</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Forward Command from Operator (relevant, if StateOpAct &amp; FwdEn) 0--&gt;1: request from POL 1--&gt;0: acknowledge from PEA (Handshake)</MultiLanguageText>
+      </Comment>
+      <StartValue>FALSE</StartValue>
+    </Member>
+    <Member Name="RevOp" Datatype="Bool">
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Reverse Command from Operator (relevant, if StateOpAct &amp; RevEn) 0--&gt;1: request from POL 1--&gt;0: acknowledge from PEA (Handshake)</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Reverse Command from Operator (relevant, if StateOpAct &amp; RevEn) 0--&gt;1: request from POL 1--&gt;0: acknowledge from PEA (Handshake)</MultiLanguageText>
+      </Comment>
+      <StartValue>FALSE</StartValue>
+    </Member>
+    <Member Name="OSLevel" Datatype="Byte">
+      <Comment>
+        <MultiLanguageText Lang="de-DE">OSLevel variable</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">OSLevel variable</MultiLanguageText>
+      </Comment>
+      <StartValue>16#00</StartValue>
+    </Member>
+    <Member Name="StateChannel" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Selection of the active OperationMode interaction channel0: The operator switches (*Op) shall be used.1: The automatic switches (*Aut) shall be used.</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Selection of the active OperationMode interaction channel0: The operator switches (*Op) shall be used.1: The automatic switches (*Aut) shall be used.</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="StateOffAut" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Set OperationMode to Offline by automatic interaction (relevant, if StateChannel).1: OperationMode is set to Offline.0: no operation</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Set OperationMode to Offline by automatic interaction (relevant, if StateChannel).1: OperationMode is set to Offline.0: no operation</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="StateOffOp" Datatype="Bool">
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Set OperationMode to Offline by operator interaction (relevant, if not StateChannel) 0--&gt;1:request to set OperationMode to Offline 1--&gt;0:acknowledge by PEA</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Set OperationMode to Offline by operator interaction (relevant, if not StateChannel) 0--&gt;1:request to set OperationMode to Offline 1--&gt;0:acknowledge by PEA</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="StateOpAut" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Set OperationMode to Operator by automatic interaction (relevant, if StateChannel).1: OperationMode is set to Manual.0: no operation</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Set OperationMode to Operator by automatic interaction (relevant, if StateChannel).1: OperationMode is set to Manual.0: no operation</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="StateOpOp" Datatype="Bool">
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Set OperationMode to Operator by operator interaction (relevant, if not StateChannel) 0--&gt;1:request to set OperationMode to Manual 1--&gt;0:acknowledge by PEA</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Set OperationMode to Operator by operator interaction (relevant, if not StateChannel) 0--&gt;1:request to set OperationMode to Manual 1--&gt;0:acknowledge by PEA</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="StateAutAut" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Set OperationMode to Automatic by automatic interaction (relevant, if StateChannel).1: OperationMode is set to Automatic.0: no operation</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Set OperationMode to Automatic by automatic interaction (relevant, if StateChannel).1: OperationMode is set to Automatic.0: no operation</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="StateAutOp" Datatype="Bool">
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Set OperationMode to Automatic by operator interaction (relevant, if not StateChannel) 0--&gt;1:request to set OperationMode is to Automatic 1--&gt;0:acknowledge by PEA</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Set OperationMode to Automatic by operator interaction (relevant, if not StateChannel) 0--&gt;1:request to set OperationMode is to Automatic 1--&gt;0:acknowledge by PEA</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="StateOpAct" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">1: current mode is Operator0: current mode is not Operator</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">1: current mode is Operator0: current mode is not Operator</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="StateAutAct" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">1: current mode is Automatic0: current mode is not Automatic</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">1: current mode is Automatic0: current mode is not Automatic</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="StateOffAct" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">1: current mode is Offline0: current mode is not Offline</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">1: current mode is Offline0: current mode is not Offline</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="SrcChannel" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">selection of the active SourceMode interaction channel0: The operator switches (*Op) shall be used.1: The automatic switches (*Aut) shall be used</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">selection of the active SourceMode interaction channel0: The operator switches (*Op) shall be used.1: The automatic switches (*Aut) shall be used</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="SrcManAut" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Set SourceMode to Manual by automatic interaction (relevant, if SrcChannel).1: SourceMode is set to Manual.0: no operation</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Set SourceMode to Manual by automatic interaction (relevant, if SrcChannel).1: SourceMode is set to Manual.0: no operation</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="SrcIntAut" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Set SourceMode to Internal by automatic interaction (relevant, if SrcChannel).1: SourceMode is set to Internal.0: no operation</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Set SourceMode to Internal by automatic interaction (relevant, if SrcChannel).1: SourceMode is set to Internal.0: no operation</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="SrcIntOp" Datatype="Bool">
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Set SourceMode to Internal by operator interaction (relevant, if SrcChannel is false) 0--&gt;1:request to set OperationMode to Internal 1--&gt;0:acknowledge by PEA</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Set SourceMode to Internal by operator interaction (relevant, if SrcChannel is false) 0--&gt;1:request to set OperationMode to Internal 1--&gt;0:acknowledge by PEA</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="SrcManOp" Datatype="Bool">
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Set SourceMode to Manual by operator interaction (relevant, if SrcChannel is false) 0--&gt;1:request to set OperationMode to Manual 1--&gt;0:acknowledge by PEA</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Set SourceMode to Manual by operator interaction (relevant, if SrcChannel is false) 0--&gt;1:request to set OperationMode to Manual 1--&gt;0:acknowledge by PEA</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="SrcIntAct" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">1: current mode is Internal0: current mode is not Internal</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">1: current mode is Internal0: current mode is not Internal</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="SrcManAct" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">1: current mode is Manual0: current mode is not Manual</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">1: current mode is Manual0: current mode is not Manual</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="SafePos" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Safe Position1: running0: stopped</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Safe Position1: running0: stopped</MultiLanguageText>
+      </Comment>
+      <StartValue>FALSE</StartValue>
+    </Member>
+    <Member Name="SafePosAct" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Safe Position activated  1: Safe Position is activated (safe operation)   0: Safe Position is not activated (normal operation)</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Safe Position activated  1: Safe Position is activated (safe operation)   0: Safe Position is not activated (normal operation)</MultiLanguageText>
+      </Comment>
+      <StartValue>FALSE</StartValue>
+    </Member>
+    <Member Name="CSF" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Reserved</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Reserved</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="WQC" Datatype="Byte">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Worst Quality Code variable</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Worst Quality Code variable</MultiLanguageText>
+      </Comment>
+      <StartValue>16#FF</StartValue>
+    </Member>
+    <Member Name="StopAut" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Set Drive to Stop by automatic.(relevant, if StateAutAct)1: Stop Command executed0: no operation</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Set Drive to Stop by automatic.(relevant, if StateAutAct)1: Stop Command executed0: no operation</MultiLanguageText>
+      </Comment>
+      <StartValue>FALSE</StartValue>
+    </Member>
+    <Member Name="FwdAut" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Set Drive to Forward by Automatic (relevant, if StateAutAct &amp; FwdEn) 1:forward request 0:no forward request</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Set Drive to Forward by Automatic (relevant, if StateAutAct &amp; FwdEn) 1:forward request 0:no forward request</MultiLanguageText>
+      </Comment>
+      <StartValue>FALSE</StartValue>
+    </Member>
+    <Member Name="RevAut" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Set Drive to Reverse by Automatic (relevant, if StateAutAct &amp; RevEn) 1:reverse request 0:no reverse request</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Set Drive to Reverse by Automatic (relevant, if StateAutAct &amp; RevEn) 1:reverse request 0:no reverse request</MultiLanguageText>
+      </Comment>
+      <StartValue>FALSE</StartValue>
+    </Member>
+    <Member Name="FwdCtrl" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Forward Control1: active0: inactive</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Forward Control1: active0: inactive</MultiLanguageText>
+      </Comment>
+      <StartValue>FALSE</StartValue>
+    </Member>
+    <Member Name="RevCtrl" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Reverse Control1: active0: inactive</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Reverse Control1: active0: inactive</MultiLanguageText>
+      </Comment>
+      <StartValue>FALSE</StartValue>
+    </Member>
+    <Member Name="RevFbkCalc" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Reverse Feedback Source1: calculated0: sensor detection</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Reverse Feedback Source1: calculated0: sensor detection</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="FwdFbkCalc" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Forward Feedback Source1: calculated0: sensor detection</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Forward Feedback Source1: calculated0: sensor detection</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="RpmFbkCalc" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">RPM Feedback Source1: calculated0: sensor detection</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">RPM Feedback Source1: calculated0: sensor detection</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="RevFbk" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Reverse Feedback Signal1: reverse running0: is not reverse running</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Reverse Feedback Signal1: reverse running0: is not reverse running</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="FwdFbk" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Forward Feedback Signal1: forward running0: is not forward running</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Forward Feedback Signal1: forward running0: is not forward running</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="Trip" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Drive Protection Indicator1: no problem0: Drive Protection triggered</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Drive Protection Indicator1: no problem0: Drive Protection triggered</MultiLanguageText>
+      </Comment>
+      <StartValue>FALSE</StartValue>
+    </Member>
+    <Member Name="RpmSclMin" Datatype="Real">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">RPM Setpoint Scale Low Limit</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">RPM Setpoint Scale Low Limit</MultiLanguageText>
+      </Comment>
+      <StartValue>0.0</StartValue>
+    </Member>
+    <Member Name="RpmSclMax" Datatype="Real">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">RPM Setpoint Scale High Limit</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">RPM Setpoint Scale High Limit</MultiLanguageText>
+      </Comment>
+      <StartValue>100.0</StartValue>
+    </Member>
+    <Member Name="RpmUnit" Datatype="Int">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">RPM Setpoint Unit</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">RPM Setpoint Unit</MultiLanguageText>
+      </Comment>
+      <StartValue>1001</StartValue>
+    </Member>
+    <Member Name="RpmMan" Datatype="Real">
+      <Comment>
+        <MultiLanguageText Lang="de-DE">(relevant, if SrcManAct)RPM Manual Setpoint</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">(relevant, if SrcManAct)RPM Manual Setpoint</MultiLanguageText>
+      </Comment>
+      <StartValue>0.0</StartValue>
+    </Member>
+    <Member Name="RpmInt" Datatype="Real">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">(relevant, if SrcIntAct)RPM Internal Setpoint</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">(relevant, if SrcIntAct)RPM Internal Setpoint</MultiLanguageText>
+      </Comment>
+      <StartValue>0.0</StartValue>
+    </Member>
+    <Member Name="RpmMin" Datatype="Real">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">RPM Setpoint Low Limit</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">RPM Setpoint Low Limit</MultiLanguageText>
+      </Comment>
+      <StartValue>0.0</StartValue>
+    </Member>
+    <Member Name="RpmMax" Datatype="Real">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">RPM Setpoint High Limit</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">RPM Setpoint High Limit</MultiLanguageText>
+      </Comment>
+      <StartValue>100.0</StartValue>
+    </Member>
+    <Member Name="Rpm" Datatype="Real">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">RPM Setpoint</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">RPM Setpoint</MultiLanguageText>
+      </Comment>
+      <StartValue>0.0</StartValue>
+    </Member>
+    <Member Name="RpmRbk" Datatype="Real">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">RPM Readback</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">RPM Readback</MultiLanguageText>
+      </Comment>
+      <StartValue>0.0</StartValue>
+    </Member>
+    <Member Name="RpmFbk" Datatype="Real">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">RPM Feedback Signal</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">RPM Feedback Signal</MultiLanguageText>
+      </Comment>
+      <StartValue>0.0</StartValue>
+    </Member>
+    <Member Name="PermEn" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Enables the Permission Lock1: enabled0: disabled</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Enables the Permission Lock1: enabled0: disabled</MultiLanguageText>
+      </Comment>
+      <StartValue>FALSE</StartValue>
+    </Member>
+    <Member Name="Permit" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Permit allows control1: permission is given0: permission is not given</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Permit allows control1: permission is given0: permission is not given</MultiLanguageText>
+      </Comment>
+      <StartValue>FALSE</StartValue>
+    </Member>
+    <Member Name="IntlEn" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Enables the Interlock Lock1: enabled0: disabled</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Enables the Interlock Lock1: enabled0: disabled</MultiLanguageText>
+      </Comment>
+      <StartValue>FALSE</StartValue>
+    </Member>
+    <Member Name="Interlock" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Interlock prevents from being activated and sets it to safe position1: Interlock is not active0: Interlock is active</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Interlock prevents from being activated and sets it to safe position1: Interlock is not active0: Interlock is active</MultiLanguageText>
+      </Comment>
+      <StartValue>FALSE</StartValue>
+    </Member>
+    <Member Name="ProtEn" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Enables the Protection Lock1: enabled; 0: disabled</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Enables the Protection Lock1: enabled; 0: disabled</MultiLanguageText>
+      </Comment>
+      <StartValue>FALSE</StartValue>
+    </Member>
+    <Member Name="Protect" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Protect prevents from being activated and sets it to safe position, requires a reset command1: protect is not active0: protect is active, requires reset</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Protect prevents from being activated and sets it to safe position, requires a reset command1: protect is not active0: protect is active, requires reset</MultiLanguageText>
+      </Comment>
+      <StartValue>FALSE</StartValue>
+    </Member>
+    <Member Name="ResetOp" Datatype="Bool">
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Reset from Operator 0--&gt;1:request from POL 1--&gt;0:acknowledge from PEA (see Handshake)</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Reset from Operator 0--&gt;1:request from POL 1--&gt;0:acknowledge from PEA (see Handshake)</MultiLanguageText>
+      </Comment>
+      <StartValue>FALSE</StartValue>
+    </Member>
+    <Member Name="ResetAut" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Reset from Automatic 1:Reset execute 0:no operation</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Reset from Automatic 1:Reset execute 0:no operation</MultiLanguageText>
+      </Comment>
+      <StartValue>FALSE</StartValue>
+    </Member>
+    <Member Name="MonEn" Datatype="Bool">
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Monitor Enable1: enabled0: disabled</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Monitor Enable1: enabled0: disabled</MultiLanguageText>
+      </Comment>
+      <StartValue>FALSE</StartValue>
+    </Member>
+    <Member Name="MonSafePos" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Set the Error Behavior, if an error occurs.1: After an error occurs, the safe pos will be set.0: After an error occurs, the entity holds the state.</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Set the Error Behavior, if an error occurs.1: After an error occurs, the safe pos will be set.0: After an error occurs, the entity holds the state.</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="MonStatErr" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Static Error active1: active0: inactive</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Static Error active1: active0: inactive</MultiLanguageText>
+      </Comment>
+      <StartValue>FALSE</StartValue>
+    </Member>
+    <Member Name="MonDynErr" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Dynamic Error active1: active0: inactive</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Dynamic Error active1: active0: inactive</MultiLanguageText>
+      </Comment>
+      <StartValue>FALSE</StartValue>
+    </Member>
+    <Member Name="MonStatTi" Datatype="Real">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Monitor Time for uncontrolled changes, in s</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Monitor Time for uncontrolled changes, in s</MultiLanguageText>
+      </Comment>
+      <StartValue>0.0</StartValue>
+    </Member>
+    <Member Name="MonDynTi" Datatype="Real">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Monitor Time for controlled changes, in s</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Monitor Time for controlled changes, in s</MultiLanguageText>
+      </Comment>
+      <StartValue>0.0</StartValue>
+    </Member>
+    <Member Name="RpmErr" Datatype="Real">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">RPM Error (RpmErr = Rpm – RpmFbk)</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">RPM Error (RpmErr = Rpm – RpmFbk)</MultiLanguageText>
+      </Comment>
+      <StartValue>0.0</StartValue>
+    </Member>
+    <Member Name="RpmAHEn" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Enable Alarm High Limit1: enabled0: disabled</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Enable Alarm High Limit1: enabled0: disabled</MultiLanguageText>
+      </Comment>
+      <StartValue>FALSE</StartValue>
+    </Member>
+    <Member Name="RpmALEn" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Enable Alarm Low Limit1: enabled0: disabled</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Enable Alarm Low Limit1: enabled0: disabled</MultiLanguageText>
+      </Comment>
+      <StartValue>FALSE</StartValue>
+    </Member>
+    <Member Name="RpmAHAct" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Alarm High Active 1:enabled 0:disabled</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Alarm High Active 1:enabled 0:disabled</MultiLanguageText>
+      </Comment>
+      <StartValue>FALSE</StartValue>
+    </Member>
+    <Member Name="RpmALAct" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Alarm Low Active 1:enabled 0:disabled</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Alarm Low Active 1:enabled 0:disabled</MultiLanguageText>
+      </Comment>
+      <StartValue>FALSE</StartValue>
+    </Member>
+    <Member Name="RpmAHLim" Datatype="Real">
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Limit Value for Alarm High</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Limit Value for Alarm High</MultiLanguageText>
+      </Comment>
+      <StartValue>100.0</StartValue>
+    </Member>
+    <Member Name="RpmALLim" Datatype="Real">
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Limit Value for Alarm Low</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Limit Value for Alarm Low</MultiLanguageText>
+      </Comment>
+      <StartValue>0.0</StartValue>
+    </Member>
+    <Member Name="StartingFbk" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Reserved</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Reserved</MultiLanguageText>
+      </Comment>
+      <StartValue>FALSE</StartValue>
+    </Member>
+    <Member Name="StoppingFbk" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Reserved</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Reserved</MultiLanguageText>
+      </Comment>
+      <StartValue>FALSE</StartValue>
+    </Member>
+  </Section>
+</Sections></Interface>
+      <Name>UDT_MTP_MonAnaDrv</Name>
+      <Namespace />
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="3" CompositionName="Items">
+            <AttributeList>
+              <Culture>de-DE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="4" CompositionName="Items">
+            <AttributeList>
+              <Culture>fr-FR</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <MultilingualText ID="5" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="6" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text>MTPDataObjectSUCLibrary/DataAssembly/AnaDrv</Text>
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="7" CompositionName="Items">
+            <AttributeList>
+              <Culture>de-DE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="8" CompositionName="Items">
+            <AttributeList>
+              <Culture>fr-FR</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </SW.Types.PlcStruct>
+</Document>

@@ -1,0 +1,9 @@
+﻿DocumentHash:
+  - FileName: HMI_MonAn08.xml
+    Hash: l5NAlCZ/+cqNIvOuCjDkcDMRsSDmfLrrpeWF7P2KaoA=
+LibraryMetaFileHash: myEytTq0Nvp1cSIPProPxY4zVf867Dz9hKu9EevFFZE=
+LibraryVersion:
+  Guid: 7fd402ce-a091-4d4f-a05c-a70794f4595c
+  DependsOn:
+    - TypeName: ScaVal
+      VersionNumber: 1.0.1

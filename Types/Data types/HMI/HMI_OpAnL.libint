@@ -1,0 +1,9 @@
+﻿DocumentHash:
+  - FileName: HMI_OpAnL.xml
+    Hash: PLhG1sDGdWKGw6h6kaTYaAQne+f9hGojyW30FsbXOnU=
+LibraryMetaFileHash: LpEMlI26OX+6dYwNiM50x7T7fK38N6LdLFZOLcGYIKQ=
+LibraryVersion:
+  Guid: 65b9fff0-e501-41ea-a31d-05c24ee6d0ea
+  DependsOn:
+    - TypeName: ScaVal
+      VersionNumber: 1.0.1

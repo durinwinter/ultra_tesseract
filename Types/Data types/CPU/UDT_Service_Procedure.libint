@@ -1,0 +1,9 @@
+﻿DocumentHash:
+  - FileName: UDT_Service_Procedure.xml
+    Hash: YhXbYBh60OhtaqrarKbhekAWfuX5ibCMek23rqn9Kwg=
+LibraryMetaFileHash: xDA2KZx49y/+YlNvsMSVTWMJGpBRT2+s1KylTZH2ulM=
+LibraryVersion:
+  Guid: 3d6e20ba-04a7-4916-95a9-27484e944f77
+  DependsOn:
+    - TypeName: UDT_Service_ProcedureEnable
+      VersionNumber: 1.0.1

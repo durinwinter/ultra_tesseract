@@ -1,0 +1,40 @@
+﻿{
+    S7_EditorMode := "SCL";
+    S7_Optimized := "TRUE";
+    S7_Version := "0.1"
+}
+FUNCTION_BLOCK "TimerTime"
+    VAR_INPUT 
+        TimeSP : Real;
+        SafeTime : Bool;
+        State : DWord;
+    END_VAR
+    VAR_OUTPUT 
+        TimerTime : DInt;
+    END_VAR
+    VAR 
+        TimeSafe : DInt;
+        safed : Bool;
+    END_VAR
+    VAR_TEMP 
+        States : _.Service_States;
+    END_VAR
+
+    { S7_Language := "SCL" }
+    NETWORK
+        IF #State = #States.Starting THEN
+            #TimerTime := REAL_TO_DINT(#TimeSP) * 1000;
+        END_IF;
+        //safe time during Held/Paused
+        IF #SafeTime = TRUE AND #safed = FALSE THEN
+            #TimeSafe := REAL_TO_DINT(#TimeSP) * 1000 - TIME_TO_DINT("TimeStirr_Timer".ET);
+            #safed := TRUE;
+        END_IF;
+        IF (#State = #States.Unholding OR #State = #States.Resuming) AND #TimeSafe <> 0 THEN
+            #TimerTime := #TimeSafe;
+            #TimeSafe := 0;
+            #safed := FALSE;
+        END_IF;
+        
+    END_NETWORK
+END_FUNCTION_BLOCK

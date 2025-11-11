@@ -1,0 +1,8 @@
+﻿LibraryType:
+  Guid: a9bbbfa6-8ea0-4074-933d-00ccbcae68ae
+  Comment:
+    de-DE: DigValFF version with .Value default value True
+LibraryVersion:
+  VersionNumber: 1.0.1
+  Author: z00438cc
+  IsDefault: true

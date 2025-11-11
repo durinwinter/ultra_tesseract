@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V20" />
+  <SW.Types.PlcStruct ID="0">
+    <AttributeList>
+      <Interface><Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v5">
+  <Section Name="None">
+    <Member Name="operatingTimeAct" Datatype="Real">
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Tatsächliche Betriebszeit des Antriebs [h]</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Actual operating time of the drive [h]</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="operatingTimeLimit" Datatype="Real">
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Max. Grenze der Betriebszeit [h]</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Max. limit of the operating time [h]</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="operatingTimeReached" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">1: Die tatsächlichen Betriebsstunden haben ihre Grenze erreicht oder überschritten (wenn Grenzwert &gt; 0)</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">1: The actual operating hours have reached or exceeded their limit (if limit &gt; 0)</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="cycleTimeAct" Datatype="Real">
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Tatsächliche Zykluszeit des Antriebs [h]</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Actual cycle time of the drive [h]</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="cycleTimeLimit" Datatype="Real">
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Max. Grenze der Zykluszeit [h]</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Max. limit of the cycle time [h]</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="cycleTimeReached" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">1: Die tatsächliche Zykluszeit hat ihre Grenze erreicht oder überschritten (wenn Grenzwert &gt; 0)</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">1: The actual cycle time have reached or exceeded their limit (if limit &gt; 0)</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="switchCounterAct" Datatype="UDInt">
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Tatsächliche Anzahl der Schaltungen des Antriebs</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Actual number of switches of the drive</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="switchCounterLimit" Datatype="UDInt">
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Max. Grenzwert des Schalterzählers</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Max. limit of switch counter</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="switchCounterReached" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">1: Die tatsächliche Anzahl der Zustandswechsel hat seine Grenze erreicht oder überschritten (wenn Grenzwert &gt; 0)</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">1: The actual switch counter has reached or exceeded its limit (if limit &gt; 0)</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="alarmCounterAct" Datatype="UDInt">
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Tatsächliche Anzahl der Alarmmeldungen des Antriebs</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Actual number of alarms of the drive</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="alarmCounterLimit" Datatype="UDInt">
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Max. Grenzwert des Alarmzählers</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Max. limit of alarm counter</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="alarmCounterReached" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">1: Der aktuelle Alarmzähler hat seinen Grenzwert erreicht oder überschritten (wenn Grenzwert &gt; 0)</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">1: The actual alarm counter has reached or exceeded its limit (if limit &gt; 0)</MultiLanguageText>
+      </Comment>
+    </Member>
+  </Section>
+</Sections></Interface>
+      <Name>LCFL_typeMaintenance</Name>
+      <Namespace />
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text>Data type for HMI data</Text>
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="3" CompositionName="Items">
+            <AttributeList>
+              <Culture>de-DE</Culture>
+              <Text>HMI-Daten für LCFL_Maintenance</Text>
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <MultilingualText ID="4" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="5" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text>HMI data for LCFL_Maintenance</Text>
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="6" CompositionName="Items">
+            <AttributeList>
+              <Culture>de-DE</Culture>
+              <Text>HMI-Daten für LCFL_Maintenance</Text>
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </SW.Types.PlcStruct>
+</Document>

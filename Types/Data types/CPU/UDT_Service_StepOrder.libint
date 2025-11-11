@@ -1,0 +1,9 @@
+﻿DocumentHash:
+  - FileName: UDT_Service_StepOrder.xml
+    Hash: CRExzjxyFLE2ZXv2BbntO08MR2bTJrev3D3QhzzrRbI=
+LibraryMetaFileHash: 4BqDPI5wCVUy2jFrGVI2tNGJf9CSwn14a+FjkQIB7n8=
+LibraryVersion:
+  Guid: da8adcaf-a4f0-49e8-bf1c-d6985dfa2e23
+  DependsOn:
+    - TypeName: UDT_Service_IndexElement
+      VersionNumber: 1.0.0

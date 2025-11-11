@@ -1,0 +1,8 @@
+﻿LibraryType:
+  Guid: bdea58b2-dfd7-494f-bb36-186db98367a8
+LibraryVersion:
+  VersionNumber: 1.0.1
+  Author: Siemens AG
+  IsDefault: true
+  Comment:
+    de-DE: 'change: default value of constant NUMBER_OF_STEPORDERBITCODING'

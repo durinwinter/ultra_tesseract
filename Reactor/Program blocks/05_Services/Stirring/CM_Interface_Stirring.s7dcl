@@ -1,0 +1,128 @@
+﻿{
+    S7_EditorMode := "SCL";
+    S7_Optimized := "TRUE";
+    S7_Version := "0.1"
+}
+FUNCTION_BLOCK "CM_Interface_Stirring"
+    VAR_INPUT 
+        {
+            S7_Access := "ReadOnly := External";
+            S7_Visibility := "Hidden := External"
+        }
+        CmCommand : Array[0..29] of Bool;
+        {
+            S7_Access := "ReadOnly := External";
+            S7_Visibility := "Hidden := External"
+        }
+        Procedure_Param : Array[0..31] of Real;
+        {
+            S7_Access := "ReadOnly := External";
+            S7_Visibility := "Hidden := External"
+        }
+        CmFbOnOff : Array[0..29] of Bool;
+        Pumped_Liters : Real;
+        Auto_Man : Bool;
+        Oos : Bool;
+    END_VAR
+    VAR_OUTPUT 
+        {
+            S7_Access := "ReadOnly := External";
+            S7_Visibility := "Hidden := External"
+        }
+        CM_E001 : _.DigVal;
+        {
+            S7_Access := "ReadOnly := External";
+            S7_Visibility := "Hidden := External"
+        }
+        SpeedStirr : _.AnaVal;
+        {
+            S7_Access := "ReadOnly := External";
+            S7_Visibility := "Hidden := External"
+        }
+        TimeStirr : _.AnaVal;
+    END_VAR
+    VAR 
+        Neg_edge : Bool;
+        Pos_edge : Bool;
+    END_VAR
+    VAR_TEMP 
+        State : _.Service_States;
+    END_VAR
+
+    { S7_Language := "SCL" }
+    NETWORK
+        REGION Bool TO DigVal
+            //CM Engine 001
+            "BoolToDigVal"(In := #CmCommand[0],
+                           ST := 16#80,
+                           Out => #CM_E001);
+        END_REGION
+        
+        REGION Real TO AnaVal
+            //Flow
+            "RealToAnaVal"(In := #Procedure_Param[0],
+                           ST := 16#80,
+                           Out => #SpeedStirr);
+            //Liter
+            "RealToAnaVal"(In := #Procedure_Param[1],
+                           ST := 16#80,
+                           Out => #TimeStirr);
+                        END_REGION
+                        
+        REGION other values
+            //Pumped Liter
+            "Stirring".ProcessValueOutAnalogIn[0] := REAL_TO_DINT(IN := #Pumped_Liters);
+        END_REGION
+        
+        REGION Switch operating state of services
+            //set Auto
+            IF "ServicesOpState" = true AND "Stirring".AutAct = false THEN
+                "Stirring".ModLiOp := true;
+                "Stirring".AutModLi := true;
+                //set Man
+            ELSIF "ServicesOpState" = true AND "Stirring".ManAct = false THEN
+                "Stirring".ModLiOp := TRUE;
+                "Stirring".ManModLi := TRUE;
+                //Reset
+            ELSE
+                "Stirring".ModLiOp := FALSE;
+                "Stirring".AutModLi := FALSE;
+                "Stirring".ManModLi := false;
+            END_IF;
+        END_REGION
+        
+        REGION Set auto/man mode & Int/Ext
+            //check for positive edge at Stirring.Oos
+            "R_TRIG_DB_Stirring"(CLK := #Oos,
+                        Q => #Neg_edge);
+            
+            IF #Auto_Man OR #Neg_edge THEN
+                "E001DB".ModLiOp.Value := TRUE;
+                "E001DB".SP_LiOp.Value := TRUE;
+            END_IF;
+            
+            //Set POs to auto mode
+            IF #Auto_Man = TRUE THEN
+                "E001DB".ManModLi.Value := FALSE;
+                "E001DB".SP_IntLi.Value := FALSE;
+                
+                "E001DB".AutModLi.Value := TRUE;
+                "E001DB".SP_ExtLi.Value := TRUE;
+            END_IF;
+            //Set POs to man mode
+            IF #Neg_edge = TRUE THEN
+                "E001DB".AutModLi.Value := FALSE;
+                "E001DB".SP_ExtLi.Value := FALSE;
+                
+                "E001DB".ManModLi.Value := TRUE;
+                "E001DB".SP_IntLi.Value := TRUE;
+            END_IF;
+            
+            //Reset ModLiOp
+            IF #Auto_Man = FALSE AND #Neg_edge = FALSE THEN
+                "E001DB".ModLiOp.Value := FALSE;
+                "E001DB".SP_LiOp.Value := FALSE;
+            END_IF;
+        END_REGION
+    END_NETWORK
+END_FUNCTION_BLOCK

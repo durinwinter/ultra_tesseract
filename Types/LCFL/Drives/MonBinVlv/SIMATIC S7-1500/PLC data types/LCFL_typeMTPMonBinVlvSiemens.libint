@@ -1,0 +1,11 @@
+﻿DocumentHash:
+  - FileName: LCFL_typeMTPMonBinVlvSiemens.xml
+    Hash: 3kRvqXX3gt/AdkA2/49oxxbXe/qaB6x0O7LRmCndPQ0=
+LibraryMetaFileHash: 6C8BeNmKVWRabVzCdKzIhoVc4cZEKJkQno3y5YsOXQ0=
+LibraryVersion:
+  Guid: 10513b9c-8a78-4a44-b0eb-a2c146ea4036
+  DependsOn:
+    - TypeName: LCFL_typeMaintenance
+      VersionNumber: 1.0.0
+    - TypeName: LCFL_typeMTPMonBinVlv
+      VersionNumber: 2.0.0

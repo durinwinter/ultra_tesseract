@@ -1,0 +1,8 @@
+﻿LibraryType:
+  Guid: 433fcaff-c563-430c-8025-338084233d0c
+LibraryVersion:
+  VersionNumber: 1.0.0
+  Author: Siemens AG
+  IsDefault: true
+  Comment:
+    de-DE: First release

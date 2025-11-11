@@ -1,0 +1,8 @@
+﻿LibraryType:
+  Guid: 37e8b2fe-1a03-4970-9078-e46119ba7d86
+  Comment:
+    de-DE: New HMI Interface
+LibraryVersion:
+  VersionNumber: 1.0.6
+  Author: z004bv0s
+  IsDefault: true

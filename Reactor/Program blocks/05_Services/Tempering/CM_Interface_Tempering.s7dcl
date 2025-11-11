@@ -1,0 +1,128 @@
+﻿{
+    S7_EditorMode := "SCL";
+    S7_Optimized := "TRUE";
+    S7_Version := "0.1"
+}
+FUNCTION_BLOCK "CM_Interface_Tempering"
+    VAR_INPUT 
+        {
+            S7_Access := "ReadOnly := External";
+            S7_Visibility := "Hidden := External"
+        }
+        CmCommand : Array[0..29] of Bool;
+        {
+            S7_Access := "ReadOnly := External";
+            S7_Visibility := "Hidden := External"
+        }
+        Procedure_Param : Array[0..31] of Real;
+        {
+            S7_Access := "ReadOnly := External";
+            S7_Visibility := "Hidden := External"
+        }
+        CmFbOnOff : Array[0..29] of Bool;
+        Pumped_Liters : Real;
+        Auto_Man : Bool;
+        Oos : Bool;
+    END_VAR
+    VAR_OUTPUT 
+        {
+            S7_Access := "ReadOnly := External";
+            S7_Visibility := "Hidden := External"
+        }
+        CM_FIC100 : _.DigVal;
+        {
+            S7_Access := "ReadOnly := External";
+            S7_Visibility := "Hidden := External"
+        }
+        TempSP : _.AnaVal;
+        {
+            S7_Access := "ReadOnly := External";
+            S7_Visibility := "Hidden := External"
+        }
+        TimeSP : _.AnaVal;
+    END_VAR
+    VAR 
+        Pos_edge : Bool;
+        Neg_edge : Bool;
+    END_VAR
+    VAR_TEMP 
+        State : _.Service_States;
+    END_VAR
+
+    { S7_Language := "SCL" }
+    NETWORK
+        REGION Bool TO DigVal
+            //CM Controler 100
+            "BoolToDigVal"(In := #CmCommand[0],
+                           ST := 16#80,
+                           Out => #CM_FIC100);
+        END_REGION
+        
+        REGION Real TO AnaVal
+            //Flow
+            "RealToAnaVal"(In := #Procedure_Param[0],
+                           ST := 16#80,
+                           Out => #TempSP);
+            //Liter
+            "RealToAnaVal"(In := #Procedure_Param[1],
+                           ST := 16#80,
+                           Out => #TimeSP);
+                        END_REGION
+                        
+        REGION other values
+            //Pumped Liter
+            "Tempering".ProcessValueOutAnalogIn[0] := REAL_TO_DINT(IN := #Pumped_Liters);
+        END_REGION
+        
+        REGION Switch operating state of services
+            //set Auto
+            IF "ServicesOpState" = true AND "Tempering".AutAct = false THEN
+                "Tempering".ModLiOp := true;
+                "Tempering".AutModLi := true;
+                //set Man
+            ELSIF "ServicesOpState" = true AND "Tempering".ManAct = false THEN
+                "Tempering".ModLiOp := TRUE;
+                "Tempering".ManModLi := TRUE;
+                //Reset
+            ELSE
+                "Tempering".ModLiOp := FALSE;
+                "Tempering".AutModLi := FALSE;
+                "Tempering".ManModLi := false;
+            END_IF;
+        END_REGION
+        
+        REGION Set auto/man mode & Int/Ext
+            //check for positive edge at Tempering.Oos
+            "R_TRIG_DB_Tempering"(CLK := #Oos,
+                        Q => #Neg_edge);
+            
+            IF #Auto_Man OR #Neg_edge THEN
+                "TIC100DB".ModLiOp.Value := TRUE;
+                "TIC100DB".SP_LiOp.Value := TRUE;
+            END_IF;
+            
+            //Set POs to auto mode
+            IF #Auto_Man = TRUE THEN
+                "TIC100DB".ManModLi.Value := FALSE;
+                "TIC100DB".SP_IntLi.Value := FALSE;
+                
+                "TIC100DB".AutModLi.Value := TRUE;
+                "TIC100DB".SP_ExtLi.Value := TRUE;
+            END_IF;
+            //Set POs to man mode
+            IF #Neg_edge = TRUE THEN
+                "TIC100DB".AutModLi.Value := FALSE;
+                "TIC100DB".SP_ExtLi.Value := FALSE;
+                
+                "TIC100DB".ManModLi.Value := TRUE;
+                "TIC100DB".SP_IntLi.Value := TRUE;
+            END_IF;
+            
+            //Reset ModLiOp
+            IF #Auto_Man = FALSE AND #Neg_edge = FALSE THEN
+                "TIC100DB".ModLiOp.Value := FALSE;
+                "TIC100DB".SP_LiOp.Value := FALSE;
+            END_IF;
+        END_REGION
+    END_NETWORK
+END_FUNCTION_BLOCK

@@ -1,0 +1,8 @@
+﻿LibraryType:
+  Guid: 2ede1fdc-9710-4142-b867-6ce71fb343b6
+LibraryVersion:
+  VersionNumber: 2.0.0
+  Author: Siemens AG
+  IsDefault: true
+  Comment:
+    en-US: Release for CFL V2.0

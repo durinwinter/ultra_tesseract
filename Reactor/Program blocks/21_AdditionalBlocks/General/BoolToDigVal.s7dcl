@@ -1,0 +1,20 @@
+﻿{
+    S7_EditorMode := "SCL";
+    S7_Optimized := "TRUE";
+    S7_Version := "0.1"
+}
+FUNCTION "BoolToDigVal" : Void
+    VAR_INPUT 
+        In : Bool;
+        ST : Byte;
+    END_VAR
+    VAR_OUTPUT 
+        Out : _.DigVal;
+    END_VAR
+
+    { S7_Language := "SCL" }
+    NETWORK
+        #Out.ST := #ST;
+        #Out.Value := #In;
+    END_NETWORK
+END_FUNCTION

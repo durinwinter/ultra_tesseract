@@ -1,0 +1,8 @@
+﻿LibraryType:
+  Guid: 480413d0-40ce-4420-ba0c-7a48f076f821
+  Comment:
+    de-DE: DigVal version with .Value default value True
+LibraryVersion:
+  VersionNumber: 1.0.1
+  Author: z00438cc
+  IsDefault: true

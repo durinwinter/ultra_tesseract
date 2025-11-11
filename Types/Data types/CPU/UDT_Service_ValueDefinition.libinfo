@@ -1,0 +1,8 @@
+﻿LibraryType:
+  Guid: 4889c093-795e-4880-a992-1b27c9e51b5a
+LibraryVersion:
+  VersionNumber: 1.0.1
+  Author: Siemens AG
+  IsDefault: true
+  Comment:
+    de-DE: rename index->indexMTP, add indexIO

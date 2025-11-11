@@ -1,0 +1,102 @@
+﻿{
+    S7_EditorMode := "SCL";
+    S7_Optimized := "TRUE";
+    S7_Version := "0.1"
+}
+FUNCTION "Service_Stirring_SCL" : Void
+    VAR_TEMP 
+        State : _.Service_States;
+    END_VAR
+
+    { S7_Language := "SCL" }
+    NETWORK
+        REGION CM_E001 feedback
+            
+            IF ("Stirring".MTP.ServiceControl.StateCur = #State.Starting AND "E001DB".AutAct.Value)
+                OR (("Stirring".MTP.ServiceControl.StateCur = #State.Aborting OR "Stirring".MTP.ServiceControl.StateCur = #State.Completing OR "Stirring".MTP.ServiceControl.StateCur = #State.Stopping)
+                AND "E001DB".Stop.Value) OR ("Stirring".MTP.ServiceControl.ProcedureCur = 2 AND "TimeStirr_Timer".Q)
+                OR ("Stirring".MTP.ServiceControl.StateCur = #State.Execute AND "Stirring".MTP.ServiceControl.ProcedureCur = 1) THEN
+                "Stirring".CmFbOnOff[0] := TRUE;
+            ELSE
+                "Stirring".CmFbOnOff[0] := FALSE;
+            END_IF;
+            
+        END_REGION
+        
+        REGION set ready to complete
+            
+            IF ("Stirring".MTP.ServiceControl.ProcedureCur = 1 AND "Stirring".MTP.ServiceControl.StateCur = #State.Execute AND "E001DB".Fwd.Value) OR "Stirring".CmFbOnOff[0] THEN
+                "Stirring".Information.readyToComplete := TRUE;
+            ELSE
+                "Stirring".Information.readyToComplete := FALSE;
+            END_IF;
+            
+        END_REGION
+        
+        REGION Service
+            
+            "Stirring"(MinimumStepTime:=T#1s,
+                       Setup:="Stirring_Setup",
+                       MTPConfigurationParameterAnalog:="ConfigurationParameters_DB".MTPAnalog,
+                       MTPConfigurationParameterDigital:="ConfigurationParameters_DB".MTPDigital,
+                       MTPConfigurationParameterBinary:="ConfigurationParameters_DB".MTPBinary,
+                       MTPConfigurationParameterString:="ConfigurationParameters_DB".MTPString,
+                       MTPProcedureParameterAnalog:="ProcedureParameters_DB".MTPAnalog,
+                       MTPProcedureParameterDigital:="ProcedureParameters_DB".MTPDigital,
+                       MTPProcedureParameterBinary:="ProcedureParameters_DB".MTPBinary,
+                       MTPProcedureParameterString:="ProcedureParameters_DB".MTPString,
+                       MTPProcessValueInAnalog:="ProcessValues_DB".MTPAnalogIn,
+                       MTPProcessValueInDigital:="ProcessValues_DB".MTPDigitalIn,
+                       MTPProcessValueInBinary:="ProcessValues_DB".MTPBinaryIn,
+                       MTPProcessValueInString:="ProcessValues_DB".MTPStringIn,
+                       MTPProcessValueOutAnalog:="ProcessValues_DB".MTPAnalogOut,
+                       MTPProcessValueOutDigital:="ProcessValues_DB".MTPDigitalOut,
+                       MTPProcessValueOutBinary:="ProcessValues_DB".MTPBinaryOut,
+                       MTPProcessValueOutString:="ProcessValues_DB".MTPStringOut,
+                       MTPReportValueAnalog:="ReportValues_DB".MTPAnalog,
+                       MTPReportValueDigital:="ReportValues_DB".MTPDigital,
+                       MTPReportValueBinary:="ReportValues_DB".MTPBinary,
+                       MTPReportValueString:="ReportValues_DB".MTPString);
+            
+        END_REGION
+        
+        REGION Parameter HMI block
+            
+            "Stirring_HMI"(Id:=3,
+                           Setup:="Stirring_Setup",
+                           ProcedureCur:="Stirring".ProcedureCurOut,
+                           ProcedureReq:="Stirring".ProcedureReqOut,
+                           ConfigurationParameterAnalog:="ConfigurationParameters_DB".MTPAnalog,
+                           ConfigurationParameterDigital:="ConfigurationParameters_DB".MTPDigital,
+                           ConfigurationParameterBinary:="ConfigurationParameters_DB".MTPBinary,
+                           ConfigurationParameterString:="ConfigurationParameters_DB".MTPString,
+                           ProcedureParameterAnalog:="ProcedureParameters_DB".MTPAnalog,
+                           ProcedureParameterDigital:="ProcedureParameters_DB".MTPDigital,
+                           ProcedureParameterBinary:="ProcedureParameters_DB".MTPBinary,
+                           ProcedureParameterString:="ProcedureParameters_DB".MTPString,
+                           ProcessValueInAnalog:="ProcessValues_DB".MTPAnalogIn,
+                           ProcessValueInDigital:="ProcessValues_DB".MTPDigitalIn,
+                           ProcessValueInBinary:="ProcessValues_DB".MTPBinaryIn,
+                           ProcessValueInString:="ProcessValues_DB".MTPStringIn,
+                           ProcessValueOutAnalog:="ProcessValues_DB".MTPAnalogOut,
+                           ProcessValueOutDigital:="ProcessValues_DB".MTPDigitalOut,
+                           ProcessValueOutBinary:="ProcessValues_DB".MTPBinaryOut,
+                           ProcessValueOutString:="ProcessValues_DB".MTPStringOut,
+                           ReportValueAnalog:="ReportValues_DB".MTPAnalog,
+                           ReportValueDigital:="ReportValues_DB".MTPDigital,
+                           ReportValueBinary:="ReportValues_DB".MTPBinary,
+                           ReportValueString:="ReportValues_DB".MTPString);
+            
+        END_REGION
+        
+        REGION CM_Interface
+            
+            "CMInterface_Stirring_DB"(CmCommand:="Stirring".CmCommand,
+                                      Procedure_Param:="Stirring".ProcedureParameterAnalogOut,
+                                      CmFbOnOff:="Stirring".CmFbOnOff,
+                                      Auto_Man:="Stirring".ManAct OR "Stirring".AutAct,
+                                      Oos:="Stirring".OosAct);
+            
+        END_REGION
+    END_NETWORK
+END_FUNCTION

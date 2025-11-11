@@ -1,0 +1,15 @@
+﻿DocumentHash:
+  - FileName: UDT_Service_ServParameter.xml
+    Hash: llY/oFsQeqoW/EmEivBNvXQ/Z+DTpvdPULHibeAMuZk=
+LibraryMetaFileHash: TO7/hHklo9So9w2S+QU1j/Q7knvDv2YYuv5/b82d+xI=
+LibraryVersion:
+  Guid: c6442c01-12f5-4266-be55-29417cc911ef
+  DependsOn:
+    - TypeName: UDT_MTP_StringServParam
+      VersionNumber: 1.0.3
+    - TypeName: UDT_MTP_BinServParam
+      VersionNumber: 1.0.3
+    - TypeName: UDT_MTP_AnaServParam
+      VersionNumber: 1.0.2
+    - TypeName: UDT_MTP_DIntServParam
+      VersionNumber: 1.0.2

@@ -1,0 +1,305 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V20" />
+  <SW.Types.PlcStruct ID="0">
+    <AttributeList>
+      <Interface><Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v5">
+  <Section Name="None">
+    <Member Name="OnOp" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="CFC_Visible" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">1=On Mode: On Mode by Operator</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">1=On Mode: On Mode by Operator</MultiLanguageText>
+      </Comment>
+      <StartValue>FALSE</StartValue>
+    </Member>
+    <Member Name="OosOp" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="CFC_Visible" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">1=Oos Mode: Oos Mode by Operator</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">1=Oos Mode: Oos Mode by Operator</MultiLanguageText>
+      </Comment>
+      <StartValue>FALSE</StartValue>
+    </Member>
+    <Member Name="OffOp" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="CFC_Visible" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">1= Counter Off by Operator</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">1= Counter Off by Operator</MultiLanguageText>
+      </Comment>
+      <StartValue>TRUE</StartValue>
+    </Member>
+    <Member Name="UpOp" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="CFC_Visible" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">1= Counter Up by Operator</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">1= Counter Up by Operator</MultiLanguageText>
+      </Comment>
+      <StartValue>FALSE</StartValue>
+    </Member>
+    <Member Name="ResetOp" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="CFC_Visible" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">1= Counter Reset by Operator</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">1= Counter Reset by Operator</MultiLanguageText>
+      </Comment>
+      <StartValue>FALSE</StartValue>
+    </Member>
+    <Member Name="HrsHi1Lim" Datatype="DInt">
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Hours, High Limit 195 days</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Hours, High Limit 195 days</MultiLanguageText>
+      </Comment>
+      <StartValue>2280</StartValue>
+    </Member>
+    <Member Name="HrsHi2Lim" Datatype="DInt">
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Hours, High Limit 290 days</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Hours, High Limit 290 days</MultiLanguageText>
+      </Comment>
+      <StartValue>2160</StartValue>
+    </Member>
+    <Member Name="CntHi1Lim" Datatype="DInt">
+      <AttributeList>
+        <BooleanAttribute Name="CFC_Visible" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Counter, High Limit 1</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Counter, High Limit 1</MultiLanguageText>
+      </Comment>
+      <StartValue>95</StartValue>
+    </Member>
+    <Member Name="CntHi2Lim" Datatype="DInt">
+      <AttributeList>
+        <BooleanAttribute Name="CFC_Visible" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Counter, High Limit 2</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Counter, High Limit 2</MultiLanguageText>
+      </Comment>
+      <StartValue>90</StartValue>
+    </Member>
+    <Member Name="HrsOpHiScale" Datatype="DInt">
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Operation Hours Bar Display High Value100 Days</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Operation Hours Bar Display High Value100 Days</MultiLanguageText>
+      </Comment>
+      <StartValue>2400</StartValue>
+    </Member>
+    <Member Name="HrsOpLoScale" Datatype="DInt">
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Operation Hours Bar Display Low Value</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Operation Hours Bar Display Low Value</MultiLanguageText>
+      </Comment>
+      <StartValue>0</StartValue>
+    </Member>
+    <Member Name="CntOpHiScale" Datatype="DInt">
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Cnt - Bar Display Limits for OS High Value</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Cnt - Bar Display Limits for OS High Value</MultiLanguageText>
+      </Comment>
+      <StartValue>100</StartValue>
+    </Member>
+    <Member Name="CntOpLoScale" Datatype="DInt">
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Cnt - Bar Display Limits for OS Low Value</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Cnt - Bar Display Limits for OS Low Value</MultiLanguageText>
+      </Comment>
+      <StartValue>0</StartValue>
+    </Member>
+    <Member Name="CntUnit" Datatype="Int">
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Unit of Cnt</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Unit of Cnt</MultiLanguageText>
+      </Comment>
+      <StartValue>0</StartValue>
+    </Member>
+    <Member Name="DeviceOn" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="CFC_ForTest" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="CFC_Visible" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">1= Device On</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">1= Device On</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="CountMode" Datatype="Int">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="CFC_ForTest" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Counting Mode; 0=Off,1=Up</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Counting Mode; 0=Off,1=Up</MultiLanguageText>
+      </Comment>
+      <StartValue>0</StartValue>
+    </Member>
+    <Member Name="Days" Datatype="Int">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="CFC_ForTest" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Operating Days</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Operating Days</MultiLanguageText>
+      </Comment>
+      <StartValue>0</StartValue>
+    </Member>
+    <Member Name="Hours" Datatype="Int">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="CFC_ForTest" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Operating Hours</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Operating Hours</MultiLanguageText>
+      </Comment>
+      <StartValue>0</StartValue>
+    </Member>
+    <Member Name="TimeHours" Datatype="DInt">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="CFC_Visible" SystemDefined="true">false</BooleanAttribute>
+        <StringAttribute Name="CFC_LowLimit" SystemDefined="true">HrsOpLoScale</StringAttribute>
+        <StringAttribute Name="CFC_HighLimit" SystemDefined="true">HrsOpHiScale</StringAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Operating Time [In Hours]</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Operating Time [In Hours]</MultiLanguageText>
+      </Comment>
+      <StartValue>0</StartValue>
+    </Member>
+    <Member Name="Cnt" Datatype="DInt">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="CFC_ForTest" SystemDefined="true">true</BooleanAttribute>
+        <StringAttribute Name="CFC_LowLimit" SystemDefined="true">CntOpLoScale</StringAttribute>
+        <StringAttribute Name="CFC_HighLimit" SystemDefined="true">CntOpHiScale</StringAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Counter Value</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Counter Value</MultiLanguageText>
+      </Comment>
+      <StartValue>0</StartValue>
+    </Member>
+    <Member Name="OS_PermOut" Datatype="DWord">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="CFC_Visible" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Operator Permission: Output for OS</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Operator Permission: Output for OS</MultiLanguageText>
+      </Comment>
+      <StartValue>16#FFFF_FFFF</StartValue>
+    </Member>
+    <Member Name="OS_PermLog" Datatype="DWord">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="CFC_Visible" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Operator Permission: Output for OS</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Operator Permission: Output for OS</MultiLanguageText>
+      </Comment>
+      <StartValue>16#FFFF_FFFF</StartValue>
+    </Member>
+    <Member Name="OpSt_Out" Datatype="DWord">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="CFC_Visible" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Enabled operator stations</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Enabled operator stations</MultiLanguageText>
+      </Comment>
+      <StartValue>16#0000_0000</StartValue>
+    </Member>
+    <Member Name="ST_Worst" Datatype="Byte">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="CFC_Visible" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Worst Signal Status</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Worst Signal Status</MultiLanguageText>
+      </Comment>
+      <StartValue>16#80</StartValue>
+    </Member>
+    <Member Name="Status1" Datatype="DWord">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="CFC_Visible" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="CFC_ForTest" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Status1 Word</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Status1 Word</MultiLanguageText>
+      </Comment>
+      <StartValue>16#0000_0000</StartValue>
+    </Member>
+    <Member Name="Status2" Datatype="DWord">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="CFC_Visible" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="CFC_ForTest" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Status2 Word</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Status2 Word</MultiLanguageText>
+      </Comment>
+      <StartValue>16#0000_0000</StartValue>
+    </Member>
+  </Section>
+</Sections></Interface>
+      <Name>HMI_CntOhSc</Name>
+      <Namespace />
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>de-DE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="3" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <MultilingualText ID="4" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="5" CompositionName="Items">
+            <AttributeList>
+              <Culture>de-DE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="6" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </SW.Types.PlcStruct>
+</Document>

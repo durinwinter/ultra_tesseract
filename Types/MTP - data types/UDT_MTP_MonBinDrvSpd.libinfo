@@ -1,0 +1,8 @@
+﻿LibraryType:
+  Guid: 6d590732-aa16-4098-b1e9-bcd69a47f811
+LibraryVersion:
+  VersionNumber: 0.0.6
+  Author: Siemens
+  IsDefault: true
+  Comment:
+    de-DE: Remaining changes according to Test_TIAAPL_MTPUDT_20200113.xlsx

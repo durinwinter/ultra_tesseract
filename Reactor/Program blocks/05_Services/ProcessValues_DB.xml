@@ -1,0 +1,491 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V20" />
+  <SW.Blocks.InstanceDB ID="0">
+    <AttributeList>
+      <HeaderAuthor>Siemens AG</HeaderAuthor>
+      <HeaderFamily>ServiceControl</HeaderFamily>
+      <HeaderVersion>1.0</HeaderVersion>
+      <InstanceOfName>ProcessValues</InstanceOfName>
+      <InstanceOfType>FB</InstanceOfType>
+      <Interface><Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v5">
+  <Section Name="Input">
+    <Member Name="ProcessValueOutAnalogIn" Datatype="Array[0..0] of &quot;UDT_MTP_AnaProcessValueOut&quot;">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+    </Member>
+    <Member Name="ProcessValueOutDigitalIn" Datatype="Array[0..0] of &quot;UDT_MTP_DIntProcessValueOut&quot;">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+    </Member>
+    <Member Name="ProcessValueOutBinaryIn" Datatype="Array[0..0] of &quot;UDT_MTP_BinProcessValueOut&quot;">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+    </Member>
+    <Member Name="ProcessValueOutStringIn" Datatype="Array[0..0] of &quot;UDT_MTP_StringProcessValueOut&quot;">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+    </Member>
+    <Member Name="ProcessValueInAnalogApply" Datatype="Array[0..0] of &quot;UDT_Service_ProcessValueInApply&quot;">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+    </Member>
+    <Member Name="ProcessValueInDigitalApply" Datatype="Array[0..0] of &quot;UDT_Service_ProcessValueInApply&quot;">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+    </Member>
+  </Section>
+  <Section Name="Output">
+    <Member Name="ProcessValueInAnalogOut" Datatype="Array[0..0] of &quot;UDT_MTP_AnaProcessValueOut&quot;">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+    </Member>
+    <Member Name="ProcessValueInDigitalOut" Datatype="Array[0..0] of &quot;UDT_MTP_DIntProcessValueOut&quot;">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+    </Member>
+    <Member Name="ProcessValueInBinaryOut" Datatype="Array[0..0] of &quot;UDT_MTP_BinProcessValueOut&quot;">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+    </Member>
+    <Member Name="ProcessValueInStringOut" Datatype="Array[0..0] of &quot;UDT_MTP_StringProcessValueOut&quot;">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+    </Member>
+  </Section>
+  <Section Name="InOut" />
+  <Section Name="Static">
+    <Member Name="MTPAnalogIn" Datatype="Array[0..4] of &quot;UDT_MTP_AnaProcessValueIn&quot;">
+      <Sections>
+        <Section Name="None">
+          <Member Name="V" Datatype="Real">
+            <Subelement Path="0">
+              <StartValue>5.0</StartValue>
+            </Subelement>
+            <Subelement Path="1">
+              <StartValue>5.0</StartValue>
+            </Subelement>
+            <Subelement Path="2">
+              <StartValue>5.0</StartValue>
+            </Subelement>
+            <Subelement Path="3">
+              <StartValue>16.0</StartValue>
+            </Subelement>
+          </Member>
+          <Member Name="SclMinCur" Datatype="Real">
+            <Subelement Path="0">
+              <StartValue>0.0</StartValue>
+            </Subelement>
+            <Subelement Path="1">
+              <StartValue>0.0</StartValue>
+            </Subelement>
+            <Subelement Path="2">
+              <StartValue>0.0</StartValue>
+            </Subelement>
+            <Subelement Path="3">
+              <StartValue>0.0</StartValue>
+            </Subelement>
+          </Member>
+          <Member Name="SclMaxCur" Datatype="Real">
+            <Subelement Path="0">
+              <StartValue>11.0</StartValue>
+            </Subelement>
+            <Subelement Path="1">
+              <StartValue>11.0</StartValue>
+            </Subelement>
+            <Subelement Path="2">
+              <StartValue>11.0</StartValue>
+            </Subelement>
+            <Subelement Path="3">
+              <StartValue>32.0</StartValue>
+            </Subelement>
+          </Member>
+          <Member Name="UnitCur" Datatype="Int">
+            <Subelement Path="0">
+              <StartValue>1351</StartValue>
+            </Subelement>
+            <Subelement Path="1">
+              <StartValue>1351</StartValue>
+            </Subelement>
+            <Subelement Path="2">
+              <StartValue>1351</StartValue>
+            </Subelement>
+            <Subelement Path="3">
+              <StartValue>1351</StartValue>
+            </Subelement>
+          </Member>
+          <Member Name="SclMinExt" Datatype="Real">
+            <Subelement Path="0">
+              <StartValue>0.0</StartValue>
+            </Subelement>
+            <Subelement Path="1">
+              <StartValue>0.0</StartValue>
+            </Subelement>
+            <Subelement Path="2">
+              <StartValue>0.0</StartValue>
+            </Subelement>
+            <Subelement Path="3">
+              <StartValue>0.0</StartValue>
+            </Subelement>
+          </Member>
+          <Member Name="SclMaxExt" Datatype="Real">
+            <Subelement Path="0">
+              <StartValue>11.0</StartValue>
+            </Subelement>
+            <Subelement Path="1">
+              <StartValue>11.0</StartValue>
+            </Subelement>
+            <Subelement Path="2">
+              <StartValue>11.0</StartValue>
+            </Subelement>
+            <Subelement Path="3">
+              <StartValue>32.0</StartValue>
+            </Subelement>
+          </Member>
+          <Member Name="UnitExt" Datatype="Int">
+            <Subelement Path="0">
+              <StartValue>1351</StartValue>
+            </Subelement>
+            <Subelement Path="1">
+              <StartValue>1351</StartValue>
+            </Subelement>
+            <Subelement Path="2">
+              <StartValue>1351</StartValue>
+            </Subelement>
+            <Subelement Path="3">
+              <StartValue>1351</StartValue>
+            </Subelement>
+          </Member>
+        </Section>
+      </Sections>
+    </Member>
+    <Member Name="MTPDigitalIn" Datatype="Array[0..0] of &quot;UDT_MTP_DIntProcessValueIn&quot;" />
+    <Member Name="MTPBinaryIn" Datatype="Array[0..0] of &quot;UDT_MTP_BinProcessValueIn&quot;" />
+    <Member Name="MTPStringIn" Datatype="Array[0..0] of &quot;UDT_MTP_StringProcessValueIn&quot;" />
+    <Member Name="AnalogIn" Datatype="Array[0..0] of &quot;ProcessValueInAnalog&quot;">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+    </Member>
+    <Member Name="DigitalIn" Datatype="Array[0..0] of &quot;ProcessValueInDigital&quot;">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+    </Member>
+    <Member Name="BinaryIn" Datatype="Array[0..0] of &quot;ProcessValueInBinary&quot;">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+    </Member>
+    <Member Name="StringIn" Datatype="Array[0..0] of &quot;ProcessValueInString&quot;">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+    </Member>
+    <Member Name="MTPAnalogOut" Datatype="Array[0..10] of &quot;UDT_MTP_AnaProcessValueOut&quot;">
+      <Sections>
+        <Section Name="None">
+          <Member Name="V" Datatype="Real">
+            <Subelement Path="0">
+              <StartValue>0.0</StartValue>
+            </Subelement>
+            <Subelement Path="1">
+              <StartValue>0.0</StartValue>
+            </Subelement>
+            <Subelement Path="2">
+              <StartValue>0.0</StartValue>
+            </Subelement>
+            <Subelement Path="3">
+              <StartValue>0.0</StartValue>
+            </Subelement>
+            <Subelement Path="4">
+              <StartValue>0.0</StartValue>
+            </Subelement>
+            <Subelement Path="5">
+              <StartValue>0.0</StartValue>
+            </Subelement>
+            <Subelement Path="6">
+              <StartValue>0.0</StartValue>
+            </Subelement>
+            <Subelement Path="7">
+              <StartValue>0.0</StartValue>
+            </Subelement>
+            <Subelement Path="8">
+              <StartValue>0.0</StartValue>
+            </Subelement>
+            <Subelement Path="9">
+              <StartValue>0.0</StartValue>
+            </Subelement>
+            <Subelement Path="10">
+              <StartValue>0.0</StartValue>
+            </Subelement>
+          </Member>
+          <Member Name="VSclMin" Datatype="Real">
+            <Subelement Path="0">
+              <StartValue>0.0</StartValue>
+            </Subelement>
+            <Subelement Path="1">
+              <StartValue>0.0</StartValue>
+            </Subelement>
+            <Subelement Path="2">
+              <StartValue>0.0</StartValue>
+            </Subelement>
+            <Subelement Path="3">
+              <StartValue>0.0</StartValue>
+            </Subelement>
+            <Subelement Path="4">
+              <StartValue>0.0</StartValue>
+            </Subelement>
+            <Subelement Path="5">
+              <StartValue>0.0</StartValue>
+            </Subelement>
+            <Subelement Path="6">
+              <StartValue>0.0</StartValue>
+            </Subelement>
+            <Subelement Path="7">
+              <StartValue>0.0</StartValue>
+            </Subelement>
+            <Subelement Path="8">
+              <StartValue>0.0</StartValue>
+            </Subelement>
+            <Subelement Path="9">
+              <StartValue>0.0</StartValue>
+            </Subelement>
+            <Subelement Path="10">
+              <StartValue>0.0</StartValue>
+            </Subelement>
+          </Member>
+          <Member Name="VSclMax" Datatype="Real">
+            <Subelement Path="0">
+              <StartValue>3000.0</StartValue>
+            </Subelement>
+            <Subelement Path="1">
+              <StartValue>3000.0</StartValue>
+            </Subelement>
+            <Subelement Path="2">
+              <StartValue>3000.0</StartValue>
+            </Subelement>
+            <Subelement Path="3">
+              <StartValue>3000.0</StartValue>
+            </Subelement>
+            <Subelement Path="4">
+              <StartValue>100.0</StartValue>
+            </Subelement>
+            <Subelement Path="5">
+              <StartValue>100.0</StartValue>
+            </Subelement>
+            <Subelement Path="6">
+              <StartValue>100.0</StartValue>
+            </Subelement>
+            <Subelement Path="7">
+              <StartValue>100.0</StartValue>
+            </Subelement>
+            <Subelement Path="8">
+              <StartValue>3000.0</StartValue>
+            </Subelement>
+            <Subelement Path="9">
+              <StartValue>3000.0</StartValue>
+            </Subelement>
+            <Subelement Path="10">
+              <StartValue>3200.0</StartValue>
+            </Subelement>
+          </Member>
+          <Member Name="VUnit" Datatype="Int">
+            <Subelement Path="0">
+              <StartValue>1038</StartValue>
+            </Subelement>
+            <Subelement Path="1">
+              <StartValue>1038</StartValue>
+            </Subelement>
+            <Subelement Path="2">
+              <StartValue>1038</StartValue>
+            </Subelement>
+            <Subelement Path="3">
+              <StartValue>1038</StartValue>
+            </Subelement>
+            <Subelement Path="4">
+              <StartValue>1001</StartValue>
+            </Subelement>
+            <Subelement Path="5">
+              <StartValue>1001</StartValue>
+            </Subelement>
+            <Subelement Path="6">
+              <StartValue>1001</StartValue>
+            </Subelement>
+            <Subelement Path="7">
+              <StartValue>1001</StartValue>
+            </Subelement>
+            <Subelement Path="8">
+              <StartValue>1038</StartValue>
+            </Subelement>
+            <Subelement Path="9">
+              <StartValue>1038</StartValue>
+            </Subelement>
+            <Subelement Path="10">
+              <StartValue>1038</StartValue>
+            </Subelement>
+          </Member>
+        </Section>
+      </Sections>
+    </Member>
+    <Member Name="MTPDigitalOut" Datatype="Array[0..0] of &quot;UDT_MTP_DIntProcessValueOut&quot;" />
+    <Member Name="MTPBinaryOut" Datatype="Array[0..2] of &quot;UDT_MTP_BinProcessValueOut&quot;">
+      <Sections>
+        <Section Name="None">
+          <Member Name="V" Datatype="Bool">
+            <Subelement Path="0">
+              <StartValue>False</StartValue>
+            </Subelement>
+            <Subelement Path="1">
+              <StartValue>False</StartValue>
+            </Subelement>
+          </Member>
+          <Member Name="VState0" Datatype="String[16]">
+            <Subelement Path="0">
+              <StartValue>'VlvClosed'</StartValue>
+            </Subelement>
+            <Subelement Path="1">
+              <StartValue>'VlvClosed'</StartValue>
+            </Subelement>
+          </Member>
+          <Member Name="VState1" Datatype="String[16]">
+            <Subelement Path="0">
+              <StartValue>'VlvOpened'</StartValue>
+            </Subelement>
+            <Subelement Path="1">
+              <StartValue>'VlvOpened'</StartValue>
+            </Subelement>
+          </Member>
+        </Section>
+      </Sections>
+    </Member>
+    <Member Name="MTPStringOut" Datatype="Array[0..0] of &quot;UDT_MTP_StringProcessValueOut&quot;" />
+    <Member Name="AnalogOut" Datatype="Array[0..0] of &quot;ProcessValueOutAnalog&quot;">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+    </Member>
+    <Member Name="DigitalOut" Datatype="Array[0..0] of &quot;ProcessValueOutDigital&quot;">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+    </Member>
+    <Member Name="BinaryOut" Datatype="Array[0..0] of &quot;ProcessValueOutBinary&quot;">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+    </Member>
+    <Member Name="StringOut" Datatype="Array[0..0] of &quot;ProcessValueOutString&quot;">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+    </Member>
+  </Section>
+</Sections></Interface>
+      <Name>ProcessValues_DB</Name>
+      <Namespace />
+      <Number>34</Number>
+      <ProgrammingLanguage>DB</ProgrammingLanguage>
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>de-DE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="3" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="4" CompositionName="Items">
+            <AttributeList>
+              <Culture>fr-FR</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <MultilingualText ID="5" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="6" CompositionName="Items">
+            <AttributeList>
+              <Culture>de-DE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="7" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="8" CompositionName="Items">
+            <AttributeList>
+              <Culture>fr-FR</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </SW.Blocks.InstanceDB>
+</Document>

@@ -1,0 +1,8 @@
+﻿LibraryType:
+  Guid: 3cad1edb-0074-4d4d-8f8b-af92e12fecd7
+  Comment:
+    de-DE: Runtime determination and counters with counting direction "up"
+LibraryVersion:
+  VersionNumber: 1.0.2
+  Author: z003h31m
+  IsDefault: true

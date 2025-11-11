@@ -1,0 +1,1028 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V20" />
+  <SW.Types.PlcStruct ID="0">
+    <AttributeList>
+      <Interface><Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v5">
+  <Section Name="None">
+    <Member Name="OnMan" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="CFC_Visible" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">1=On: On Command in Manual Mode</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">1=On: On Command in Manual Mode</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">1=On: On Command in Manual Mode</MultiLanguageText>
+      </Comment>
+      <StartValue>FALSE</StartValue>
+    </Member>
+    <Member Name="OffMan" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="CFC_Visible" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">1=Off: Off Command in Manual Mode</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">1=Off: Off Command in Manual Mode</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">1=Off: Off Command in Manual Mode</MultiLanguageText>
+      </Comment>
+      <StartValue>TRUE</StartValue>
+    </Member>
+    <Member Name="AutModOp" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="CFC_Visible" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">1=Auto Mode: Auto Mode by Operator</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">1=Auto Mode: Auto Mode by Operator</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">1=Auto Mode: Auto Mode by Operator</MultiLanguageText>
+      </Comment>
+      <StartValue>FALSE</StartValue>
+    </Member>
+    <Member Name="ManModOp" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="CFC_Visible" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">1=Manual Mode: Manual Mode by Operator</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">1=Manual Mode: Manual Mode by Operator</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">1=Manual Mode: Manual Mode by Operator</MultiLanguageText>
+      </Comment>
+      <StartValue>TRUE</StartValue>
+    </Member>
+    <Member Name="OosOp" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="CFC_Visible" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">1=Oos Mode: Oos Mode by Operator</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">1=Oos Mode: Oos Mode by Operator</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">1=Oos Mode: Oos Mode by Operator</MultiLanguageText>
+      </Comment>
+      <StartValue>FALSE</StartValue>
+    </Member>
+    <Member Name="ExtNoOp" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="CFC_Visible" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Ext Mode for Number of Units: Ext Mode by Operator</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Ext Mode for Number of Units: Ext Mode by Operator</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">Ext Mode for Number of Units: Ext Mode by Operator</MultiLanguageText>
+      </Comment>
+      <StartValue>0</StartValue>
+    </Member>
+    <Member Name="IntNoOp" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="CFC_Visible" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Int Mode for Number of Units: Int Mode by Operator</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Int Mode for Number of Units: Int Mode by Operator</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">Int Mode for Number of Units: Int Mode by Operator</MultiLanguageText>
+      </Comment>
+      <StartValue>1</StartValue>
+    </Member>
+    <Member Name="UnitReqOp" Datatype="USInt">
+      <AttributeList>
+        <BooleanAttribute Name="CFC_Visible" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Number of Units required from Operator</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Number of Units required from Operator</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">Number of Units required from Operator</MultiLanguageText>
+      </Comment>
+      <StartValue>1</StartValue>
+    </Member>
+    <Member Name="ExtSwOp" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="CFC_Visible" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Ext Mode for Switch: Ext Mode by Operator</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Ext Mode for Switch: Ext Mode by Operator</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">Ext Mode for Switch: Ext Mode by Operator</MultiLanguageText>
+      </Comment>
+      <StartValue>0</StartValue>
+    </Member>
+    <Member Name="IntSwOp" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="CFC_Visible" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Int Mode for Switch: Int Mode by Operator</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Int Mode for Switch: Int Mode by Operator</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">Int Mode for Switch: Int Mode by Operator</MultiLanguageText>
+      </Comment>
+      <StartValue>1</StartValue>
+    </Member>
+    <Member Name="TimeSwOp" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="CFC_Visible" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Time Mode for Switch: Time Mode by Operator</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Time Mode for Switch: Time Mode by Operator</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">Time Mode for Switch: Time Mode by Operator</MultiLanguageText>
+      </Comment>
+      <StartValue>0</StartValue>
+    </Member>
+    <Member Name="UnitMstrOp" Datatype="USInt">
+      <AttributeList>
+        <BooleanAttribute Name="CFC_Visible" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Master Unit from Operator</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Master Unit from Operator</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">Master Unit from Operator</MultiLanguageText>
+      </Comment>
+      <StartValue>1</StartValue>
+    </Member>
+    <Member Name="ChangeTime" Datatype="Int">
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Time for Change the Master Agg.[h]</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Time for Change the Master Agg.[h]</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">Time for Change the Master Agg.[h]</MultiLanguageText>
+      </Comment>
+      <StartValue>168</StartValue>
+    </Member>
+    <Member Name="DelayOn" Datatype="Real">
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Delay Time on [s]</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Delay Time on [s]</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">Delay Time on [s]</MultiLanguageText>
+      </Comment>
+      <StartValue>0.0</StartValue>
+    </Member>
+    <Member Name="DelayOff" Datatype="Real">
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Delay Time off [s]</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Delay Time off [s]</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">Delay Time off [s]</MultiLanguageText>
+      </Comment>
+      <StartValue>0.0</StartValue>
+    </Member>
+    <Member Name="MaxAggr" Datatype="USInt">
+      <Comment>
+        <MultiLanguageText Lang="de-DE">max. Number of units</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">max. Number of units</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">max. Number of units</MultiLanguageText>
+      </Comment>
+      <StartValue>0</StartValue>
+    </Member>
+    <Member Name="RunTi01" Datatype="DWord">
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Runtime unit 1</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Runtime unit 1</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">Runtime unit 1</MultiLanguageText>
+      </Comment>
+      <StartValue>0</StartValue>
+    </Member>
+    <Member Name="RunTi02" Datatype="DWord">
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Runtime unit 2</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Runtime unit 2</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">Runtime unit 2</MultiLanguageText>
+      </Comment>
+      <StartValue>0</StartValue>
+    </Member>
+    <Member Name="RunTi03" Datatype="DWord">
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Runtime unit 3</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Runtime unit 3</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">Runtime unit 3</MultiLanguageText>
+      </Comment>
+      <StartValue>0</StartValue>
+    </Member>
+    <Member Name="RunTi04" Datatype="DWord">
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Runtime unit 4</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Runtime unit 4</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">Runtime unit 4</MultiLanguageText>
+      </Comment>
+      <StartValue>0</StartValue>
+    </Member>
+    <Member Name="RunTi05" Datatype="DWord">
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Runtime unit 5</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Runtime unit 5</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">Runtime unit 5</MultiLanguageText>
+      </Comment>
+      <StartValue>0</StartValue>
+    </Member>
+    <Member Name="RunTi06" Datatype="DWord">
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Runtime unit 6</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Runtime unit 6</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">Runtime unit 6</MultiLanguageText>
+      </Comment>
+      <StartValue>0</StartValue>
+    </Member>
+    <Member Name="RunTi07" Datatype="DWord">
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Runtime unit 7</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Runtime unit 7</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">Runtime unit 7</MultiLanguageText>
+      </Comment>
+      <StartValue>0</StartValue>
+    </Member>
+    <Member Name="RunTi08" Datatype="DWord">
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Runtime unit 8</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Runtime unit 8</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">Runtime unit 8</MultiLanguageText>
+      </Comment>
+      <StartValue>0</StartValue>
+    </Member>
+    <Member Name="RunTi09" Datatype="DWord">
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Runtime unit 9</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Runtime unit 9</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">Runtime unit 9</MultiLanguageText>
+      </Comment>
+      <StartValue>0</StartValue>
+    </Member>
+    <Member Name="RunTi10" Datatype="DWord">
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Runtime unit 10</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Runtime unit 10</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">Runtime unit 10</MultiLanguageText>
+      </Comment>
+      <StartValue>0</StartValue>
+    </Member>
+    <Member Name="RunTi11" Datatype="DWord">
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Runtime unit 11</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Runtime unit 11</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">Runtime unit 11</MultiLanguageText>
+      </Comment>
+      <StartValue>0</StartValue>
+    </Member>
+    <Member Name="RunTi12" Datatype="DWord">
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Runtime unit 12</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Runtime unit 12</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">Runtime unit 12</MultiLanguageText>
+      </Comment>
+      <StartValue>0</StartValue>
+    </Member>
+    <Member Name="RunTi13" Datatype="DWord">
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Runtime unit 13</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Runtime unit 13</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">Runtime unit 13</MultiLanguageText>
+      </Comment>
+      <StartValue>0</StartValue>
+    </Member>
+    <Member Name="RunTi14" Datatype="DWord">
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Runtime unit 14</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Runtime unit 14</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">Runtime unit 14</MultiLanguageText>
+      </Comment>
+      <StartValue>0</StartValue>
+    </Member>
+    <Member Name="RunTi15" Datatype="DWord">
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Runtime unit 15</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Runtime unit 15</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">Runtime unit 15</MultiLanguageText>
+      </Comment>
+      <StartValue>0</StartValue>
+    </Member>
+    <Member Name="RunTi16" Datatype="DWord">
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Runtime unit 16</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Runtime unit 16</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">Runtime unit 16</MultiLanguageText>
+      </Comment>
+      <StartValue>0</StartValue>
+    </Member>
+    <Member Name="Prio01" Datatype="USInt">
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Priority (1 - 99) unit 1</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Priority (1 - 99) unit 1</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">Priority (1 - 99) unit 1</MultiLanguageText>
+      </Comment>
+      <StartValue>1</StartValue>
+    </Member>
+    <Member Name="Prio02" Datatype="USInt">
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Priority (1 - 99) unit 2</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Priority (1 - 99) unit 2</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">Priority (1 - 99) unit 2</MultiLanguageText>
+      </Comment>
+      <StartValue>1</StartValue>
+    </Member>
+    <Member Name="Prio03" Datatype="USInt">
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Priority (1 - 99) unit 3</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Priority (1 - 99) unit 3</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">Priority (1 - 99) unit 3</MultiLanguageText>
+      </Comment>
+      <StartValue>1</StartValue>
+    </Member>
+    <Member Name="Prio04" Datatype="USInt">
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Priority (1 - 99) unit 4</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Priority (1 - 99) unit 4</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">Priority (1 - 99) unit 4</MultiLanguageText>
+      </Comment>
+      <StartValue>1</StartValue>
+    </Member>
+    <Member Name="Prio05" Datatype="USInt">
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Priority (1 - 99) unit 5</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Priority (1 - 99) unit 5</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">Priority (1 - 99) unit 5</MultiLanguageText>
+      </Comment>
+      <StartValue>1</StartValue>
+    </Member>
+    <Member Name="Prio06" Datatype="USInt">
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Priority (1 - 99) unit 6</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Priority (1 - 99) unit 6</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">Priority (1 - 99) unit 6</MultiLanguageText>
+      </Comment>
+      <StartValue>1</StartValue>
+    </Member>
+    <Member Name="Prio07" Datatype="USInt">
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Priority (1 - 99) unit 7</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Priority (1 - 99) unit 7</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">Priority (1 - 99) unit 7</MultiLanguageText>
+      </Comment>
+      <StartValue>1</StartValue>
+    </Member>
+    <Member Name="Prio08" Datatype="USInt">
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Priority (1 - 99) unit 8</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Priority (1 - 99) unit 8</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">Priority (1 - 99) unit 8</MultiLanguageText>
+      </Comment>
+      <StartValue>1</StartValue>
+    </Member>
+    <Member Name="Prio09" Datatype="USInt">
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Priority (1 - 99) unit 9</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Priority (1 - 99) unit 9</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">Priority (1 - 99) unit 9</MultiLanguageText>
+      </Comment>
+      <StartValue>1</StartValue>
+    </Member>
+    <Member Name="Prio10" Datatype="USInt">
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Priority (1 - 99) unit 10</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Priority (1 - 99) unit 10</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">Priority (1 - 99) unit 10</MultiLanguageText>
+      </Comment>
+      <StartValue>1</StartValue>
+    </Member>
+    <Member Name="Prio11" Datatype="USInt">
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Priority (1 - 99) unit 11</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Priority (1 - 99) unit 11</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">Priority (1 - 99) unit 11</MultiLanguageText>
+      </Comment>
+      <StartValue>1</StartValue>
+    </Member>
+    <Member Name="Prio12" Datatype="USInt">
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Priority (1 - 99) unit 12</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Priority (1 - 99) unit 12</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">Priority (1 - 99) unit 12</MultiLanguageText>
+      </Comment>
+      <StartValue>1</StartValue>
+    </Member>
+    <Member Name="Prio13" Datatype="USInt">
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Priority (1 - 99) unit 13</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Priority (1 - 99) unit 13</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">Priority (1 - 99) unit 13</MultiLanguageText>
+      </Comment>
+      <StartValue>1</StartValue>
+    </Member>
+    <Member Name="Prio14" Datatype="USInt">
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Priority (1 - 99) unit 14</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Priority (1 - 99) unit 14</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">Priority (1 - 99) unit 14</MultiLanguageText>
+      </Comment>
+      <StartValue>1</StartValue>
+    </Member>
+    <Member Name="Prio15" Datatype="USInt">
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Priority (1 - 99) unit 15</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Priority (1 - 99) unit 15</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">Priority (1 - 99) unit 15</MultiLanguageText>
+      </Comment>
+      <StartValue>1</StartValue>
+    </Member>
+    <Member Name="Prio16" Datatype="USInt">
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Priority (1 - 99) unit 16</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Priority (1 - 99) unit 16</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">Priority (1 - 99) unit 16</MultiLanguageText>
+      </Comment>
+      <StartValue>1</StartValue>
+    </Member>
+    <Member Name="On" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="CFC_Visible" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">1= Aggr on</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">1= Aggr on</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">1= Aggr on</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="Off" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="CFC_Visible" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">1= Aggr off</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">1= Aggr off</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">1= Aggr off</MultiLanguageText>
+      </Comment>
+      <StartValue>true</StartValue>
+    </Member>
+    <Member Name="PrioOut01" Datatype="USInt">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Priority (1 - 99) unit 1</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Priority (1 - 99) unit 1</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">Priority (1 - 99) unit 1</MultiLanguageText>
+      </Comment>
+      <StartValue>1</StartValue>
+    </Member>
+    <Member Name="PrioOut02" Datatype="USInt">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Priority (1 - 99) unit 2</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Priority (1 - 99) unit 2</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">Priority (1 - 99) unit 2</MultiLanguageText>
+      </Comment>
+      <StartValue>1</StartValue>
+    </Member>
+    <Member Name="PrioOut03" Datatype="USInt">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Priority (1 - 99) unit 3</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Priority (1 - 99) unit 3</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">Priority (1 - 99) unit 3</MultiLanguageText>
+      </Comment>
+      <StartValue>1</StartValue>
+    </Member>
+    <Member Name="PrioOut04" Datatype="USInt">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Priority (1 - 99) unit 4</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Priority (1 - 99) unit 4</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">Priority (1 - 99) unit 4</MultiLanguageText>
+      </Comment>
+      <StartValue>1</StartValue>
+    </Member>
+    <Member Name="PrioOut05" Datatype="USInt">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Priority (1 - 99) unit 5</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Priority (1 - 99) unit 5</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">Priority (1 - 99) unit 5</MultiLanguageText>
+      </Comment>
+      <StartValue>1</StartValue>
+    </Member>
+    <Member Name="PrioOut06" Datatype="USInt">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Priority (1 - 99) unit 6</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Priority (1 - 99) unit 6</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">Priority (1 - 99) unit 6</MultiLanguageText>
+      </Comment>
+      <StartValue>1</StartValue>
+    </Member>
+    <Member Name="PrioOut07" Datatype="USInt">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Priority (1 - 99) unit 7</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Priority (1 - 99) unit 7</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">Priority (1 - 99) unit 7</MultiLanguageText>
+      </Comment>
+      <StartValue>1</StartValue>
+    </Member>
+    <Member Name="PrioOut08" Datatype="USInt">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Priority (1 - 99) unit 8</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Priority (1 - 99) unit 8</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">Priority (1 - 99) unit 8</MultiLanguageText>
+      </Comment>
+      <StartValue>1</StartValue>
+    </Member>
+    <Member Name="PrioOut09" Datatype="USInt">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Priority (1 - 99) unit 9</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Priority (1 - 99) unit 9</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">Priority (1 - 99) unit 9</MultiLanguageText>
+      </Comment>
+      <StartValue>1</StartValue>
+    </Member>
+    <Member Name="PrioOut10" Datatype="USInt">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Priority (1 - 99) unit 10</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Priority (1 - 99) unit 10</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">Priority (1 - 99) unit 10</MultiLanguageText>
+      </Comment>
+      <StartValue>1</StartValue>
+    </Member>
+    <Member Name="PrioOut11" Datatype="USInt">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Priority (1 - 99) unit 11</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Priority (1 - 99) unit 11</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">Priority (1 - 99) unit 11</MultiLanguageText>
+      </Comment>
+      <StartValue>1</StartValue>
+    </Member>
+    <Member Name="PrioOut12" Datatype="USInt">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Priority (1 - 99) unit 12</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Priority (1 - 99) unit 12</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">Priority (1 - 99) unit 12</MultiLanguageText>
+      </Comment>
+      <StartValue>1</StartValue>
+    </Member>
+    <Member Name="PrioOut13" Datatype="USInt">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Priority (1 - 99) unit 13</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Priority (1 - 99) unit 13</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">Priority (1 - 99) unit 13</MultiLanguageText>
+      </Comment>
+      <StartValue>1</StartValue>
+    </Member>
+    <Member Name="PrioOut14" Datatype="USInt">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Priority (1 - 99) unit 14</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Priority (1 - 99) unit 14</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">Priority (1 - 99) unit 14</MultiLanguageText>
+      </Comment>
+      <StartValue>1</StartValue>
+    </Member>
+    <Member Name="PrioOut15" Datatype="USInt">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Priority (1 - 99) unit 15</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Priority (1 - 99) unit 15</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">Priority (1 - 99) unit 15</MultiLanguageText>
+      </Comment>
+      <StartValue>1</StartValue>
+    </Member>
+    <Member Name="PrioOut16" Datatype="USInt">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Priority (1 - 99) unit 16</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Priority (1 - 99) unit 16</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">Priority (1 - 99) unit 16</MultiLanguageText>
+      </Comment>
+      <StartValue>1</StartValue>
+    </Member>
+    <Member Name="Start01" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="CFC_ForTest" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">1=Start unit 1</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">1=Start unit 1</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">1=Start unit 1</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="Start02" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="CFC_ForTest" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">1=Start unit 2</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">1=Start unit 2</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">1=Start unit 2</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="Start03" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="CFC_ForTest" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">1=Start unit 3</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">1=Start unit 3</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">1=Start unit 3</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="Start04" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="CFC_ForTest" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">1=Start unit 4</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">1=Start unit 4</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">1=Start unit 4</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="Start05" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="CFC_ForTest" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">1=Start unit 5</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">1=Start unit 5</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">1=Start unit 5</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="Start06" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="CFC_ForTest" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">1=Start unit 6</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">1=Start unit 6</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">1=Start unit 6</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="Start07" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="CFC_ForTest" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">1=Start unit 7</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">1=Start unit 7</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">1=Start unit 7</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="Start08" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="CFC_ForTest" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">1=Start unit 8</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">1=Start unit 8</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">1=Start unit 8</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="Start09" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="CFC_ForTest" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">1=Start unit 9</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">1=Start unit 9</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">1=Start unit 9</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="Start10" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="CFC_ForTest" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">1=Start unit 10</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">1=Start unit 10</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">1=Start unit 10</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="Start11" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="CFC_ForTest" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">1=Start unit 11</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">1=Start unit 11</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">1=Start unit 11</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="Start12" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="CFC_ForTest" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">1=Start unit 12</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">1=Start unit 12</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">1=Start unit 12</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="Start13" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="CFC_ForTest" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">1=Start unit 13</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">1=Start unit 13</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">1=Start unit 13</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="Start14" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="CFC_ForTest" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">1=Start unit 14</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">1=Start unit 14</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">1=Start unit 14</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="Start15" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="CFC_ForTest" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">1=Start unit 15</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">1=Start unit 15</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">1=Start unit 15</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="Start16" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="CFC_ForTest" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">1=Start unit 16</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">1=Start unit 16</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">1=Start unit 16</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="UnitOn" Datatype="Word">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="CFC_ForTest" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Units on Display</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Units on Display</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">Units on Display</MultiLanguageText>
+      </Comment>
+      <StartValue>0</StartValue>
+    </Member>
+    <Member Name="UnitAvail" Datatype="Word">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="CFC_ForTest" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Units available Display</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Units available Display</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">Units available Display</MultiLanguageText>
+      </Comment>
+      <StartValue>0</StartValue>
+    </Member>
+    <Member Name="UnitReq" Datatype="USInt">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="CFC_ForTest" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Number of Units required</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Number of Units required</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">Number of Units required</MultiLanguageText>
+      </Comment>
+      <StartValue>0</StartValue>
+    </Member>
+    <Member Name="NoUnitRun" Datatype="USInt">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="CFC_ForTest" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Compared Number of Units required/on</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Compared Number of Units required/on</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">Compared Number of Units required/on</MultiLanguageText>
+      </Comment>
+      <StartValue>0</StartValue>
+    </Member>
+    <Member Name="NoUnitAvail" Datatype="USInt">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Number of Units on and available</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Number of Units on and available</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">Number of Units on and available</MultiLanguageText>
+      </Comment>
+      <StartValue>0</StartValue>
+    </Member>
+    <Member Name="UnitMstr" Datatype="USInt">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="CFC_ForTest" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Master Unit</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Master Unit</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">Master Unit</MultiLanguageText>
+      </Comment>
+      <StartValue>0</StartValue>
+    </Member>
+    <Member Name="UnitMissing" Datatype="USInt">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="CFC_ForTest" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Units missing</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Units missing</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">Units missing</MultiLanguageText>
+      </Comment>
+      <StartValue>0</StartValue>
+    </Member>
+    <Member Name="UnitReserved" Datatype="USInt">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="CFC_ForTest" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Reserved Units</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Reserved Units</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">Reserved Units</MultiLanguageText>
+      </Comment>
+      <StartValue>0</StartValue>
+    </Member>
+    <Member Name="ChangeTime_Out" Datatype="Time">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="CFC_Visible" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Residual Time for Changing Master</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Residual Time for Changing Master</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">Residual Time for Changing Master</MultiLanguageText>
+      </Comment>
+      <StartValue>T#0MS</StartValue>
+    </Member>
+    <Member Name="OS_PermOut" Datatype="DWord">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Operator Permission: Output for OS</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Operator Permission: Output for OS</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">Operator Permission: Output for OS</MultiLanguageText>
+      </Comment>
+      <StartValue>16#FFFF_FFFF</StartValue>
+    </Member>
+    <Member Name="OS_PermLog" Datatype="DWord">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Operator Permission: Output for OS</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Operator Permission: Output for OS</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">Operator Permission: Output for OS</MultiLanguageText>
+      </Comment>
+      <StartValue>16#FFFF_FFFF</StartValue>
+    </Member>
+    <Member Name="OpSt_Out" Datatype="DWord">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="CFC_Visible" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Enabled operator stations</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Enabled operator stations</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">Enabled operator stations</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="Status1" Datatype="DWord">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="CFC_ForTest" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="CFC_Visible" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Status word 1</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Status word 1</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">Status word 1</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="Status2" Datatype="DWord">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+        <BooleanAttribute Name="CFC_ForTest" SystemDefined="true">true</BooleanAttribute>
+        <BooleanAttribute Name="CFC_Visible" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Status word 2</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Status word 2</MultiLanguageText>
+        <MultiLanguageText Lang="fr-FR">Status word 2</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="AlarmState" Datatype="Word">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Alarm State for group display</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Alarm Status for group display</MultiLanguageText>
+      </Comment>
+    </Member>
+  </Section>
+</Sections></Interface>
+      <Name>HMI_Aggr16</Name>
+      <Namespace />
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="3" CompositionName="Items">
+            <AttributeList>
+              <Culture>de-DE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="4" CompositionName="Items">
+            <AttributeList>
+              <Culture>fr-FR</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <MultilingualText ID="5" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="6" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="7" CompositionName="Items">
+            <AttributeList>
+              <Culture>de-DE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="8" CompositionName="Items">
+            <AttributeList>
+              <Culture>fr-FR</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </SW.Types.PlcStruct>
+</Document>

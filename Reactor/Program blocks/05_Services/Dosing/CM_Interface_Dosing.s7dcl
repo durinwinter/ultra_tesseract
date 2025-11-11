@@ -1,0 +1,158 @@
+﻿{
+    S7_EditorMode := "SCL";
+    S7_Optimized := "TRUE";
+    S7_Version := "0.1"
+}
+FUNCTION_BLOCK "CM_Interface_Dosing"
+    VAR_INPUT 
+        {
+            S7_Access := "ReadOnly := External";
+            S7_Visibility := "Hidden := External"
+        }
+        CmCommand : Array[0..29] of Bool;
+        {
+            S7_Access := "ReadOnly := External";
+            S7_Visibility := "Hidden := External"
+        }
+        Procedure_Param : Array[0..31] of Real;
+        {
+            S7_Access := "ReadOnly := External";
+            S7_Visibility := "Hidden := External"
+        }
+        CmFbOnOff : Array[0..29] of Bool;
+        Pumped_Liters : Real;
+        Auto_Man : Bool;
+        Oos : Bool;
+    END_VAR
+    VAR_OUTPUT 
+        {
+            S7_Access := "ReadOnly := External";
+            S7_Visibility := "Hidden := External"
+        }
+        CM_P100 : _.DigVal;
+        {
+            S7_Access := "ReadOnly := External";
+            S7_Visibility := "Hidden := External"
+        }
+        CM_V102 : _.DigVal;
+        {
+            S7_Access := "ReadOnly := External";
+            S7_Visibility := "Hidden := External"
+        }
+        CM_V103 : _.DigVal;
+        {
+            S7_Access := "ReadOnly := External";
+            S7_Visibility := "Hidden := External"
+        }
+        CM_V104 : _.DigVal;
+        {
+            S7_Access := "ReadOnly := External";
+            S7_Visibility := "Hidden := External"
+        }
+        QuantityProduct : _.AnaVal;
+    END_VAR
+    VAR 
+        Pos_edge : Bool;
+        Neg_edge : Bool;
+    END_VAR
+    VAR_TEMP 
+        State : _.Service_States;
+    END_VAR
+
+    { S7_Language := "SCL" }
+    NETWORK
+        REGION Bool TO DigVal
+            //CM Pump 100
+            "BoolToDigVal"(In := #CmCommand[0],
+                           ST := 16#80,
+                           Out => #CM_P100);
+            //CM Pump 101
+            "BoolToDigVal"(In := #CmCommand[1],
+                           ST := 16#80,
+                           Out => #CM_V102);
+            //CM Controler 100
+            "BoolToDigVal"(In := #CmCommand[2],
+                           ST := 16#80,
+                           Out => #CM_V103);
+            //CM Valve 100
+            "BoolToDigVal"(In := #CmCommand[3],
+                           ST := 16#80,
+                           Out => #CM_V104);
+        END_REGION
+        
+        REGION Real To AnaVal
+            //Quantity Product
+            "RealToAnaVal"(In := #Procedure_Param[0],
+                           ST := 16#80,
+                           Out => #QuantityProduct);
+        END_REGION
+                        
+        REGION other values
+            //Pumped Liter
+            "Dosing".ProcessValueOutAnalogIn[0] := REAL_TO_DINT(IN := #Pumped_Liters);
+        END_REGION
+        
+        REGION Switch operating state of services
+            //set Auto
+            IF "ServicesOpState" = true AND "Dosing".AutAct = false THEN
+                "Dosing".ModLiOp := true;
+                "Dosing".AutModLi := true;
+            //set Man
+            ELSIF "ServicesOpState" = true AND "Dosing".ManAct = false THEN
+                "Dosing".ModLiOp := TRUE;
+                "Dosing".ManModLi := TRUE;
+            //Reset
+            ELSE
+                "Dosing".ModLiOp := FALSE;
+                "Dosing".AutModLi := FALSE;
+                "Dosing".ManModLi := false;
+            END_IF;
+        END_REGION
+        
+        REGION Set auto/man mode & Int/Ext of measuring points
+            //check for positive edge at Dose.Oos
+            "R_TRIG_DB_Dosing"(CLK := #Oos,
+                        Q => #Neg_edge);
+            
+            IF #Auto_Man OR #Neg_edge THEN
+                "P100DB".ModLiOp.Value := TRUE;
+                "V102DB".ModLiOp.Value := TRUE;
+                "V103DB".ModLiOp.Value := TRUE;
+                "V104DB".ModLiOp.Value := TRUE;
+            END_IF;
+            
+            //Set POs to auto mode
+            IF #Auto_Man = TRUE THEN
+                "P100DB".ManModLi.Value := FALSE;
+                "V102DB".ManModLi.Value := FALSE;
+                "V103DB".ManModLi.Value := FALSE;
+                "V104DB".ManModLi.Value := FALSE;
+                
+                "P100DB".AutModLi.Value := TRUE;
+                "V102DB".AutModLi.Value := TRUE;
+                "V103DB".AutModLi.Value := TRUE;
+                "V104DB".AutModLi.Value := TRUE;
+            END_IF;
+            //Set POs to man mode
+            IF #Neg_edge = TRUE THEN
+                "P100DB".AutModLi.Value := FALSE;
+                "V102DB".AutModLi.Value := FALSE;
+                "V103DB".AutModLi.Value := FALSE;
+                "V104DB".AutModLi.Value := FALSE;
+                
+                "P100DB".ManModLi.Value := TRUE;
+                "V102DB".ManModLi.Value := TRUE;
+                "V103DB".ManModLi.Value := TRUE;
+                "V104DB".ManModLi.Value := TRUE;
+            END_IF;
+            
+            //Reset ModLiOp
+            IF #Auto_Man = FALSE AND #Neg_edge = FALSE THEN
+                "P100DB".ModLiOp.Value := FALSE;
+                "V102DB".ModLiOp.Value := FALSE;
+                "V103DB".ModLiOp.Value := FALSE;
+                "V104DB".ModLiOp.Value := FALSE;
+            END_IF;
+        END_REGION
+    END_NETWORK
+END_FUNCTION_BLOCK

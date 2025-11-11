@@ -1,0 +1,9 @@
+﻿DocumentHash:
+  - FileName: UDT_Service_StepOrderRawDataMedium.xml
+    Hash: mERV/3b+zfSkGs9D8dQ1MAz++e1MG1iuPmqtUdSPmj8=
+LibraryMetaFileHash: 8tXNWF2n6qrKlpAa2st9r68v/0kqnj5UdiwOID9ndlg=
+LibraryVersion:
+  Guid: 6d4ad450-0410-48db-87f2-382290d6eb22
+  DependsOn:
+    - TypeName: UDT_Service_StepOrder
+      VersionNumber: 1.0.0

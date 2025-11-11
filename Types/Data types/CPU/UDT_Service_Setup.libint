@@ -1,0 +1,9 @@
+﻿DocumentHash:
+  - FileName: UDT_Service_Setup.xml
+    Hash: R4iBH4IAoout4+KU/txs2ILY22NOidTgSo7TqGOAkjA=
+LibraryMetaFileHash: r68YdiJ5YKTjIcE0oFlOcT5QLfyp7PIjrHM8hsouZ4A=
+LibraryVersion:
+  Guid: f8e23565-e960-45ba-b093-eca6576e63b4
+  DependsOn:
+    - TypeName: UDT_Service_StepOrder
+      VersionNumber: 1.0.0

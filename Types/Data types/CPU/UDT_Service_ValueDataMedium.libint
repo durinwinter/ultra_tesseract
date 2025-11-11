@@ -1,0 +1,9 @@
+﻿DocumentHash:
+  - FileName: UDT_Service_ValueDataMedium.xml
+    Hash: mjjLhqbpv+ZrYcn7fUeEPMukDtA1ayU+/hqmaZm1QQw=
+LibraryMetaFileHash: 480l1Mxj3Rr7hKD6ZiP/vejAiVVRreD+yqf7tpbUJMc=
+LibraryVersion:
+  Guid: 279d3ae3-069d-434f-91b9-df85c880169e
+  DependsOn:
+    - TypeName: UDT_Service_ValueDefinition
+      VersionNumber: 1.0.1

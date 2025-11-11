@@ -1,0 +1,766 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V20" />
+  <SW.Types.PlcStruct ID="0">
+    <AttributeList>
+      <Interface><Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v5">
+  <Section Name="None">
+    <Member Name="WQC" Datatype="Byte">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Worst Quality Code variable</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Worst Quality Code variable</MultiLanguageText>
+      </Comment>
+      <StartValue>16#FF</StartValue>
+    </Member>
+    <Member Name="OSLevel" Datatype="Byte">
+      <Comment>
+        <MultiLanguageText Lang="de-DE">OSLevel variable Operation Mode</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">OSLevel variable Operation Mode</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="StateChannel" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Selection of the active OperationMode interaction channel0: The operator switches (*Op) shall be used.1: The automatic switches (*Aut) shall be used.</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Selection of the active OperationMode interaction channel0: The operator switches (*Op) shall be used.1: The automatic switches (*Aut) shall be used.</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="StateOffAut" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Set OperationMode to Offline by automatic interaction (relevant, if StateChannel).1: OperationMode is set to Offline.0: no operation</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Set OperationMode to Offline by automatic interaction (relevant, if StateChannel).1: OperationMode is set to Offline.0: no operation</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="StateOpAut" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Set OperationMode to Operator by automatic interaction (relevant, if StateChannel).1: OperationMode is set to Manual.0: no operation</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Set OperationMode to Operator by automatic interaction (relevant, if StateChannel).1: OperationMode is set to Manual.0: no operation</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="StateAutAut" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Set OperationMode to Automatic by automatic interaction (relevant, if StateChannel).1: OperationMode is set to Automatic.0: no operation</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Set OperationMode to Automatic by automatic interaction (relevant, if StateChannel).1: OperationMode is set to Automatic.0: no operation</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="StateOffOp" Datatype="Bool">
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Set OperationMode to Offline by operator interaction (relevant, if not StateChannel) 0--&gt;1:request to set OperationMode to Offline 1--&gt;0:acknowledge by PEA</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Set OperationMode to Offline by operator interaction (relevant, if not StateChannel) 0--&gt;1:request to set OperationMode to Offline 1--&gt;0:acknowledge by PEA</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="StateOpOp" Datatype="Bool">
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Set OperationMode to Operator by operator interaction (relevant, if not StateChannel) 0--&gt;1:request to set OperationMode to Manual 1--&gt;0:acknowledge by PEA</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Set OperationMode to Operator by operator interaction (relevant, if not StateChannel) 0--&gt;1:request to set OperationMode to Manual 1--&gt;0:acknowledge by PEA</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="StateAutOp" Datatype="Bool">
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Set OperationMode to Automatic by operator interaction (relevant, if not StateChannel) 0--&gt;1:request to set OperationMode is to Automatic 1--&gt;0:acknowledge by PEA</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Set OperationMode to Automatic by operator interaction (relevant, if not StateChannel) 0--&gt;1:request to set OperationMode is to Automatic 1--&gt;0:acknowledge by PEA</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="StateOpAct" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">1: current mode is Operator0: current mode is not Operator</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">1: current mode is Operator0: current mode is not Operator</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="StateAutAct" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">1: current mode is Automatic0: current mode is not Automatic</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">1: current mode is Automatic0: current mode is not Automatic</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="StateOffAct" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">1: current mode is Offline0: current mode is not Offline SourceMode for Number of CMs</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">1: current mode is Offline0: current mode is not Offline SourceMode for Number of CMs</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="NoSrcChannel" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Selection of the active OperationMode interaction channel number of CMs0: The operator switches (*Op) shall be used.1: The automatic switches (*Aut) shall be used.</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Selection of the active OperationMode interaction channel number of CMs0: The operator switches (*Op) shall be used.1: The automatic switches (*Aut) shall be used.</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="NoSrcIntAct" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">1: current mode of units is Internal0: current mode of CMs is not Internal</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">1: current mode of units is Internal0: current mode of CMs is not Internal</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="NoSrcIntAut" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Set SourceMode to Internal by automatic interaction (relevant, if NoSrcChannel is true)1: SourceMode is set to Internal0: no operation</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Set SourceMode to Internal by automatic interaction (relevant, if NoSrcChannel is true)1: SourceMode is set to Internal0: no operation</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="NoSrcIntOp" Datatype="Bool">
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Set SourceMode to Internal by operator interaction (relevant, if NoSrcChannel is false)0--&gt;1:request to set OperationMode to Internal1--&gt;0:acknowledge by PEA</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Set SourceMode to Internal by operator interaction (relevant, if NoSrcChannel is false)0--&gt;1:request to set OperationMode to Internal1--&gt;0:acknowledge by PEA</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="NoSrcManAct" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">1: current mode is Manual0: current mode is not Manual</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">1: current mode is Manual0: current mode is not Manual</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="NoSrcManAut" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Set SourceMode to Manual by automatic interaction (relevant, if NoSrcChannel is true)1:SourceMode is set to Manual0:no operation</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Set SourceMode to Manual by automatic interaction (relevant, if NoSrcChannel is true)1:SourceMode is set to Manual0:no operation</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="NoSrcManOp" Datatype="Bool">
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Set SourceMode to Manual by operator interaction (relevant, if NoSrcChannel is false)0--&gt;1:request to set OperationMode to Manual1--&gt;0 :acknowledge by PEA</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Set SourceMode to Manual by operator interaction (relevant, if NoSrcChannel is false)0--&gt;1:request to set OperationMode to Manual1--&gt;0 :acknowledge by PEA</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="NoCMInt" Datatype="Int">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Internal Value (relevant, if NoSrcIntAct is false) Number CMs</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Internal Value (relevant, if NoSrcIntAct is false) Number CMs</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="NoCMMan" Datatype="Int">
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Manual Value (relevant, if NoSrcManAct is true) Number CMs SourceMode for Switch Mode</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Manual Value (relevant, if NoSrcManAct is true) Number CMs SourceMode for Switch Mode</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="SmSrcChannel" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Selection of the active SourceMode interaction channel switch mode0:The operator switches (*Op) shall be used1:The automatic switches (*Aut) shall be used</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Selection of the active SourceMode interaction channel switch mode0:The operator switches (*Op) shall be used1:The automatic switches (*Aut) shall be used</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="SmSrcIntAct" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">1: current mode of units is Internal0: current mode of units is not Internal</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">1: current mode of units is Internal0: current mode of units is not Internal</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="SmSrcIntAut" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Set SourceMode to Internal by automatic interaction (relevant, if SrcChannelNo is true)1: SourceMode is set to Internal0: no operation</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Set SourceMode to Internal by automatic interaction (relevant, if SrcChannelNo is true)1: SourceMode is set to Internal0: no operation</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="SmSrcIntOp" Datatype="Bool">
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Set SourceMode to Internal by operator interaction (relevant, if SmSrcChannel is false)0--&gt;1:request to set OperationMode to Internal1--&gt;0:acknowledge by PEA</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Set SourceMode to Internal by operator interaction (relevant, if SmSrcChannel is false)0--&gt;1:request to set OperationMode to Internal1--&gt;0:acknowledge by PEA</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="SmSrcManAct" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">1: current mode is Manual0: current mode is not Manual</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">1: current mode is Manual0: current mode is not Manual</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="SmSrcManAut" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Set SourceMode to Manual by automatic interaction (relevant, if SmSrcChannel is true)1:SourceMode is set to Manual0:no operation</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Set SourceMode to Manual by automatic interaction (relevant, if SmSrcChannel is true)1:SourceMode is set to Manual0:no operation</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="SmSrcManOp" Datatype="Bool">
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Set SourceMode to Manual by operator interaction (relevant, if SmSrcChannel is false)0--&gt;1:request to set OperationMode to Manual1--&gt;0 :acknowledge by PEA</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Set SourceMode to Manual by operator interaction (relevant, if SmSrcChannel is false)0--&gt;1:request to set OperationMode to Manual1--&gt;0 :acknowledge by PEA</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="SmSrcManActTi" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">1: current mode is Manual Time0: current mode is not Manual Time</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">1: current mode is Manual Time0: current mode is not Manual Time</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="SmSrcManAutTi" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Set SourceMode to Manual Time by automatic interaction (relevant, if SmSrcChannel is true)1:SourceMode is set to Manual Time0:no operation</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Set SourceMode to Manual Time by automatic interaction (relevant, if SmSrcChannel is true)1:SourceMode is set to Manual Time0:no operation</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="SmSrcManOpTi" Datatype="Bool">
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Set SourceMode to Manual Time by operator interaction (relevant, if SmSrcChannel is false)0--&gt;1:request to set OperationMode to Manual Time1--&gt;0 :acknowledge by PEA</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Set SourceMode to Manual Time by operator interaction (relevant, if SmSrcChannel is false)0--&gt;1:request to set OperationMode to Manual Time1--&gt;0 :acknowledge by PEA</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="MstrCMInt" Datatype="Int">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Internal Value (relevant, if SmSrcIntAct is true) Master CM</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Internal Value (relevant, if SmSrcIntAct is true) Master CM</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="MstrCMMan" Datatype="Int">
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Manual Value (relevant, if SmSrcManAct is true) Master CM</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Manual Value (relevant, if SmSrcManAct is true) Master CM</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="CMEn" Datatype="DWord">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Enables the CM 1-16 to be used by CM161: enabled0: disabled</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Enables the CM 1-16 to be used by CM161: enabled0: disabled</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="CMRdyToStart" Datatype="DWord">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Ready to use CM 1-16 Fbk1: CM is ready0: CM is not active</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Ready to use CM 1-16 Fbk1: CM is ready0: CM is not active</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="CMFbkRun" Datatype="DWord">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Feedback signal CM 1-161: is running0: is not running</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Feedback signal CM 1-161: is running0: is not running</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="CMCtrl" Datatype="DWord">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">CM 1-16 Control by CM161: active (start)0: inactive (stop)</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">CM 1-16 Control by CM161: active (start)0: inactive (stop)</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="OHCM01" Datatype="DWord">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Operating hours CM 1</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Operating hours CM 1</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="OHCM02" Datatype="DWord">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Operating hours CM 2</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Operating hours CM 2</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="OHCM03" Datatype="DWord">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Operating hours CM 3</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Operating hours CM 3</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="OHCM04" Datatype="DWord">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Operating hours CM 4</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Operating hours CM 4</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="OHCM05" Datatype="DWord">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Operating hours CM 5</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Operating hours CM 5</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="OHCM06" Datatype="DWord">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Operating hours CM 6</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Operating hours CM 6</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="OHCM07" Datatype="DWord">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Operating hours CM 7</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Operating hours CM 7</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="OHCM08" Datatype="DWord">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Operating hours CM 8</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Operating hours CM 8</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="OHCM09" Datatype="DWord">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Operating hours CM 9</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Operating hours CM 9</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="OHCM10" Datatype="DWord">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Operating hours CM 10</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Operating hours CM 10</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="OHCM11" Datatype="DWord">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Operating hours CM 11</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Operating hours CM 11</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="OHCM12" Datatype="DWord">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Operating hours CM 12</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Operating hours CM 12</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="OHCM13" Datatype="DWord">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Operating hours CM 13</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Operating hours CM 13</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="OHCM14" Datatype="DWord">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Operating hours CM 14</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Operating hours CM 14</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="OHCM15" Datatype="DWord">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Operating hours CM 15</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Operating hours CM 15</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="OHCM16" Datatype="DWord">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Operating hours CM 16</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Operating hours CM 16</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="PrioCM01" Datatype="Int">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Switch On Priority for CM 1</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Switch On Priority for CM 1</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="PrioCM02" Datatype="Int">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Switch On Priority for CM 2</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Switch On Priority for CM 2</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="PrioCM03" Datatype="Int">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Switch On Priority for CM 3</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Switch On Priority for CM 3</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="PrioCM04" Datatype="Int">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Switch On Priority for CM 4</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Switch On Priority for CM 4</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="PrioCM05" Datatype="Int">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Switch On Priority for CM 5</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Switch On Priority for CM 5</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="PrioCM06" Datatype="Int">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Switch On Priority for CM 6</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Switch On Priority for CM 6</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="PrioCM07" Datatype="Int">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Switch On Priority for CM 7</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Switch On Priority for CM 7</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="PrioCM08" Datatype="Int">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Switch On Priority for CM 8</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Switch On Priority for CM 8</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="PrioCM09" Datatype="Int">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Switch On Priority for CM 9</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Switch On Priority for CM 9</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="PrioCM10" Datatype="Int">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Switch On Priority for CM 10</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Switch On Priority for CM 10</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="PrioCM11" Datatype="Int">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Switch On Priority for CM 11</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Switch On Priority for CM 11</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="PrioCM12" Datatype="Int">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Switch On Priority for CM 12</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Switch On Priority for CM 12</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="PrioCM13" Datatype="Int">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Switch On Priority for CM 13</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Switch On Priority for CM 13</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="PrioCM14" Datatype="Int">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Switch On Priority for CM 14</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Switch On Priority for CM 14</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="PrioCM15" Datatype="Int">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Switch On Priority for CM 15</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Switch On Priority for CM 15</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="PrioCM16" Datatype="Int">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Switch On Priority for CM 16</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Switch On Priority for CM 16</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="OnAut" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">1=On: On Command in Auto Mode</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">1=On: On Command in Auto Mode</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="OffAut" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">1=Off: Off Command in Auto Mode</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">1=Off: Off Command in Auto Mode</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="OnOp" Datatype="Bool">
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Set CM to On by Operator instruction (relevant, if StateOpAct)0--&gt;1: request to set CM to On1--&gt;0: acknowledge by PEA</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Set CM to On by Operator instruction (relevant, if StateOpAct)0--&gt;1: request to set CM to On1--&gt;0: acknowledge by PEA</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="OffOp" Datatype="Bool">
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Set CM to Off by Operator instruction (relevant, if StateOpAct)0--&gt;1: request to set CM to Off1--&gt;0: acknowledge by PEA</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Set CM to Off by Operator instruction (relevant, if StateOpAct)0--&gt;1: request to set CM to Off1--&gt;0: acknowledge by PEA</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="OnAct" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">CM is set to On.1: CM is set to On.0: CM is not set to On.</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">CM is set to On.1: CM is set to On.0: CM is not set to On.</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="OffAct" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">CM is set to Off.1: CM is set to Off.0: CM is not set to Off.</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">CM is set to Off.1: CM is set to Off.0: CM is not set to Off.</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="OpTimeSwMode" Datatype="Bool">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">0=Master aggregate / 1=Operating Time or Priority switch mode active</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">0=Master aggregate / 1=Operating Time or Priority switch mode active</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="PrefCMMode" Datatype="Int">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">1=Operating Time / 2=Priority switch mode active</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">1=Operating Time / 2=Priority switch mode active</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="ChangeTime" Datatype="Int">
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Time for Change the Master CM[h]</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Time for Change the Master CM[h]</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="MaxCM" Datatype="Int">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">max. Number of CMs</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">max. Number of CMs</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="CMOn" Datatype="DWord">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">CMs on Display</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">CMs on Display</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="CMAvail" Datatype="DWord">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">CMs available Display</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">CMs available Display</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="NoCMRun" Datatype="Int">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Compared Number of CMs required/on</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Compared Number of CMs required/on</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="ChangeTime_Out" Datatype="DWord">
+      <AttributeList>
+        <BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute>
+      </AttributeList>
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Residual Time for Changing Master</MultiLanguageText>
+        <MultiLanguageText Lang="en-US">Residual Time for Changing Master</MultiLanguageText>
+      </Comment>
+    </Member>
+  </Section>
+</Sections></Interface>
+      <Name>UDT_BinAggr16</Name>
+      <Namespace />
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="3" CompositionName="Items">
+            <AttributeList>
+              <Culture>de-DE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="4" CompositionName="Items">
+            <AttributeList>
+              <Culture>fr-FR</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <MultilingualText ID="5" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="6" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text>MTPDataObjectSUCLibrary/DataAssembly/ActiveElement/Aggr/Aggr16</Text>
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="7" CompositionName="Items">
+            <AttributeList>
+              <Culture>de-DE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="8" CompositionName="Items">
+            <AttributeList>
+              <Culture>fr-FR</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </SW.Types.PlcStruct>
+</Document>
