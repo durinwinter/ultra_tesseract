@@ -15,7 +15,7 @@
       <StartValue>'C1B54EEF-2D71-47BB-85AA-6F49015D382A'</StartValue>
     </Member>
     <Member Name="ComponentName" Datatype="String">
-      <StartValue>'ReactorPEA'</StartValue>
+      <StartValue>'TesseractPEA'</StartValue>
     </Member>
     <Member Name="DeviceClass" Datatype="String">
       <StartValue>'ReactorService'</StartValue>
